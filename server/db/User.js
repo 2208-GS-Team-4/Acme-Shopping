@@ -1,19 +1,39 @@
 const db = require('./db');
+const Sequelize = require("sequelize")
 const { STRING, UUID, UUIDV4 } = db.Sequelize;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const JWT = process.env.JWT;
 
-
 const User = db.define('user', {
-    id: {
-        type: UUID,
-        primaryKey: true,
-        defaultValue: UUIDV4
+    // id: {
+    //     type: UUID,
+    //     primaryKey: true,
+    //     defaultValue: UUIDV4
+    // },
+    // UNDO THESE AT THE END OF THE PROJECT
+    firstName: {
+        type: Sequelize.STRING, 
+        // allowNull: false,
+        validate: {
+        }
+    },
+    lastName: {
+        type: Sequelize.STRING, 
+        // allowNull: false,
+        validate: {
+        }
+    },
+    email: {
+        type: Sequelize.STRING, 
+        // allowNull: false,
+        validate: {
+            isEmail: true,
+        }
     },
     username: {
         type: STRING,
-        allowNull: false,
+        // allowNull: false,
         validate: {
             notEmpty: true
         },
@@ -21,10 +41,26 @@ const User = db.define('user', {
     },
     password: {
         type: STRING,
-        allowNull: false,
+        // allowNull: false,
         validate: {
-            notEmpty: true
+            notEmpty: true,
+            //len: [10,18],
         }
+    },
+    shippingAddress:{
+        type:Sequelize.STRING,
+    },
+    billingAddress:{
+        type:Sequelize.STRING,
+    },
+    creditCard:{
+        type:Sequelize.BIGINT,
+        validate: {
+            isCreditCard: true,
+        }
+    },
+    phone:{
+        type:Sequelize.BIGINT,
     }
 });
 

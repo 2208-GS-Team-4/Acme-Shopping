@@ -1,0 +1,33 @@
+const Sequelize = require("sequelize");
+const db = require("./db");
+
+const CartProduct = db.define('cartproduct', {
+    quantity: {
+        type: Sequelize.INTEGER
+        },
+    price: {
+        type: Sequelize.DECIMAL(5,2)
+        },
+    })
+
+module.exports = CartProduct
+
+
+// const ActorMovies = sequelize.define('ActorMovies', {
+//     MovieId: {
+//       type: DataTypes.INTEGER,
+//       references: {
+//         model: Movie, // 'Movies' would also work
+//         key: 'id'
+//       }
+//     },
+//     ActorId: {
+//       type: DataTypes.INTEGER,
+//       references: {
+//         model: Actor, // 'Actors' would also work
+//         key: 'id'
+//       }
+//     }
+//   });
+//   Movie.belongsToMany(Actor, { through: ActorMovies });
+//   Actor.belongsToMany(Movie, { through: ActorMovies });

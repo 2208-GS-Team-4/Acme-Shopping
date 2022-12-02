@@ -15,14 +15,17 @@ const Product = db.define('product', {
     },
     description: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        // allowNull: false,
         validate: {
           notEmpty: true,
         },
     },
     color:{ type: Sequelize.STRING,},
-    price:{ type: Sequelize.INTEGER,},
-    size:{type: Sequelize.INTEGER,},
+    price:{ type: Sequelize.DECIMAL(5,2)},
+    size: {
+      type: Sequelize.ENUM,
+      values: ['S','M','L']
+    },
     stock: {type: Sequelize.INTEGER,},
 });
 

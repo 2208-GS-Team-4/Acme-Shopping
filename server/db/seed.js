@@ -1,5 +1,5 @@
 const db = require("./db");
-const User = require("./User");
+const { User, Cart, Product, Order, OrderProduct, CartProduct } = require("./index.js");
 
 const seed = async () => {
     await db.sync({ force: true });
@@ -11,6 +11,8 @@ const seed = async () => {
         User.create({ username: 'ethyl', password: '123' }),
     ]);
 
+    const shirt = await Product.create ({name: "shirt"})
+    
     return {
         users: {
             moe,
@@ -18,7 +20,12 @@ const seed = async () => {
             larry,
             ethyl
         },
+        products: {
+            shirt
+        }
     };
 };
+
+seed();
 
 module.exports = seed;

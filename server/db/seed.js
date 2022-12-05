@@ -8,7 +8,20 @@ const {
   CartProduct,
 } = require("./index.js");
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~Products~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
 const productsList = [
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~Womens items~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~Mens items~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -426,14 +439,14 @@ const productsList = [
     stock: 10,
     type: "Hats",
     gender: "Men",
-  },
-
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-  //~~~~~~~~~Womens items~~~~~~~~~//
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
-
+  }
 ];
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~Users~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 const userList = [
   {
@@ -1096,6 +1109,10 @@ const seed = async () => {
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
   const [
+
+    // Womens items start here in order
+    
+
     // Mens items start here in order
     mensJacketOne,
     mensJacketTwo,
@@ -1133,10 +1150,7 @@ const seed = async () => {
     mensSocks7,
     mensHats1,
     mensHats2,
-    mensHats3,
-
-    // Womens items start here in order
-
+    mensHats3
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));
 
   console.log('DB SEED COMPLETE.');

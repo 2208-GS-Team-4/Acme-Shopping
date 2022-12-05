@@ -21,8 +21,8 @@ const productsList = [
     description:
       "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this one over sweaters for effortless styling",
     color: "Blue",
-    price: "249.99",
-    stock: "10",
+    price: 249.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -32,8 +32,8 @@ const productsList = [
     description:
       "Warm-up your looks with this effortless puffer bomber jacket. Pair with jeans or chinos for the perfect everyday look",
     color: "Gray",
-    price: "249.99",
-    stock: "10",
+    price: 249.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -43,8 +43,8 @@ const productsList = [
     description:
       "With a twist on the classic, this wool-blend topcoat features a drawstring hood and a covered zip closure. Pair with jeans and boots for a casual look",
     color: "Brown",
-    price: "249.99",
-    stock: "10",
+    price: 249.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -54,8 +54,8 @@ const productsList = [
     description:
       "The perfect classic trucker jacket in a navy wool-blend fabric. Add this to any outfit to keep cozy on cool days and chilly nights",
     color: "Blue",
-    price: "199.99",
-    stock: "10",
+    price: 199.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -65,8 +65,8 @@ const productsList = [
     description:
       "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this wool-blend coat with denim for a polished look or with suiting for all of your formal events this season",
     color: "Black",
-    price: "299.99",
-    stock: "10",
+    price: 299.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -77,8 +77,8 @@ const productsList = [
     description:
       "A winter classic, this cable knit crewneck sweater is the perfect cold weather essential. Complete the look with jeans or chinos for a sleek look",
     color: "White",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Sweater",
     gender: "Men",
   },
@@ -88,8 +88,8 @@ const productsList = [
     description:
       "A classic layering choice to keep you warm this season. This waffle knit cardigan looks great over tees, button-ups and more - we love a versatile piece",
     color: "Black",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Sweater",
     gender: "Men",
   },
@@ -99,8 +99,8 @@ const productsList = [
     description:
       "A winter classic with a unique cable knit pattern, this crewneck sweater brings a fun twist to a cold weather essential. Complete the look with jeans or chinos for a sleek look",
     color: "Blue",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Sweater",
     gender: "Men",
   },
@@ -110,8 +110,8 @@ const productsList = [
     description:
       "A cozy, ribbed sweater featuring a mock neck and quarter-zip front that's perfect for cool days and chilly nights. Pair with jeans, joggers or chinos for a polished casual look",
     color: "Brown",
-    price: "119.99",
-    stock: "10",
+    price: 119.99,
+    stock: 10,
     type: "Sweater",
     gender: "Men",
   },
@@ -121,8 +121,8 @@ const productsList = [
     description:
       "An everyday staple for cold weather months, this v-neck sweater is a versatile choice and pairs well any of your favorite bottoms",
     color: "Gray",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Sweater",
     gender: "Men",
   },
@@ -133,8 +133,8 @@ const productsList = [
     description:
       "This slim light wash jean features the perfect amount of stretch for all-day comfort. Throw on with sweaters or tees or a put together look",
     color: "Blue",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Pants",
     gender: "Men",
   },
@@ -144,8 +144,8 @@ const productsList = [
     description:
       "Woven on a vintage shuttle loom which provides a highly desirable irregular yarn character indicative of prized premium denim. This guarantees that no two jeans are identical. Every jean is unique",
     color: "Dark Blue",
-    price: "149.99",
-    stock: "10",
+    price: 149.99,
+    stock: 10,
     type: "Pants",
     gender: "Men",
   },
@@ -155,8 +155,8 @@ const productsList = [
     description:
       "Our hyper stretch jeans are constructed with the maximum amount of stretch for all day comfort. Featuring a slim fit in a trendy color that provides a versatile look that pairs with any outfit",
     color: "Brown",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Pants",
     gender: "Men",
   },
@@ -166,8 +166,8 @@ const productsList = [
     description:
       "These slim straight jeans feature our highest level of stretch for all-day comfort. Made in a versatile medium wash that's perfect for work or play",
     color: "Blue",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Pants",
     gender: "Men",
   },
@@ -177,8 +177,8 @@ const productsList = [
     description:
       "This slim straight jean is made with our highest level of stretch to keep you comfortable no matter where the day takes you. Featured in a stylish warm stone wash to bring new life to your wardrobe",
     color: "Light Brown",
-    price: "99.99",
-    stock: "10",
+    price: 99.99,
+    stock: 10,
     type: "Pants",
     gender: "Men",
   },
@@ -189,8 +189,8 @@ const productsList = [
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
-    price: "79.99",
-    stock: "10",
+    price: 79.99,
+    stock: 10,
     type: "Shirt",
     gender: "Men",
   },
@@ -200,8 +200,8 @@ const productsList = [
     description:
       "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling as we head into fall",
     color: "Blue",
-    price: "79.99",
-    stock: "10",
+    price: 79.99,
+    stock: 10,
     type: "Shirt",
     gender: "Men",
   },
@@ -210,9 +210,9 @@ const productsList = [
     imageURL: "/img/shirts/mensShirt3.jpg",
     description:
       "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "",
-    price: "",
-    stock: "10",
+    color: "Black/Grey",
+    price: 79.99,
+    stock: 10,
     type: "Shirt",
     gender: "Men",
   },
@@ -222,8 +222,8 @@ const productsList = [
     description:
       "A corduroy shirt is the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "Gray",
-    price: "79.99",
-    stock: "10",
+    price: 79.99,
+    stock: 10,
     type: "Shirt",
     gender: "Men",
   },
@@ -233,8 +233,8 @@ const productsList = [
     description:
       "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
     color: "Dark Brown",
-    price: "79.99",
-    stock: "10",
+    price: 79.99,
+    stock: 10,
     type: "Jacket",
     gender: "Men",
   },
@@ -245,8 +245,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Assorted",
-    price: "20.00",
-    stock: "10",
+    price: 20.00,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -256,8 +256,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Assorted",
-    price: "29.99",
-    stock: "10",
+    price: 29.99,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -267,8 +267,8 @@ const productsList = [
     description:
       "Pack includes 5 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
     color: "Assorted",
-    price: "20.00",
-    stock: "10",
+    price: 20.00,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -278,8 +278,8 @@ const productsList = [
     description:
       "Pack includes 10 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
     color: "Assorted",
-    price: "59.99",
-    stock: "10",
+    price: 59.99,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -289,8 +289,8 @@ const productsList = [
     description:
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Red plaid",
-    price: "6.99",
-    stock: "10",
+    price: 6.99,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -300,8 +300,8 @@ const productsList = [
     description:
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Blue plaid",
-    price: "6.99",
-    stock: "10",
+    price: 6.99,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -311,8 +311,8 @@ const productsList = [
     description:
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Red Buffalo plaid",
-    price: "6.99",
-    stock: "10",
+    price: 6.99,
+    stock: 10,
     type: "Underwear",
     gender: "Men",
   },
@@ -323,8 +323,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "Black",
-    price: "13.99",
-    stock: "10",
+    price: 13.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -334,8 +334,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "White",
-    price: "13.99",
-    stock: "10",
+    price: 13.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -345,8 +345,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "Black",
-    price: "15.99",
-    stock: "10",
+    price: 15.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -356,8 +356,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "Assored",
-    price: "15.99",
-    stock: "10",
+    price: 15.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -367,8 +367,8 @@ const productsList = [
     description:
       "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
     color: "Grey",
-    price: "7.99",
-    stock: "10",
+    price: 7.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -378,8 +378,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "Assored",
-    price: "19.99",
-    stock: "10",
+    price: 19.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -389,8 +389,8 @@ const productsList = [
     description:
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "Assored",
-    price: "19.99",
-    stock: "10",
+    price: 19.99,
+    stock: 10,
     type: "Socks",
     gender: "Men",
   },
@@ -401,8 +401,8 @@ const productsList = [
     description:
       "This hat is totally classic and gender-neutral, too. Wearable & shareable for you, for him, for her, for them! 100% Cotton.",
     color: "Navy blue/Blue tropical",
-    price: "9.97",
-    stock: "10",
+    price: 9.97,
+    stock: 10,
     type: "Hats",
     gender: "Men",
   },
@@ -412,8 +412,8 @@ const productsList = [
     description:
       "This baseball cap is totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them.",
     color: "Off-white/Ammonite",
-    price: "6.99",
-    stock: "10",
+    price: 6.99,
+    stock: 10,
     type: "Hats",
     gender: "Men",
   },
@@ -423,8 +423,8 @@ const productsList = [
     description:
       "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
     color: "Assorted",
-    price: "9.97",
-    stock: "10",
+    price: 9.97,
+    stock: 10,
     type: "Hats",
     gender: "Men",
   },
@@ -490,19 +490,19 @@ const seed = async () => {
 
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));
 
-  return {
-    users: {
-      moe,
-      lucy,
-      larry,
-      ethyl,
-    },
-    products: {
-      shirt,
-    },
-  };
+  // return {
+  //   users: {
+  //     moe,
+  //     lucy,
+  //     larry,
+  //     ethyl,
+  //   },
+  //   products: {
+  //     shirt,
+  //   },
+  // };
 };
 
 seed();
 
-module.exports = seed;
+//module.exports = seed;

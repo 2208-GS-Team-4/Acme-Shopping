@@ -239,13 +239,79 @@ const productsList = [
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   {
     name: "Men's Boxers 3-Pack",
-    imageURL: "/img/shirts/shirt4.jpg",
+    imageURL: "/img/underwear/mensUnderwear1.jpg",
     description:
-      "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
-    color: "Dark Brown",
-    price: "79.99",
+      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
+    color: "Assorted",
+    price: "20.00",
     stock: "10",
-    type: "Jacket",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxers 3-Pack",
+    imageURL: "/img/underwear/mensUnderwear2.jpg",
+    description:
+      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
+    color: "Assorted",
+    price: "29.99",
+    stock: "10",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxer Brief 5-Pack",
+    imageURL: "/img/underwear/mensUnderwear3.jpg",
+    description:
+      "Pack includes 5 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
+    color: "Assorted",
+    price: "20.00",
+    stock: "10",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxer Brief 10-Pack",
+    imageURL: "/img/underwear/mensUnderwear4.jpg",
+    description:
+      "Pack includes 10 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
+    color: "Assorted",
+    price: "59.99",
+    stock: "10",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxer Single",
+    imageURL: "/img/underwear/mensUnderwear5.jpg",
+    description:
+      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
+    color: "Red plaid",
+    price: "6.99",
+    stock: "10",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxer Single",
+    imageURL: "/img/underwear/mensUnderwear6.jpg",
+    description:
+      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
+    color: "Blue plaid",
+    price: "6.99",
+    stock: "10",
+    type: "Underwear",
+    gender: "Men",
+  },
+  {
+    name: "Men's Boxer Single",
+    imageURL: "/img/underwear/mensUnderwear6.jpg",
+    description:
+      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
+    color: "Red Buffalo plaid",
+    price: "6.99",
+    stock: "10",
+    type: "Underwear",
     gender: "Men",
   },
 

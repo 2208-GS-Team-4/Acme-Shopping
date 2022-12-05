@@ -9,6 +9,9 @@ const {
 } = require("./index.js");
 
 const productsList = [
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~Mens items~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   {
     name: "Wool-Blend Topcoat",
     imageURL: "/img/jacket/jacket1.jpg",
@@ -229,6 +232,26 @@ const productsList = [
     type: "Jacket",
     gender: "Men",
   },
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  {
+    name: "Men's Boxers 3-Pack",
+    imageURL: "/img/shirts/shirt4.jpg",
+    description:
+      "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
+    color: "Dark Brown",
+    price: "79.99",
+    stock: "10",
+    type: "Jacket",
+    gender: "Men",
+  },
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~Womens items~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 ];
 
 const seed = async () => {
@@ -243,6 +266,7 @@ const seed = async () => {
 
   // updating out variable names here!
   const [
+    // Mens items start here in order
     mensJacketOne,
     mensJacketTwo,
     mensJacketThree,
@@ -263,6 +287,8 @@ const seed = async () => {
     mensShirtThree,
     mensShirtFour,
     mensShirtFive,
+
+    // Womens items start here in order
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));
 
   return {

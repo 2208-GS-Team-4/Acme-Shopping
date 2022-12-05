@@ -422,7 +422,7 @@ const productsList = [
     description:
       "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
     color: "Assorted",
-    price: "8.00",
+    price: "9.97",
     stock: "10",
     type: "Hats",
     gender: "Men",

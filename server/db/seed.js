@@ -12,6 +12,8 @@ const productsList = [
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~Mens items~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+  //~~~~~Mens jacket items~~~~~//
   {
     name: "Wool-Blend Topcoat",
     imageURL: "/img/jacket/mensJacket1.jpg",
@@ -67,6 +69,7 @@ const productsList = [
     type: "Jacket",
     gender: "Men",
   },
+  //~~~~~Mens sweater items~~~~~//
   {
     name: "Cable Knit CrewNeck Sweater",
     imageURL: "/img/sweater/mensSweater1.jpg",
@@ -122,6 +125,7 @@ const productsList = [
     type: "Sweater",
     gender: "Men",
   },
+  //~~~~~Mens pants items~~~~~//
   {
     name: "Slim Light Wash Stretch Jeans",
     imageURL: "/img/pants/mensPants1.jpg",
@@ -177,6 +181,7 @@ const productsList = [
     type: "Pants",
     gender: "Men",
   },
+  //~~~~~Mens shirt items~~~~~//
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
     imageURL: "/img/shirt/mensShirt1,jpg",
@@ -232,11 +237,7 @@ const productsList = [
     type: "Jacket",
     gender: "Men",
   },
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~Mens underwear items~~~~~//
   {
     name: "Men's Boxers 3-Pack",
     imageURL: "/img/underwear/mensUnderwear1.jpg",
@@ -305,13 +306,91 @@ const productsList = [
   },
   {
     name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear6.jpg",
+    imageURL: "/img/underwear/mensUnderwear7.jpg",
     description:
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "Red Buffalo plaid",
     price: "6.99",
     stock: "10",
     type: "Underwear",
+    gender: "Men",
+  },
+  //~~~~~Mens socks items~~~~~//
+  {
+    name: "Men’s Ankle Socks 3-Pack",
+    imageURL: "/img/underwear/mensSocks1.jpg",
+    description:
+      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
+    color: "Black",
+    price: "13.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Men’s Ankle Socks 3-Pack",
+    imageURL: "/img/underwear/mensSocks2.jpg",
+    description:
+      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
+    color: "White",
+    price: "13.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Men’s Classic Socks 3-Pack",
+    imageURL: "/img/underwear/mensSocks3.jpg",
+    description:
+      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
+    color: "Black",
+    price: "15.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Men’s Classic Socks 3-Pack",
+    imageURL: "/img/underwear/mensSocks4.jpg",
+    description:
+      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
+    color: "Assored",
+    price: "15.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Men’s Classic Tube Sock Single Pair",
+    imageURL: "/img/underwear/mensSocks5.jpg",
+    description:
+      "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
+    color: "Grey",
+    price: "7.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Pop culture Gender neutral socks 3 pack",
+    imageURL: "/img/underwear/mensSocks6.jpg",
+    description:
+      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
+    color: "Assored",
+    price: "19.99",
+    stock: "10",
+    type: "Socks",
+    gender: "Men",
+  },
+  {
+    name: "Pop culture Gender neutral socks 3 pack",
+    imageURL: "/img/underwear/mensSocks7.jpg",
+    description:
+      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
+    color: "Assored",
+    price: "19.99",
+    stock: "10",
+    type: "Socks",
     gender: "Men",
   },
 
@@ -360,6 +439,13 @@ const seed = async () => {
     mensUnderwear5,
     mensUnderwear6,
     mensUnderwear7,
+    mensSocks1,
+    mensSocks2,
+    mensSocks3,
+    mensSocks4,
+    mensSocks5,
+    mensSocks6,
+    mensSocks7,
 
     // Womens items start here in order
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));

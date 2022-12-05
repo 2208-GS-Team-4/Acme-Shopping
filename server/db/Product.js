@@ -15,18 +15,30 @@ const Product = db.define('product', {
     },
     description: {
         type: Sequelize.TEXT,
-        // allowNull: false,
+        allowNull: false,
         validate: {
           notEmpty: true,
         },
     },
-    color:{ type: Sequelize.STRING,},
-    price:{ type: Sequelize.DECIMAL(5,2)},
-    size: {
-      type: Sequelize.ENUM,
-      values: ['S','M','L']
+    color:{
+      type: Sequelize.STRING
     },
-    stock: {type: Sequelize.INTEGER,},
+    price:{
+      type: Sequelize.DECIMAL(5,2)
+    },
+    // size: {
+    //   type: Sequelize.ENUM,
+    //   values: ['S','M','L']
+    // },
+    stock: {
+      type: Sequelize.INTEGER
+    },
+    type: {
+      type: Sequelize.STRING
+    },
+    gender: {
+      type: Sequelize.STRING
+    },
 });
 
 module.exports = Product;

@@ -353,6 +353,13 @@ const seed = async () => {
     mensShirtThree,
     mensShirtFour,
     mensShirtFive,
+    mensUnderwear1,
+    mensUnderwear2,
+    mensUnderwear3,
+    mensUnderwear4,
+    mensUnderwear5,
+    mensUnderwear6,
+    mensUnderwear7,
 
     // Womens items start here in order
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));

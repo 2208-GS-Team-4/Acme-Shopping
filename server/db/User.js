@@ -55,9 +55,10 @@ const User = db.define('user', {
     },
     creditCard:{
         type:Sequelize.BIGINT,
-        validate: {
-            isCreditCard: true,
-        }
+        // commenting out this validator to create fake data use FakerJS
+        //validate: {
+        //    isCreditCard: true,
+        //}
     },
     phone:{
         type:Sequelize.BIGINT,

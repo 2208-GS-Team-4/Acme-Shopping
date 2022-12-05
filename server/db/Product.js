@@ -26,6 +26,7 @@ const Product = db.define('product', {
     price:{
       type: Sequelize.DECIMAL(5,2)
     },
+    // Commenting this out to test running seed file -> need to add sizes to seed objects
     // size: {
     //   type: Sequelize.ENUM,
     //   values: ['S','M','L']

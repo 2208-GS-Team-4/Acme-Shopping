@@ -443,7 +443,6 @@ const seed = async () => {
     User.create({ username: "ethyl", password: "123" }),
   ]);
 
-  // updating out variable names here!
   const [
     // Mens items start here in order
     mensJacketOne,
@@ -485,6 +484,7 @@ const seed = async () => {
     mensHats3,
 
     // Womens items start here in order
+
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));
 
   return {

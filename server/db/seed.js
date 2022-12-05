@@ -318,7 +318,7 @@ const productsList = [
   //~~~~~Mens socks items~~~~~//
   {
     name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/underwear/mensSocks1.jpg",
+    imageURL: "/img/socks/mensSocks1.jpg",
     description:
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "Black",
@@ -329,7 +329,7 @@ const productsList = [
   },
   {
     name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/underwear/mensSocks2.jpg",
+    imageURL: "/img/socks/mensSocks2.jpg",
     description:
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "White",
@@ -340,7 +340,7 @@ const productsList = [
   },
   {
     name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/underwear/mensSocks3.jpg",
+    imageURL: "/img/socks/mensSocks3.jpg",
     description:
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "Black",
@@ -351,7 +351,7 @@ const productsList = [
   },
   {
     name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/underwear/mensSocks4.jpg",
+    imageURL: "/img/socks/mensSocks4.jpg",
     description:
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "Assored",
@@ -362,7 +362,7 @@ const productsList = [
   },
   {
     name: "Men’s Classic Tube Sock Single Pair",
-    imageURL: "/img/underwear/mensSocks5.jpg",
+    imageURL: "/img/socks/mensSocks5.jpg",
     description:
       "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
     color: "Grey",
@@ -373,7 +373,7 @@ const productsList = [
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/underwear/mensSocks6.jpg",
+    imageURL: "/img/socks/mensSocks6.jpg",
     description:
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "Assored",
@@ -384,13 +384,47 @@ const productsList = [
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/underwear/mensSocks7.jpg",
+    imageURL: "/img/socks/mensSocks7.jpg",
     description:
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "Assored",
     price: "19.99",
     stock: "10",
     type: "Socks",
+    gender: "Men",
+  },
+  //~~~~~Mens hat items~~~~~//
+  {
+    name: "Reversible Twill Bucket Hat",
+    imageURL: "/img/hat/mensHat1.1.jpg",
+    description:
+      "This hat is totally classic and gender-neutral, too. Wearable & shareable for you, for him, for her, for them! 100% Cotton.",
+    color: "Navy blue/Blue tropical",
+    price: "9.97",
+    stock: "10",
+    type: "Hats",
+    gender: "Men",
+  },
+  {
+    name: "Classic Baseball Brim",
+    imageURL: "/img/hat/mensHat2.jpg",
+    description:
+      "This baseball cap is totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them.",
+    color: "Off-white/Ammonite",
+    price: "6.99",
+    stock: "10",
+    type: "Hats",
+    gender: "Men",
+  },
+  {
+    name: "Red Knit Beanie",
+    imageURL: "/img/hat/mensHat3.3.jpg",
+    description:
+      "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
+    color: "Assorted",
+    price: "8.00",
+    stock: "10",
+    type: "Hats",
     gender: "Men",
   },
 
@@ -446,6 +480,9 @@ const seed = async () => {
     mensSocks5,
     mensSocks6,
     mensSocks7,
+    mensHats1,
+    mensHats2,
+    mensHats3,
 
     // Womens items start here in order
   ] = await Promise.all(productsList.map((singleProduct) => Product.create(singleProduct)));

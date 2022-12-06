@@ -30,7 +30,7 @@ router.get("/:productType", async (req, res, next) => {
 router.get("/:productType/:productName", async (req, res, next) => {
   //      sweater/1
   const productName = req.params.productName;
-  const product = await Product.findByAll({
+  const product = await Product.findAll({
     where: {
       name: productName,
     },

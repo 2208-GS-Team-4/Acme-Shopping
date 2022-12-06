@@ -1918,6 +1918,8 @@ let dress = [
     size: "S",
     stock: 5,
     imageURL: "/img/dress/floralDress1.png",
+    description:
+      "Flowy fabric. Evasé design. Floral print. Short design. Puffed short sleeve. Rounded neck. Back slit. Bow fastening on the back. Button closing on the neck.",
   },
   {
     type: "dress",

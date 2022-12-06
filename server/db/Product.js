@@ -15,10 +15,10 @@ const Product = db.define('product', {
     },
     description: {
         type: Sequelize.TEXT,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
+        // allowNull: false,
+        // validate: {
+        //   notEmpty: true,
+        // },
     },
     color:{
       type: Sequelize.STRING
@@ -27,10 +27,10 @@ const Product = db.define('product', {
       type: Sequelize.DECIMAL(5,2)
     },
     // Commenting this out to test running seed file -> need to add sizes to seed objects
-    // size: {
-    //   type: Sequelize.ENUM,
-    //   values: ['S','M','L']
-    // },
+    size: {
+      type: Sequelize.ENUM,
+      values: ['S','M','L']
+    },
     stock: {
       type: Sequelize.INTEGER
     },

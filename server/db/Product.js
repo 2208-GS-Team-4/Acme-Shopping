@@ -27,9 +27,9 @@ const Product = db.define("product", {
     type: Sequelize.DECIMAL(5, 2),
   },
   // Commenting this out to test running seed file -> need to add sizes to seed objects
-  // option: {
-  //   type: Sequelize.ARRAY(Sequelize.STRING),
-  // },
+  option: {
+    type: Sequelize.JSON,
+  },
   type: {
     type: Sequelize.STRING,
   },

@@ -10,7 +10,7 @@ const CartProduct = db.define('cartproduct', {
         },
     })
 
-module.exports = CartProduct
+module.exports = CartProduct;
 
 
 // const ActorMovies = sequelize.define('ActorMovies', {

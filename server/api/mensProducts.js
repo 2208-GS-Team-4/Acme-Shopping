@@ -3,7 +3,7 @@ const router = express.Router();
 const sequelize = require("sequelize");
 const { Product } = require("../db");
 
-// GETlocalhost:3000/api/mens
+// GETlocalhost:3000/api/men
 router.get("/", async (req, res, next) => {
   const menProducts = await Product.findAll({
     where: {
@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
   res.send(menProducts);
 });
 
-// GET localhost:3000/api/mens/:productType
+// GET localhost:3000/api/men/:productType
 router.get("/:productType", async (req, res, next) => {
   //sweater
   const productType = req.params.productType;
@@ -26,7 +26,7 @@ router.get("/:productType", async (req, res, next) => {
   res.send(products);
 });
 
-// GET localhost:3000/api/mens/:productType/:productId
+// GET localhost:3000/api/men/:productType/:productId
 router.get("/:productType/:productName", async (req, res, next) => {
   //      sweater/1
   const productName = req.params.productName;

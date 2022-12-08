@@ -2024,6 +2024,17 @@ const userList = [
     creditCard: 8816599003432313,
     phone: 13263105256,
   },
+  {
+    firstName: "Ben",
+    lastName: "Odisho",
+    email: "benodisho@gmail.com",
+    username: "ben123",
+    password: "ben123",
+    shippingAddress: "123 ben st",
+    billingAddress: "123 ben st",
+    creditCard: 8816599003432312,
+    phone: 13263105259,
+  },
 ];
 
 const seed = async () => {

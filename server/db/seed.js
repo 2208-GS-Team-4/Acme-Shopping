@@ -747,34 +747,13 @@ const mensUnderwear = [
       "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "assorted",
     price: 20.0,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxers 3-Pack",
-    imageURL: "/img/underwear/mensUnderwear1.jpg",
-    description:
-      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "assorted",
-    price: 20.0,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxers 3-Pack",
-    imageURL: "/img/underwear/mensUnderwear1.jpg",
-    description:
-      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "assorted",
-    price: 20.0,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxers 3-Pack",
@@ -783,34 +762,13 @@ const mensUnderwear = [
       "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "assorted",
     price: 29.99,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxers 3-Pack",
-    imageURL: "/img/underwear/mensUnderwear2.jpg",
-    description:
-      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "assorted",
-    price: 29.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxers 3-Pack",
-    imageURL: "/img/underwear/mensUnderwear2.jpg",
-    description:
-      "Pack includes 3 pairs of boxer shorts, each in a different color, print or pattern. Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "assorted",
-    price: 29.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxer Brief 5-Pack",
@@ -819,33 +777,12 @@ const mensUnderwear = [
       "Pack includes 5 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
     color: "assorted",
     price: 20.0,
-    stock: 10,
     type: "underwear",
-    size: "S",
-  },
-  {
-    name: "Men's Boxer Brief 5-Pack",
-    imageURL: "/img/underwear/mensUnderwear3.jpg",
-    description:
-      "Pack includes 5 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
-    color: "assorted",
-    price: 20.0,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxer Brief 5-Pack",
-    imageURL: "/img/underwear/mensUnderwear3.jpg",
-    description:
-      "Pack includes 5 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
-    color: "assorted",
-    price: 20.0,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxer Brief 10-Pack",
@@ -854,34 +791,13 @@ const mensUnderwear = [
       "Pack includes 10 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
     color: "assorted",
     price: 59.99,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxer Brief 10-Pack",
-    imageURL: "/img/underwear/mensUnderwear4.jpg",
-    description:
-      "Pack includes 10 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
-    color: "assorted",
-    price: 59.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxer Brief 10-Pack",
-    imageURL: "/img/underwear/mensUnderwear4.jpg",
-    description:
-      "Pack includes 10 pairs of boxer brief underwear, each in a different print, pattern or color. Elastic comfort waistband. Fly front. Soft-washed cotton jersey for the ultimate soft underwear. We put it through the wringer so you don't have to.n Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em.",
-    color: "assorted",
-    price: 59.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxer Single",
@@ -890,34 +806,13 @@ const mensUnderwear = [
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "red plaid",
     price: 6.99,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear5.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "red plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear5.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "red plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxer Single",
@@ -926,34 +821,13 @@ const mensUnderwear = [
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "blue plaid",
     price: 6.99,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear6.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "blue plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear6.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "blue plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men's Boxer Single",
@@ -962,34 +836,13 @@ const mensUnderwear = [
       "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
     color: "red Buffalo plaid",
     price: 6.99,
-    stock: 10,
     type: "underwear",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear7.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "red Buffalo plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men's Boxer Single",
-    imageURL: "/img/underwear/mensUnderwear7.jpg",
-    description:
-      "Elasticized waistband. Fly front. Soft-washed 100% cotton poplin for the ultimate soft underwear. We put it through the wringer so you don't have to.",
-    color: "red Buffalo plaid",
-    price: 6.99,
-    stock: 10,
-    type: "underwear",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
 ];
 
@@ -1002,34 +855,13 @@ const mensSocks = [
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "black",
     price: 13.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks1.jpg",
-    description:
-      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
-    color: "black",
-    price: 13.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks1.jpg",
-    description:
-      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
-    color: "black",
-    price: 13.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men’s Ankle Socks 3-Pack",
@@ -1038,34 +870,13 @@ const mensSocks = [
       "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
     color: "white",
     price: 13.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks2.jpg",
-    description:
-      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
-    color: "white",
-    price: 13.99,
-    stock: 10,
-    type: "socks",
-    gender: "Men",
-    size: "M",
-  },
-  {
-    name: "Men’s Ankle Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks2.jpg",
-    description:
-      "Pack includes 3 pairs of Go-Dry running socks. Rib-knit ankle-length openings. Embroidered Old Navy Active logo. Mesh top for breathability. Cushioned throughout; seamless toe. Superior Go-Dry wicking keeps you dry & comfortable. Soft cotton blend with added stretch.",
-    color: "white",
-    price: 13.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -1074,34 +885,13 @@ const mensSocks = [
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "black",
     price: 15.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks3.jpg",
-    description:
-      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
-    color: "black",
-    price: 15.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks3.jpg",
-    description:
-      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
-    color: "black",
-    price: 15.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -1110,34 +900,13 @@ const mensSocks = [
       "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
     color: "assored",
     price: 15.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks4.jpg",
-    description:
-      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
-    color: "assored",
-    price: 15.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men’s Classic Socks 3-Pack",
-    imageURL: "/img/socks/mensSocks4.jpg",
-    description:
-      "Pack includes 3 pairs of training socks. Breathable mesh top lets you vent. Go-Dry moisture-wicking technology keeps you dry & comfortable. Cushioned heel and toe for added comfort. Soft, microfiber knit, with comfortable stretch. Old Navy Active logo graphic at ribbed openings.",
-    color: "assored",
-    price: 15.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Men’s Classic Tube Sock Single Pair",
@@ -1146,34 +915,13 @@ const mensSocks = [
       "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
     color: "grey",
     price: 7.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Men’s Classic Tube Sock Single Pair",
-    imageURL: "/img/socks/mensSocks5.jpg",
-    description:
-      "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
-    color: "grey",
-    price: 7.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Men’s Classic Tube Sock Single Pair",
-    imageURL: "/img/socks/mensSocks5.jpg",
-    description:
-      "Rib-knit cuffs and tube-style openings with multi-color stripes. Soft-knit fabric. with comfortable stretch. Notched seams at toe and heel for added comfort.",
-    color: "grey",
-    price: 7.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -1182,34 +930,13 @@ const mensSocks = [
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "assored",
     price: 19.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/socks/mensSocks6.jpg",
-    description:
-      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
-    color: "assored",
-    price: 19.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/socks/mensSocks6.jpg",
-    description:
-      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
-    color: "assored",
-    price: 19.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -1218,35 +945,14 @@ const mensSocks = [
       "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
     color: "assored",
     price: 19.99,
-    stock: 10,
     type: "socks",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/socks/mensSocks7.jpg",
-    description:
-      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
-    color: "assored",
-    price: 19.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Pop culture Gender neutral socks 3 pack",
-    imageURL: "/img/socks/mensSocks7.jpg",
-    description:
-      "Pack includes 3 pairs of graphic socks, featuring your favorite licensed pop-culture characters. These licensed graphic socks are totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them! Contrasting rib-knit openings and notched toes. Soft-knit fabric, with comfortable stretch.",
-    color: "assored",
-    price: 19.99,
-    stock: 10,
-    type: "socks",
-    gender: "men",
-    size: "L",
-  },
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  }
 ];
 //~~~~~Mens hat items~~~~~//
 const mensHats = [
@@ -1257,34 +963,13 @@ const mensHats = [
       "This hat is totally classic and gender-neutral, too. Wearable & shareable for you, for him, for her, for them! 100% Cotton.",
     color: "navy blue/blue tropical",
     price: 9.97,
-    stock: 10,
     type: "hat",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Reversible Twill Bucket Hat",
-    imageURL: "/img/hat/mensHat1.1.jpg",
-    description:
-      "This hat is totally classic and gender-neutral, too. Wearable & shareable for you, for him, for her, for them! 100% Cotton.",
-    color: "Navy blue/blue tropical",
-    price: 9.97,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Reversible Twill Bucket Hat",
-    imageURL: "/img/hat/mensHat1.1.jpg",
-    description:
-      "This hat is totally classic and gender-neutral, too. Wearable & shareable for you, for him, for her, for them! 100% Cotton.",
-    color: "Navy blue/blue tropical",
-    price: 9.97,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Classic Baseball Brim",
@@ -1293,34 +978,13 @@ const mensHats = [
       "This baseball cap is totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them.",
     color: "off-white/Ammonite",
     price: 6.99,
-    stock: 10,
     type: "hat",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Classic Baseball Brim",
-    imageURL: "/img/hat/mensHat2.jpg",
-    description:
-      "This baseball cap is totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them.",
-    color: "off-white/Ammonite",
-    price: 6.99,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Classic Baseball Brim",
-    imageURL: "/img/hat/mensHat2.jpg",
-    description:
-      "This baseball cap is totally classic & gender neutral, too. Wearable & shareable for you, for him, for her, for them.",
-    color: "off-white/Ammonite",
-    price: 6.99,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Red Knit Beanie",
@@ -1329,35 +993,14 @@ const mensHats = [
       "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
     color: "assorted",
     price: 9.97,
-    stock: 10,
     type: "hat",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Red Knit Beanie",
-    imageURL: "/img/hat/mensHat3.3.jpg",
-    description:
-      "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
-    color: "assorted",
-    price: 9.97,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Red Knit Beanie",
-    imageURL: "/img/hat/mensHat3.3.jpg",
-    description:
-      "This beanie hat is totally cozy & gender-neutral, too. Wearable & shareable for you, for him, for her, for them.",
-    color: "assorted",
-    price: 9.97,
-    stock: 10,
-    type: "hat",
-    gender: "men",
-    size: "L",
-  },
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  }
 ];
 
 //-------------------------Women' Products--------------------------//

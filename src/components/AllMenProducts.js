@@ -26,7 +26,7 @@ const AllMenProducts = () => {
         return (
           <div key={product.id}>
             <Link to={`/men/${product.type}/${product.id}`}>
-              {/* <img src={product.imageURL} /> */}
+              <img src={product.imageURL} />
               <p>{product.name}</p>
             </Link>
           </div>

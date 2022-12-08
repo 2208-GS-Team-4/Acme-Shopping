@@ -27,12 +27,12 @@ router.get("/:productType", async (req, res, next) => {
 });
 
 // GET localhost:3000/api/men/:productType/:productId
-router.get("/:productType/:productName", async (req, res, next) => {
+router.get("/:productType/:id", async (req, res, next) => {
   //      sweater/1
-  const productName = req.params.productName;
+  const id = req.params.id;
   const product = await Product.findAll({
     where: {
-      name: productName,
+      id: id,
     },
   });
   res.send(product);

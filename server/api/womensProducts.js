@@ -26,9 +26,9 @@ router.get("/:type", async (req, res, next) => {
 });
 
 // GET localhost:3000/api/women/:type/:id
-router.get("/:productType/:name", async (req, res, next) => {
-  const name = req.params.name;
-  const product = await Product.findAll({ where: { name: name } });
+router.get("/:productType/:id", async (req, res, next) => {
+  const id = req.params.id;
+  const product = await Product.findAll({ where: { id: id } });
   res.send(product);
 });
 module.exports = router;

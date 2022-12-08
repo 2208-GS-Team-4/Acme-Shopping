@@ -19,7 +19,12 @@ const ProductCategoryWomen = () => {
   return (
     <div>
       {products.map((product) => {
-        return product.name;
+        return (
+          <div>
+            <img src={product.imageURL} />
+            <p>{product.name}</p>
+          </div>
+        );
       })}
     </div>
   );

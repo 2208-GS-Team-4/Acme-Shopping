@@ -558,7 +558,7 @@ const menPants = [
 const menShirts = [
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -570,7 +570,7 @@ const menShirts = [
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -582,7 +582,7 @@ const menShirts = [
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -753,7 +753,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxers 3-Pack",
@@ -768,7 +768,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Brief 5-Pack",
@@ -782,7 +782,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Brief 10-Pack",
@@ -797,7 +797,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -812,7 +812,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -827,7 +827,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -842,7 +842,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 
@@ -861,7 +861,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Ankle Socks 3-Pack",
@@ -876,7 +876,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -891,7 +891,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -906,7 +906,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Tube Sock Single Pair",
@@ -921,7 +921,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -936,7 +936,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -951,8 +951,8 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 //~~~~~Mens hat items~~~~~//
 const mensHats = [
@@ -969,7 +969,7 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Classic Baseball Brim",
@@ -984,7 +984,7 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Red Knit Beanie",
@@ -999,8 +999,8 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 
 //-------------------------Women' Products--------------------------//
@@ -1410,7 +1410,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/socks/woolSocks.png",
+    imageURL: "/img/socks/woolSocks.jpeg",
     description: "Fine-knit socks in a soft, warm wool blend with ribbed tops.",
   },
   {
@@ -1424,7 +1424,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 10.99,
-    imageURL: "/img/socks/ankleSocks.png",
+    imageURL: "/img/socks/ankleSocks.jpeg",
     description: "Fine-knit ankle socks in a soft cotton blend.",
   },
   {
@@ -1438,7 +1438,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/socks/fishnetTightsSocks.png",
+    imageURL: "/img/socks/fishnetTightsSocks.jpeg",
     description:
       "Rhinestone-embellished fishnet tights with a regular waist and elasticized waistband.",
   },
@@ -1453,7 +1453,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 2.99,
-    imageURL: "/img/socks/sportsSocks.png",
+    imageURL: "/img/socks/sportSocks.jpeg",
     description:
       "Sports socks in DryMove™ functional fabric to wick away moisture from skin and keep you comfortably dry while moving. High leg section with ribbing and reflective details.",
   },
@@ -1468,7 +1468,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 8.99,
-    imageURL: "/img/socks/fuzzySocks.png",
+    imageURL: "/img/socks/fuzzySocks.jpeg",
     description: "Soft, fine-knit socks with elasticized tops.",
   },
 ];
@@ -1484,7 +1484,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 15.99,
-    imageURL: "/img/underwear/brazilianUnderwear.png",
+    imageURL: "/img/underwear/brazilianUnderwear.jpeg",
     description:
       "Briefs in jersey with a low waist, high-cut back, and lined gusset.",
   },
@@ -1499,7 +1499,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/underwear/thongUnderwear.png",
+    imageURL: "/img/underwear/thongUnderwear.jpeg",
     description:
       "Thong brief in cotton jersey with a regular waist. Lined gusset",
   },
@@ -1514,7 +1514,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 7.99,
-    imageURL: "/img/underwear/hipsterUnderwear.png",
+    imageURL: "/img/underwear/hipsterUnderwear.jpeg",
     description:
       "Briefs in cotton-blend jersey with a regular waist, medium coverage at back, and lined gusset. Cotton content is organic.",
   },
@@ -1529,7 +1529,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 25.99,
-    imageURL: "/img/underwear/shapingUnderwear.png",
+    imageURL: "/img/underwear/shapingUnderwear.jpeg",
     description:
       "Shaping bikers in microfiber with a light sculpting effect on tummy, thighs, and seat. High waist, lined gusset, and laser-cut edges around legs for seamless comfort and minimal visibility under clothes.",
   },
@@ -1544,7 +1544,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 15.99,
-    imageURL: "/img/underwear/maternityUnderwear.png",
+    imageURL: "/img/underwear/maternityUnderwear.jpeg",
     description:
       "Hipster briefs in organic cotton jersey with lace trim at top, wide sides, and medium coverage at back. Lined gusset.",
   },

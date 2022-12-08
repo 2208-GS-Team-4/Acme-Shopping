@@ -30,15 +30,12 @@ const App = () => {
   if (!user.id) return <Login />;
   return (
     <div>
-      <h1>Acme Shopping</h1>
-      <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/men">Men</Link>
-          <Link to="/women">Women</Link>
-        </nav>
-        <RouterComponent />
-      </div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/men">Men</Link>
+        <Link to="/women">Women</Link>
+      </nav>
+      <RouterComponent />
     </div>
   );
 };

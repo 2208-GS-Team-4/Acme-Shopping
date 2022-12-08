@@ -15,24 +15,28 @@ const AllMenProducts = () => {
 
   return (
     <div>
-      <Link to="/men/jacket">Jackets</Link>
-      <Link to="/men/sweater">Sweaters</Link>
-      <Link to="/men/pants">Pants</Link>
-      <Link to="/men/shirt">Shirts</Link>
-      <Link to="/men/socks">Socks</Link>
-      <Link to="/men/hat">Hats</Link>
+      <div className="sideMenu">
+        <Link to="/men/jacket">Jackets</Link>
+        <Link to="/men/sweater">Sweaters</Link>
+        <Link to="/men/pants">Pants</Link>
+        <Link to="/men/shirt">Shirts</Link>
+        <Link to="/men/socks">Socks</Link>
+        <Link to="/men/hat">Hats</Link>
+      </div>
       {/* <Link to="/men/accessories">Accessories</Link> */}
-      {products.map((product) => {
-        return (
-          <div key={product.id}>
-            <Link to={`/men/${product.type}/${product.id}`}>
-              <img src={product.imageURL} />
-              <p>{product.name}</p>
-            </Link>
-          </div>
-        );
-      })}
-      THIS IS THE ALL MENS PAGE
+      <div className="grid-container">
+        {products.map((product) => {
+          return (
+            <div key={product.id} className="grid-item">
+              <Link to={`/men/${product.type}/${product.id}`}>
+                <img src={product.imageURL} />
+                <p>{product.name}</p>
+              </Link>
+            </div>
+          );
+        })}{" "}
+      </div>
+      ;
     </div>
   );
 };

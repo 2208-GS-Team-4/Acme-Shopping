@@ -14,8 +14,9 @@ const Home = () => {
 
   return (
     <div id="loggedInDiv">
-      <p>Welcome {user.username}!!</p>
-      <button onClick={logout}>Logout</button>
+      {user.id && <p>Welcome {user.username}!!</p>}
+      {user.id && <button onClick={logout}>Logout</button>}
+      {!user.id && <Link to="/login">Login</Link>}
     </div>
   );
 };

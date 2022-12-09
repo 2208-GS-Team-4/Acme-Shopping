@@ -7,31 +7,44 @@ import ProductCategoryMen from "./ProductCategoryMen";
 import ProductCategoryWomen from "./ProductCategoryWomen";
 import SingleMenProduct from "./SingleMenProduct";
 import SingleWomenProduct from "./SingleWomenProduct";
+import Login from "./Login";
+import Register from "./Register";
+
+import { setUser } from "../store/userSlice";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 
 const RouterComponent = () => {
+  const { user } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  const loginWithToken = async () => {
+    const token = window.localStorage.getItem("token");
+    if (token) {
+      const response = await axios.get("/api/auth", {
+        headers: {
+          authorization: token,
+        },
+      });
+      dispatch(setUser(response.data));
+    }
+  };
+
+  useEffect(() => {
+    loginWithToken();
+  }, []);
+
   return (
     <Routes>
+      {!user.id && <Route path='/login' element={<Login />}/>}
+      {!user.id && <Route path='/register' element={<Register />}/>}
       <Route exact path="/" element={<Home />} />
-
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
-      <Route
-        exact
-        path="/men/:productType/:id"
-        element={<SingleMenProduct />}
-      />
-
+      <Route exact path="/men/:productType/:id" element={<SingleMenProduct />}/>
       <Route exact path="/women" element={<AllWomenProducts />} />
-      <Route
-        exact
-        path="/women/:productType"
-        element={<ProductCategoryWomen />}
-      />
-      <Route
-        exact
-        path="/women/:productType/:id"
-        element={<SingleWomenProduct />}
-      />
+      <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
+      <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
     </Routes>
   );
 };

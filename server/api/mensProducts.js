@@ -37,4 +37,5 @@ router.get("/:productType/:id", async (req, res, next) => {
   });
   res.send(product);
 });
+
 module.exports = router;

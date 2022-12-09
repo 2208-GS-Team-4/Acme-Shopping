@@ -267,14 +267,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-<<<<<<< HEAD
     option: [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
     ]
-=======
-    size: "S",
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -286,7 +283,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "M",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -298,8 +299,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "L",
->>>>>>> f99ba1f0b684e3887968c99f1bca5d066f239b6e
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Floral Stretch Corduroy Shirt",

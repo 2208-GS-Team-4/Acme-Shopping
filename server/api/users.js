@@ -9,6 +9,23 @@ router.get("/", async (req, res, next) => {
     res.send(users);
   });
 
+// POST localhost:3000/api/users/
+router.post("/", async (req, res, next) => {
+  const data = {
+    firstName,
+    lastName,
+    email,
+    username,
+    password,
+    //shippingAddress,
+    //billingAddress,
+    //creditCard,
+    //phone
+  } = req.body;
+  const newUser = await User.create(data);
+  res.send(newUser);
+});
+
 // GET localhost:3000/api/users/:userId
 router.get("/:userId", async (req, res, next) => {
   const user = await User.findByPk(req.params.userId,{

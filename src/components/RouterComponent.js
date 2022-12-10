@@ -16,23 +16,6 @@ import axios from "axios";
 
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-
-  const loginWithToken = async () => {
-    const token = window.localStorage.getItem("token");
-    if (token) {
-      const response = await axios.get("/api/auth", {
-        headers: {
-          authorization: token,
-        },
-      });
-      dispatch(setUser(response.data));
-    }
-  };
-
-  useEffect(() => {
-    loginWithToken();
-  }, []);
 
   return (
     <Routes>

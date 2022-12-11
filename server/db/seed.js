@@ -1332,6 +1332,7 @@ const seed = async () => {
     HudsonLegros,
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
+  // ------------- create all user carts here---------//
   let cartList = [
     {total:0,userId:HowellAltenwerth.id},
     {total:0,userId:DaphneyBednar.id},
@@ -1345,8 +1346,18 @@ const seed = async () => {
     {total:0,userId:HudsonLegros.id},
   ];
 
-  // ------------- create all user carts here---------//
-  cartList = await Promise.all(cartList.map((singleCart)=>Cart.create(singleCart)));
+  const [
+    HowellAltenwerthCart,
+    DaphneyBednarCart,
+    BreanaPourosCart,
+    RosalindOberbrunnerCart,
+    MalcolmBraunCart,
+    JacintoChamplinCart,
+    NyahLakinCart,
+    AlfredProhaskaCart,
+    CharleyKulasCart,
+    HudsonLegrosCart,
+  ] = await Promise.all(cartList.map((singleCart)=>Cart.create(singleCart)));
 
   // ------------- create all womens items here------later check if we need array name for product.create or not---------//
   womensBlouses = await Promise.all(

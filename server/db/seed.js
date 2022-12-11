@@ -9,7 +9,7 @@ const {
 } = require("./index.js");
 
 //-------------------------Men's Products--------------------------//
-const menJackets = [
+let mensJackets = [
   {
     name: "Wool-Blend Topcoat",
     imageURL: "/img/jacket/mensJacket1.jpg",
@@ -91,7 +91,7 @@ const menJackets = [
     ]
   }
 ];
-const menSweaters = [
+let mensSweaters = [
   {
     name: "Cable Knit CrewNeck Sweater",
     imageURL: "/img/sweater/mensSweater1.jpg",
@@ -174,7 +174,7 @@ const menSweaters = [
   },
   
 ];
-const menPants = [
+let mensPants = [
   {
     name: "Slim Light Wash Stretch Jeans",
     imageURL: "/img/pants/mensPants1.jpg",
@@ -256,7 +256,7 @@ const menPants = [
     ]
   },
 ];
-const menShirts = [
+let mensShirts = [
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
     imageURL: "/img/shirts/mensShirt1.jpg",
@@ -372,7 +372,7 @@ const menShirts = [
 ];
 
 //~~~~~Mens underwear items~~~~~//
-const mensUnderwear = [
+let mensUnderwear = [
   {
     name: "Men's Boxers 3-Pack",
     imageURL: "/img/underwear/mensUnderwear1.jpg",
@@ -480,7 +480,7 @@ const mensUnderwear = [
 ];
 
 //~~~~~Mens socks items~~~~~//
-const mensSocks = [
+let mensSocks = [
   {
     name: "Men’s Ankle Socks 3-Pack",
     imageURL: "/img/socks/mensSocks1.jpg",
@@ -588,7 +588,7 @@ const mensSocks = [
   },
 ];
 //~~~~~Mens hat items~~~~~//
-const mensHats = [
+let mensHats = [
   {
     name: "Reversible Twill Bucket Hat",
     imageURL: "/img/hat/mensHat1.1.jpg",
@@ -637,7 +637,7 @@ const mensHats = [
 ];
 
 //-------------------------Women' Products--------------------------//
-let blouse = [
+let womensBlouses = [
   {
     type: "blouse",
     gender: "women",
@@ -715,7 +715,7 @@ let blouse = [
   },
 ];
 
-let womenPants = [
+let womensPants = [
   {
     type: "pants",
     gender: "women",
@@ -794,7 +794,7 @@ let womenPants = [
       "Flowy fabric. Suit style. Wide-leg design. Side zip fastening. ",
   },
 ];
-let womenJacket = [
+let womensJackets = [
   {
     type: "jacket",
     gender: "women",
@@ -875,7 +875,7 @@ let womenJacket = [
       "Cotton-blend fabric. Tweed fabric. Straight design. Long design. Blazer style. Lapel-collar V-neck collar. Long sleeve. Two pockets with flaps. Inner lining. Button fastening on the front.",
   },
 ];
-let dress = [
+let womensDresses = [
   {
     type: "dress",
     gender: "women",
@@ -956,7 +956,7 @@ let dress = [
       "Recycled polyester blend fabric. Long design. Evasé design. Crossover design. V-neck. Long sleeve. Side bow fastening.",
   },
 ];
-let womenHat = [
+let womensHats = [
   {
     type: "hat",
     gender: "women",
@@ -1031,7 +1031,7 @@ let womenHat = [
   },
 ];
 
-let womenSocks = [
+let womensSocks = [
   {
     type: "socks",
     gender: "women",
@@ -1105,7 +1105,7 @@ let womenSocks = [
     description: "Soft, fine-knit socks with elasticized tops.",
   },
 ];
-let womenUnderwear = [
+let womensUnderwear = [
   {
     type: "underwear",
     gender: "women",
@@ -1189,7 +1189,7 @@ let womenUnderwear = [
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-const userList = [
+let userList = [
   {
     firstName: "Howell",
     lastName: "Altenwerth",
@@ -1333,42 +1333,55 @@ const seed = async () => {
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
   // ------------- create all womens items here------later check if we need array name for product.create or not---------//
-  blouse = await Promise.all(blouse.map((item) => Product.create(item)));
-  womenPants = await Promise.all(
-    womenPants.map((item) => Product.create(item))
+  womensBlouses = await Promise.all(
+    womensBlouses.map((item) => Product.create(item))
   );
-  womenJacket = await Promise.all(
-    womenJacket.map((item) => Product.create(item))
+  womensPants = await Promise.all(
+    womensPants.map((item) => Product.create(item))
   );
-  dress = await Promise.all(dress.map((item) => Product.create(item)));
-  womenHat = await Promise.all(womenHat.map((item) => Product.create(item)));
-  womenSocks = await Promise.all(
-    womenSocks.map((item) => Product.create(item))
+  womensJackets = await Promise.all(
+    womensJackets.map((item) => Product.create(item))
   );
-  womenUnderwear.map((item) => Product.create(item));
+  womensDresses = await Promise.all(
+    womensDresses.map((item) => Product.create(item))
+  );
+  womensHats = await Promise.all(
+    womensHats.map((item) => Product.create(item))
+  );
+  womensSocks = await Promise.all(
+    womensSocks.map((item) => Product.create(item))
+  );
+  womensUnderwear = await Promise.all(
+    womensUnderwear.map((item) => Product.create(item))
+  );
 
   // ------------- create all mens items here-------------//
-  await Promise.all(mensUnderwear.map((item) => Product.create(item)));
-  await Promise.all(mensSocks.map((item) => Product.create(item)));
-  await Promise.all(mensHats.map((item) => Product.create(item)));
-
-  const menJacket = await Promise.all(
-    menJackets.map((jacket) => {
+  mensUnderwear = await Promise.all(
+    mensUnderwear.map((item) => Product.create(item))
+  );
+  mensSocks = await Promise.all(
+    mensSocks.map((item) => Product.create(item))
+  );
+  mensHats = await Promise.all(
+    mensHats.map((item) => Product.create(item))
+  );
+  mensJackets = await Promise.all(
+    mensJackets.map((jacket) => {
       Product.create(jacket);
     })
   );
-  const menSweater = await Promise.all(
-    menSweaters.map((sweater) => {
+  mensSweaters = await Promise.all(
+    mensSweaters.map((sweater) => {
       Product.create(sweater);
     })
   );
-  const menPant = await Promise.all(
-    menPants.map((pant) => {
+  mensPants = await Promise.all(
+    mensPants.map((pant) => {
       Product.create(pant);
     })
   );
-  const menShirt = await Promise.all(
-    menShirts.map((shirt) => {
+  mensShirts = await Promise.all(
+    mensShirts.map((shirt) => {
       Product.create(shirt);
     })
   );

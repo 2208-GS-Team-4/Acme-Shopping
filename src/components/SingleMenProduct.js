@@ -9,20 +9,20 @@ const SingleMenProduct = () => {
 
   const getProduct = async (productType, id) => {
     const response = await axios.get(`/api/men/${productType}/${id}`);
-    setProduct(response.data);
+    setProduct(response.data[0]);
     setLoading(false);
   };
 
   useEffect(() => {
     getProduct(productType, id);
   }, []);
-  console.log(product[0]);
-  if (loading) {
-    return <p>Loading...</p>;
-  } else {
-    return <div>{product.name}</div>;
-    // return <div>hello</div>;
-  }
+
+  if(loading) return (
+    <p>Loading...</p>
+  );
+  return(
+    <div>{product.name}</div>
+  );
 };
 
 export default SingleMenProduct;

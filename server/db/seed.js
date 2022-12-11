@@ -43,7 +43,7 @@ let mensJackets = [
     ]
   },
   {
-    name: " Wool-Blend Hooded Topcoat",
+    name: "Wool-Blend Hooded Topcoat",
     imageURL: "/img/jacket/mensJacket3.jpg",
     description:
       "With a twist on the classic, this wool-blend topcoat features a drawstring hood and a covered zip closure. Pair with jeans and boots for a casual look",
@@ -1183,12 +1183,7 @@ let womensUnderwear = [
   },
 ];
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~Users~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+//-------------------------Users--------------------------//
 let userList = [
   {
     firstName: "Howell",
@@ -1318,21 +1313,7 @@ const seed = async () => {
 
   await db.sync({ force: true });
 
-  // ------------- create all users here-------------//
-  const [
-    HowellAltenwerth,
-    DaphneyBednar,
-    BreanaPouros,
-    RosalindOberbrunner,
-    MalcolmBraun,
-    JacintoChamplin,
-    NyahLakin,
-    AlfredProhaska,
-    CharleyKulas,
-    HudsonLegros,
-  ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
-
-  // ------------- create all womens items here------later check if we need array name for product.create or not---------//
+  //-------------create all womens items here-------------//
   womensBlouses = await Promise.all(
     womensBlouses.map((item) => Product.create(item))
   );
@@ -1355,7 +1336,13 @@ const seed = async () => {
     womensUnderwear.map((item) => Product.create(item))
   );
 
-  // ------------- create all mens items here-------------//
+  //-------------create all mens items here-------------//
+  mensJackets = await Promise.all(
+    mensJackets.map((jacket) => Product.create(jacket))
+  );
+  mensSweaters = await Promise.all(
+    mensSweaters.map((sweater) => Product.create(sweater))
+  );
   mensUnderwear = await Promise.all(
     mensUnderwear.map((item) => Product.create(item))
   );
@@ -1365,25 +1352,45 @@ const seed = async () => {
   mensHats = await Promise.all(
     mensHats.map((item) => Product.create(item))
   );
-  mensJackets = await Promise.all(
-    mensJackets.map((jacket) => {
-      Product.create(jacket);
-    })
-  );
-  mensSweaters = await Promise.all(
-    mensSweaters.map((sweater) => {
-      Product.create(sweater);
-    })
-  );
   mensPants = await Promise.all(
-    mensPants.map((pant) => {
-      Product.create(pant);
-    })
+    mensPants.map((pant) => Product.create(pant))
   );
   mensShirts = await Promise.all(
-    mensShirts.map((shirt) => {
-      Product.create(shirt);
-    })
+    mensShirts.map((shirt) => Product.create(shirt))
+  );
+
+  //-------------create all users here-------------//
+  const [
+    HowellAltenwerth,
+    DaphneyBednar,
+    BreanaPouros,
+    RosalindOberbrunner,
+    MalcolmBraun,
+    JacintoChamplin,
+    NyahLakin,
+    AlfredProhaska,
+    CharleyKulas,
+    HudsonLegros,
+  ] = await Promise.all(
+    userList.map((singleUser) => User.create(singleUser))
+  );
+
+  //-------------create all cart items here-------------//
+  let cartList = [
+    {total:0,userId:HowellAltenwerth.id},
+    {total:0,userId:DaphneyBednar.id},
+    {total:0,userId:BreanaPouros.id},
+    {total:0,userId:RosalindOberbrunner.id},
+    {total:0,userId:MalcolmBraun.id},
+    {total:0,userId:JacintoChamplin.id},
+    {total:0,userId:NyahLakin.id},
+    {total:0,userId:AlfredProhaska.id},
+    {total:0,userId:CharleyKulas.id},
+    {total:0,userId:HudsonLegros.id},
+  ];
+
+  cartList = await Promise.all(
+    cartList.map((singleCart)=>Cart.create(singleCart))
   );
 
   console.log("DB SEED COMPLETE.");

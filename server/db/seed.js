@@ -9,7 +9,7 @@ const {
 } = require("./index.js");
 
 //-------------------------Men's Products--------------------------//
-const menJackets = [
+let mensJackets = [
   {
     name: "Wool-Blend Topcoat",
     imageURL: "/img/jacket/mensJacket1.jpg",
@@ -20,31 +20,11 @@ const menJackets = [
     stock: 10,
     type: "jacket",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Wool-Blend Topcoat",
-    imageURL: "/img/jacket/mensJacket1.jpg",
-    description:
-      "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this one over sweaters for effortless styling",
-    color: "blue",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Wool-Blend Topcoat",
-    imageURL: "/img/jacket/mensJacket1.jpg",
-    description:
-      "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this one over sweaters for effortless styling",
-    color: "blue",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Puffer Bomber Jacket",
@@ -56,31 +36,11 @@ const menJackets = [
     stock: 10,
     type: "jacket",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Puffer Bomber Jacket",
-    imageURL: "/img/jacket/mensJacket2.jpg",
-    description:
-      "Warm-up your looks with this effortless puffer bomber jacket. Pair with jeans or chinos for the perfect everyday look",
-    color: "gray",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Puffer Bomber Jacket",
-    imageURL: "/img/jacket/mensJacket2.jpg",
-    description:
-      "Warm-up your looks with this effortless puffer bomber jacket. Pair with jeans or chinos for the perfect everyday look",
-    color: "gray",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: " Wool-Blend Hooded Topcoat",
@@ -92,31 +52,11 @@ const menJackets = [
     stock: 10,
     type: "jacket",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: " Wool-Blend Hooded Topcoat",
-    imageURL: "/img/jacket/mensJacket3.jpg",
-    description:
-      "With a twist on the classic, this wool-blend topcoat features a drawstring hood and a covered zip closure. Pair with jeans and boots for a casual look",
-    color: "brown",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: " Wool-Blend Hooded Topcoat",
-    imageURL: "/img/jacket/mensJacket3.jpg",
-    description:
-      "With a twist on the classic, this wool-blend topcoat features a drawstring hood and a covered zip closure. Pair with jeans and boots for a casual look",
-    color: "brown",
-    price: 249.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Wool-Blend Trucker Jacket",
@@ -128,31 +68,11 @@ const menJackets = [
     stock: 10,
     type: "jacket",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Wool-Blend Trucker Jacket",
-    imageURL: "/img/jacket/mensJacket4.jpg",
-    description:
-      "The perfect classic trucker jacket in a navy wool-blend fabric. Add this to any outfit to keep cozy on cool days and chilly nights",
-    color: "blue",
-    price: 199.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Wool-Blend Trucker Jacket",
-    imageURL: "/img/jacket/mensJacket4.jpg",
-    description:
-      "The perfect classic trucker jacket in a navy wool-blend fabric. Add this to any outfit to keep cozy on cool days and chilly nights",
-    color: "blue",
-    price: 199.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Wool-Blend Water Resistant Topcoat",
@@ -164,34 +84,14 @@ const menJackets = [
     stock: 10,
     type: "jacket",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Wool-Blend Water Resistant Topcoat",
-    imageURL: "/img/jacket/mensJacket5.jpg",
-    description:
-      "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this wool-blend coat with denim for a polished look or with suiting for all of your formal events this season",
-    color: "black",
-    price: 299.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Wool-Blend Water Resistant Topcoat",
-    imageURL: "/img/jacket/mensJacket5.jpg",
-    description:
-      "A topcoat is a staple in every sharp-dressed man's wardrobe. Pair this wool-blend coat with denim for a polished look or with suiting for all of your formal events this season",
-    color: "black",
-    price: 299.99,
-    stock: 10,
-    type: "jacket",
-    gender: "men",
-    size: "L",
-  },
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  }
 ];
-const menSweaters = [
+let mensSweaters = [
   {
     name: "Cable Knit CrewNeck Sweater",
     imageURL: "/img/sweater/mensSweater1.jpg",
@@ -202,31 +102,11 @@ const menSweaters = [
     stock: 10,
     type: "sweater",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Cable Knit CrewNeck Sweater",
-    imageURL: "/img/sweater/mensSweater1.jpg",
-    description:
-      "A winter classic, this cable knit crewneck sweater is the perfect cold weather essential. Complete the look with jeans or chinos for a sleek look",
-    color: "white",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Cable Knit CrewNeck Sweater",
-    imageURL: "/img/sweater/mensSweater1.jpg",
-    description:
-      "A winter classic, this cable knit crewneck sweater is the perfect cold weather essential. Complete the look with jeans or chinos for a sleek look",
-    color: "white",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Waffle Knit Shawl Collar Cardigan",
@@ -238,31 +118,11 @@ const menSweaters = [
     stock: 10,
     type: "sweater",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Waffle Knit Shawl Collar Cardigan",
-    imageURL: "/img/sweater/mensSweater2.jpg",
-    description:
-      "A classic layering choice to keep you warm this season. This waffle knit cardigan looks great over tees, button-ups and more - we love a versatile piece",
-    color: "black",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Waffle Knit Shawl Collar Cardigan",
-    imageURL: "/img/sweater/mensSweater2.jpg",
-    description:
-      "A classic layering choice to keep you warm this season. This waffle knit cardigan looks great over tees, button-ups and more - we love a versatile piece",
-    color: "black",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Vine Cable Knit CrewNeck Sweater",
@@ -274,291 +134,132 @@ const menSweaters = [
     stock: 10,
     type: "sweater",
     gender: "men",
-    size: "S",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
-    name: "Vine Cable Knit CrewNeck Sweater",
-    imageURL: "/img/sweater/mensSweater3.jpg",
+    name: "Solid Mock Neck Quarter Zip Sweater",
+    imageURL: "/img/sweater/mensSweater4.jpg",
     description:
-      "A winter classic with a unique cable knit pattern, this crewneck sweater brings a fun twist to a cold weather essential. Complete the look with jeans or chinos for a sleek look",
+      "A cozy, ribbed sweater featuring a mock neck and quarter-zip front that's perfect for cool days and chilly nights. Pair with jeans, joggers or chinos for a polished casual look",
+    color: "brown",
+    price: 119.99,
+    stock: 10,
+    type: "sweater",
+    gender: "men",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  },
+  {
+    name: "V-Neck Popover Sweater",
+    imageURL: "/img/sweater/mensSweater5.jpg",
+    description:
+      "An everyday staple for cold weather months, this v-neck sweater is a versatile choice and pairs well any of your favorite bottoms",
+    color: "gray",
+    price: 99.99,
+    stock: 10,
+    type: "sweater",
+    gender: "men",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  },
+  
+];
+let mensPants = [
+  {
+    name: "Slim Light Wash Stretch Jeans",
+    imageURL: "/img/pants/mensPants1.jpg",
+    description:
+      "This slim light wash jean features the perfect amount of stretch for all-day comfort. Throw on with sweaters or tees or a put together look",
     color: "blue",
     price: 99.99,
     stock: 10,
-    type: "sweater",
+    type: "pants",
     gender: "men",
-    size: "M",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
-    name: "Vine Cable Knit CrewNeck Sweater",
-    imageURL: "/img/sweater/mensSweater3.jpg",
+    name: "Slim Dark Wash Selvedge Jeans",
+    imageURL: "/img/pants/mensPants2.jpg",
     description:
-      "A winter classic with a unique cable knit pattern, this crewneck sweater brings a fun twist to a cold weather essential. Complete the look with jeans or chinos for a sleek look",
+      "Woven on a vintage shuttle loom which provides a highly desirable irregular yarn character indicative of prized premium denim. This guarantees that no two jeans are identical. Every jean is unique",
+    color: "dark blue",
+    price: 149.99,
+    stock: 10,
+    type: "pants",
+    gender: "men",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  },
+  {
+    name: "Slim Hyper Stretch Jeans",
+    imageURL: "/img/pants/mensPants3.jpg",
+    description:
+      "Our hyper stretch jeans are constructed with the maximum amount of stretch for all day comfort. Featuring a slim fit in a trendy color that provides a versatile look that pairs with any outfit",
+    color: "brown",
+    price: 99.99,
+    stock: 10,
+    type: "pants",
+    gender: "men",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
+  },
+  {
+    name: "Slim Straight Medium Wash Hyper Stretch Jeans",
+    imageURL: "/img/pants/mensPants4.jpg",
+    description:
+      "These slim straight jeans feature our highest level of stretch for all-day comfort. Made in a versatile medium wash that's perfect for work or play",
     color: "blue",
     price: 99.99,
     stock: 10,
-    type: "sweater",
+    type: "pants",
     gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
-    name: "Solid Mock Neck Quarter Zip Sweater",
-    imageURL: "/img/sweater/mensSweater4.jpg",
+    name: "Slim Straight Warm Stone Hyper Stretch Jeans",
+    imageURL: "/img/pants/mensPants5.jpg",
     description:
-      "A cozy, ribbed sweater featuring a mock neck and quarter-zip front that's perfect for cool days and chilly nights. Pair with jeans, joggers or chinos for a polished casual look",
-    color: "brown",
-    price: 119.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Solid Mock Neck Quarter Zip Sweater",
-    imageURL: "/img/sweater/mensSweater4.jpg",
-    description:
-      "A cozy, ribbed sweater featuring a mock neck and quarter-zip front that's perfect for cool days and chilly nights. Pair with jeans, joggers or chinos for a polished casual look",
-    color: "brown",
-    price: 119.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Solid Mock Neck Quarter Zip Sweater",
-    imageURL: "/img/sweater/mensSweater4.jpg",
-    description:
-      "A cozy, ribbed sweater featuring a mock neck and quarter-zip front that's perfect for cool days and chilly nights. Pair with jeans, joggers or chinos for a polished casual look",
-    color: "brown",
-    price: 119.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "L",
-  },
-  {
-    name: "V-Neck Popover Sweater",
-    imageURL: "/img/sweater/mensSweater5.jpg",
-    description:
-      "An everyday staple for cold weather months, this v-neck sweater is a versatile choice and pairs well any of your favorite bottoms",
-    color: "gray",
+      "This slim straight jean is made with our highest level of stretch to keep you comfortable no matter where the day takes you. Featured in a stylish warm stone wash to bring new life to your wardrobe",
+    color: "light brown",
     price: 99.99,
     stock: 10,
-    type: "sweater",
+    type: "pants",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "V-Neck Popover Sweater",
-    imageURL: "/img/sweater/mensSweater5.jpg",
-    description:
-      "An everyday staple for cold weather months, this v-neck sweater is a versatile choice and pairs well any of your favorite bottoms",
-    color: "gray",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "V-Neck Popover Sweater",
-    imageURL: "/img/sweater/mensSweater5.jpg",
-    description:
-      "An everyday staple for cold weather months, this v-neck sweater is a versatile choice and pairs well any of your favorite bottoms",
-    color: "gray",
-    price: 99.99,
-    stock: 10,
-    type: "sweater",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
 ];
-const menPants = [
-  {
-    name: "Slim Light Wash Stretch Jeans",
-    imageURL: "/img/pants/mensPants1.jpg",
-    description:
-      "This slim light wash jean features the perfect amount of stretch for all-day comfort. Throw on with sweaters or tees or a put together look",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim Light Wash Stretch Jeans",
-    imageURL: "/img/pants/mensPants1.jpg",
-    description:
-      "This slim light wash jean features the perfect amount of stretch for all-day comfort. Throw on with sweaters or tees or a put together look",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim Light Wash Stretch Jeans",
-    imageURL: "/img/pants/mensPants1.jpg",
-    description:
-      "This slim light wash jean features the perfect amount of stretch for all-day comfort. Throw on with sweaters or tees or a put together look",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "L",
-  },
-  {
-    name: "Slim Dark Wash Selvedge Jeans",
-    imageURL: "/img/pants/mensPants2.jpg",
-    description:
-      "Woven on a vintage shuttle loom which provides a highly desirable irregular yarn character indicative of prized premium denim. This guarantees that no two jeans are identical. Every jean is unique",
-    color: "dark blue",
-    price: 149.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim Dark Wash Selvedge Jeans",
-    imageURL: "/img/pants/mensPants2.jpg",
-    description:
-      "Woven on a vintage shuttle loom which provides a highly desirable irregular yarn character indicative of prized premium denim. This guarantees that no two jeans are identical. Every jean is unique",
-    color: "dark blue",
-    price: 149.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim Dark Wash Selvedge Jeans",
-    imageURL: "/img/pants/mensPants2.jpg",
-    description:
-      "Woven on a vintage shuttle loom which provides a highly desirable irregular yarn character indicative of prized premium denim. This guarantees that no two jeans are identical. Every jean is unique",
-    color: "dark blue",
-    price: 149.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "L",
-  },
-  {
-    name: "Slim Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants3.jpg",
-    description:
-      "Our hyper stretch jeans are constructed with the maximum amount of stretch for all day comfort. Featuring a slim fit in a trendy color that provides a versatile look that pairs with any outfit",
-    color: "brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants3.jpg",
-    description:
-      "Our hyper stretch jeans are constructed with the maximum amount of stretch for all day comfort. Featuring a slim fit in a trendy color that provides a versatile look that pairs with any outfit",
-    color: "brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants3.jpg",
-    description:
-      "Our hyper stretch jeans are constructed with the maximum amount of stretch for all day comfort. Featuring a slim fit in a trendy color that provides a versatile look that pairs with any outfit",
-    color: "brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "L",
-  },
-  {
-    name: "Slim Straight Medium Wash Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants4.jpg",
-    description:
-      "These slim straight jeans feature our highest level of stretch for all-day comfort. Made in a versatile medium wash that's perfect for work or play",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim Straight Medium Wash Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants4.jpg",
-    description:
-      "These slim straight jeans feature our highest level of stretch for all-day comfort. Made in a versatile medium wash that's perfect for work or play",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim Straight Medium Wash Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants4.jpg",
-    description:
-      "These slim straight jeans feature our highest level of stretch for all-day comfort. Made in a versatile medium wash that's perfect for work or play",
-    color: "blue",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "L",
-  },
-  {
-    name: "Slim Straight Warm Stone Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants5.jpg",
-    description:
-      "This slim straight jean is made with our highest level of stretch to keep you comfortable no matter where the day takes you. Featured in a stylish warm stone wash to bring new life to your wardrobe",
-    color: "light brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim Straight Warm Stone Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants5.jpg",
-    description:
-      "This slim straight jean is made with our highest level of stretch to keep you comfortable no matter where the day takes you. Featured in a stylish warm stone wash to bring new life to your wardrobe",
-    color: "light brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim Straight Warm Stone Hyper Stretch Jeans",
-    imageURL: "/img/pants/mensPants5.jpg",
-    description:
-      "This slim straight jean is made with our highest level of stretch to keep you comfortable no matter where the day takes you. Featured in a stylish warm stone wash to bring new life to your wardrobe",
-    color: "light brown",
-    price: 99.99,
-    stock: 10,
-    type: "pants",
-    gender: "men",
-    size: "L",
-  },
-];
-const menShirts = [
+let mensShirts = [
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -566,11 +267,15 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "S",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -578,11 +283,15 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "M",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirt/mensShirt1,jpg",
+    imageURL: "/img/shirts/mensShirt1.jpg",
     description:
       "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
     color: "red",
@@ -590,7 +299,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -602,31 +315,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Floral Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt2.jpg",
-    description:
-      "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling as we head into fall",
-    color: "blue",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Floral Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt2.jpg",
-    description:
-      "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling as we head into fall",
-    color: "blue",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -638,31 +331,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Floral Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt3.jpg",
-    description:
-      "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "black/Grey",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Floral Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt3.jpg",
-    description:
-      "A soft, stretchy corduroy in a floral print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "gray",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Solid Corduroy Shirt",
@@ -674,31 +347,11 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Solid Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt4.jpg",
-    description:
-      "A corduroy shirt is the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "gray",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Solid Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt4.jpg",
-    description:
-      "A corduroy shirt is the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "gray",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
   {
     name: "Slim plaid Stretch Flannel Shirt",
@@ -710,36 +363,16 @@ const menShirts = [
     stock: 10,
     type: "shirt",
     gender: "men",
-    size: "S",
-  },
-  {
-    name: "Slim plaid Stretch Flannel Shirt",
-    imageURL: "/img/shirts/mensShirt4.jpg",
-    description:
-      "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
-    color: "brown",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "M",
-  },
-  {
-    name: "Slim plaid Stretch Flannel Shirt",
-    imageURL: "/img/shirts/mensShirt4.jpg",
-    description:
-      "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
-    color: "brown",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    size: "L",
+    option: [
+      { size: "S", stock: 50 },
+      { size: "M", stock: 50 },
+      { size: "L", stock: 50 },
+    ]
   },
 ];
 
 //~~~~~Mens underwear items~~~~~//
-const mensUnderwear = [
+let mensUnderwear = [
   {
     name: "Men's Boxers 3-Pack",
     imageURL: "/img/underwear/mensUnderwear1.jpg",
@@ -753,7 +386,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxers 3-Pack",
@@ -768,7 +401,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Brief 5-Pack",
@@ -782,7 +415,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Brief 10-Pack",
@@ -797,7 +430,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -812,7 +445,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -827,7 +460,7 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men's Boxer Single",
@@ -842,12 +475,12 @@ const mensUnderwear = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 
 //~~~~~Mens socks items~~~~~//
-const mensSocks = [
+let mensSocks = [
   {
     name: "Men’s Ankle Socks 3-Pack",
     imageURL: "/img/socks/mensSocks1.jpg",
@@ -861,7 +494,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Ankle Socks 3-Pack",
@@ -876,7 +509,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -891,7 +524,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Socks 3-Pack",
@@ -906,7 +539,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Men’s Classic Tube Sock Single Pair",
@@ -921,7 +554,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -936,7 +569,7 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Pop culture Gender neutral socks 3 pack",
@@ -951,11 +584,11 @@ const mensSocks = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 //~~~~~Mens hat items~~~~~//
-const mensHats = [
+let mensHats = [
   {
     name: "Reversible Twill Bucket Hat",
     imageURL: "/img/hat/mensHat1.1.jpg",
@@ -969,7 +602,7 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Classic Baseball Brim",
@@ -984,7 +617,7 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Red Knit Beanie",
@@ -999,12 +632,12 @@ const mensHats = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 
 //-------------------------Women' Products--------------------------//
-let blouse = [
+let womensBlouses = [
   {
     type: "blouse",
     gender: "women",
@@ -1082,7 +715,7 @@ let blouse = [
   },
 ];
 
-let womenPants = [
+let womensPants = [
   {
     type: "pants",
     gender: "women",
@@ -1161,7 +794,7 @@ let womenPants = [
       "Flowy fabric. Suit style. Wide-leg design. Side zip fastening. ",
   },
 ];
-let womenJacket = [
+let womensJackets = [
   {
     type: "jacket",
     gender: "women",
@@ -1242,7 +875,7 @@ let womenJacket = [
       "Cotton-blend fabric. Tweed fabric. Straight design. Long design. Blazer style. Lapel-collar V-neck collar. Long sleeve. Two pockets with flaps. Inner lining. Button fastening on the front.",
   },
 ];
-let dress = [
+let womensDresses = [
   {
     type: "dress",
     gender: "women",
@@ -1323,7 +956,7 @@ let dress = [
       "Recycled polyester blend fabric. Long design. Evasé design. Crossover design. V-neck. Long sleeve. Side bow fastening.",
   },
 ];
-let womenHat = [
+let womensHats = [
   {
     type: "hat",
     gender: "women",
@@ -1398,7 +1031,7 @@ let womenHat = [
   },
 ];
 
-let womenSocks = [
+let womensSocks = [
   {
     type: "socks",
     gender: "women",
@@ -1410,7 +1043,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/socks/woolSocks.png",
+    imageURL: "/img/socks/woolSocks.jpeg",
     description: "Fine-knit socks in a soft, warm wool blend with ribbed tops.",
   },
   {
@@ -1424,7 +1057,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 10.99,
-    imageURL: "/img/socks/ankleSocks.png",
+    imageURL: "/img/socks/ankleSocks.jpeg",
     description: "Fine-knit ankle socks in a soft cotton blend.",
   },
   {
@@ -1438,7 +1071,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/socks/fishnetTightsSocks.png",
+    imageURL: "/img/socks/fishnetTightsSocks.jpeg",
     description:
       "Rhinestone-embellished fishnet tights with a regular waist and elasticized waistband.",
   },
@@ -1453,7 +1086,7 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 2.99,
-    imageURL: "/img/socks/sportsSocks.png",
+    imageURL: "/img/socks/sportSocks.jpeg",
     description:
       "Sports socks in DryMove™ functional fabric to wick away moisture from skin and keep you comfortably dry while moving. High leg section with ribbing and reflective details.",
   },
@@ -1468,11 +1101,11 @@ let womenSocks = [
       { size: "L", stock: 10 },
     ],
     price: 8.99,
-    imageURL: "/img/socks/fuzzySocks.png",
+    imageURL: "/img/socks/fuzzySocks.jpeg",
     description: "Soft, fine-knit socks with elasticized tops.",
   },
 ];
-let womenUnderwear = [
+let womensUnderwear = [
   {
     type: "underwear",
     gender: "women",
@@ -1484,7 +1117,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 15.99,
-    imageURL: "/img/underwear/brazilianUnderwear.png",
+    imageURL: "/img/underwear/brazilianUnderwear.jpeg",
     description:
       "Briefs in jersey with a low waist, high-cut back, and lined gusset.",
   },
@@ -1499,7 +1132,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 5.99,
-    imageURL: "/img/underwear/thongUnderwear.png",
+    imageURL: "/img/underwear/thongUnderwear.jpeg",
     description:
       "Thong brief in cotton jersey with a regular waist. Lined gusset",
   },
@@ -1514,7 +1147,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 7.99,
-    imageURL: "/img/underwear/hipsterUnderwear.png",
+    imageURL: "/img/underwear/hipsterUnderwear.jpeg",
     description:
       "Briefs in cotton-blend jersey with a regular waist, medium coverage at back, and lined gusset. Cotton content is organic.",
   },
@@ -1529,7 +1162,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 25.99,
-    imageURL: "/img/underwear/shapingUnderwear.png",
+    imageURL: "/img/underwear/shapingUnderwear.jpeg",
     description:
       "Shaping bikers in microfiber with a light sculpting effect on tummy, thighs, and seat. High waist, lined gusset, and laser-cut edges around legs for seamless comfort and minimal visibility under clothes.",
   },
@@ -1544,7 +1177,7 @@ let womenUnderwear = [
       { size: "L", stock: 10 },
     ],
     price: 15.99,
-    imageURL: "/img/underwear/maternityUnderwear.png",
+    imageURL: "/img/underwear/maternityUnderwear.jpeg",
     description:
       "Hipster briefs in organic cotton jersey with lace trim at top, wide sides, and medium coverage at back. Lined gusset.",
   },
@@ -1556,7 +1189,7 @@ let womenUnderwear = [
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-const userList = [
+let userList = [
   {
     firstName: "Howell",
     lastName: "Altenwerth",
@@ -1699,7 +1332,7 @@ const seed = async () => {
     HudsonLegros,
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
-  const cartList = [
+  let cartList = [
     {total:0,userId:HowellAltenwerth.id},
     {total:0,userId:DaphneyBednar.id},
     {total:0,userId:BreanaPouros.id},
@@ -1713,45 +1346,58 @@ const seed = async () => {
   ];
 
   // ------------- create all user carts here---------//
-  await Promise.all(cartList.map((singleCart)=>Cart.create(singleCart)));
+  cartList = await Promise.all(cartList.map((singleCart)=>Cart.create(singleCart)));
 
   // ------------- create all womens items here------later check if we need array name for product.create or not---------//
-  blouse = await Promise.all(blouse.map((item) => Product.create(item)));
-  womenPants = await Promise.all(
-    womenPants.map((item) => Product.create(item))
+  womensBlouses = await Promise.all(
+    womensBlouses.map((item) => Product.create(item))
   );
-  womenJacket = await Promise.all(
-    womenJacket.map((item) => Product.create(item))
+  womensPants = await Promise.all(
+    womensPants.map((item) => Product.create(item))
   );
-  dress = await Promise.all(dress.map((item) => Product.create(item)));
-  womenHat = await Promise.all(womenHat.map((item) => Product.create(item)));
-  womenSocks = await Promise.all(
-    womenSocks.map((item) => Product.create(item))
+  womensJackets = await Promise.all(
+    womensJackets.map((item) => Product.create(item))
   );
-  womenUnderwear.map((item) => Product.create(item));
+  womensDresses = await Promise.all(
+    womensDresses.map((item) => Product.create(item))
+  );
+  womensHats = await Promise.all(
+    womensHats.map((item) => Product.create(item))
+  );
+  womensSocks = await Promise.all(
+    womensSocks.map((item) => Product.create(item))
+  );
+  womensUnderwear = await Promise.all(
+    womensUnderwear.map((item) => Product.create(item))
+  );
 
   // ------------- create all mens items here-------------//
-  await Promise.all(mensUnderwear.map((item) => Product.create(item)));
-  await Promise.all(mensSocks.map((item) => Product.create(item)));
-  await Promise.all(mensHats.map((item) => Product.create(item)));
-
-  const menJacket = await Promise.all(
-    menJackets.map((jacket) => {
+  mensUnderwear = await Promise.all(
+    mensUnderwear.map((item) => Product.create(item))
+  );
+  mensSocks = await Promise.all(
+    mensSocks.map((item) => Product.create(item))
+  );
+  mensHats = await Promise.all(
+    mensHats.map((item) => Product.create(item))
+  );
+  mensJackets = await Promise.all(
+    mensJackets.map((jacket) => {
       Product.create(jacket);
     })
   );
-  const menSweater = await Promise.all(
-    menSweaters.map((sweater) => {
+  mensSweaters = await Promise.all(
+    mensSweaters.map((sweater) => {
       Product.create(sweater);
     })
   );
-  const menPant = await Promise.all(
-    menPants.map((pant) => {
+  mensPants = await Promise.all(
+    mensPants.map((pant) => {
       Product.create(pant);
     })
   );
-  const menShirt = await Promise.all(
-    menShirts.map((shirt) => {
+  mensShirts = await Promise.all(
+    mensShirts.map((shirt) => {
       Product.create(shirt);
     })
   );

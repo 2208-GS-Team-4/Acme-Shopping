@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 const AllMenProducts = () => {
   const [products, setProducts] = useState([]);
 
@@ -22,6 +23,7 @@ const AllMenProducts = () => {
         <Link to="/men/shirt">Shirts</Link>
         <Link to="/men/socks">Socks</Link>
         <Link to="/men/hat">Hats</Link>
+        <Link to="/men/underwear">Underwear</Link>
       </div>
       {/* <Link to="/men/accessories">Accessories</Link> */}
       <div className="grid-container">
@@ -30,13 +32,12 @@ const AllMenProducts = () => {
             <div key={product.id} className="grid-item">
               <Link to={`/men/${product.type}/${product.id}`}>
                 <img src={product.imageURL} />
-                <p>{product.name}</p>
+                <p className="productDisplayName">{product.name}</p>
               </Link>
             </div>
           );
         })}{" "}
       </div>
-      ;
     </div>
   );
 };

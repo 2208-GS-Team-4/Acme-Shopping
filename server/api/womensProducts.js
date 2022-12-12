@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
 
 // GET localhost:3000/api/women/:type
 router.get("/productType/:productType", async (req, res, next) => {
-  const type = req.params.type;
+  const productType = req.params.productType;
   const products = await Product.findAll({
     where: {
       gender: "women",

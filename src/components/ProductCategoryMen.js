@@ -7,8 +7,7 @@ const ProductCategoryMen = () => {
   const { productType } = useParams();
 
   const getProducts = async (productType) => {
-    const response = await axios.get(`/api/men/${productType}`);
-
+    const response = await axios.get(`/api/men/productType/${productType}`);
     setProducts(response.data);
   };
 

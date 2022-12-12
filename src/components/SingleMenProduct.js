@@ -4,11 +4,10 @@ import { useParams } from "react-router-dom";
 
 const SingleMenProduct = () => {
   const [product, setProduct] = useState([]);
-  const { productType, id } = useParams();
+  const { id } = useParams();
 
   const getProduct = async (id) => {
     const response = await axios.get(`/api/men/id/${id}`);
-    console.log(response.data);
     setProduct(response.data);
   };
 

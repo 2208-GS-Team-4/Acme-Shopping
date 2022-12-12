@@ -24,13 +24,16 @@ const ProductCategoryMen = () => {
         <Link to="/men/shirt">Shirts</Link>
         <Link to="/men/socks">Socks</Link>
         <Link to="/men/hat">Hats</Link>
+        <Link to="/men/underwear">Underwear</Link>
       </div>{" "}
       <div className="grid-container">
         {products.map((product) => {
           return (
             <div key={product.id} className="grid-item">
-              <img src={product.imageURL} />
-              <p>{product.name}</p>
+              <Link to={`/men/${product.type}/${product.id}`}>
+                <img src={product.imageURL} />
+                <p className="productDisplayName">{product.name}</p>
+              </Link>
             </div>
           );
         })}

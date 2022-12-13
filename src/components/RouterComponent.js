@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 import {
   AllMenProducts,

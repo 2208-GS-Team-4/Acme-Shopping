@@ -10,7 +10,7 @@ const App = () => {
   const fetchProducts = async() => {
     const allMensProducts = await axios.get('/api/men');
     dispatch(setAllMensProducts(allMensProducts.data));
-    const allWomensProducts = await axios.get('/api/men');
+    const allWomensProducts = await axios.get('/api/women');
     dispatch(setAllWomensProducts(allWomensProducts.data));
   };
 

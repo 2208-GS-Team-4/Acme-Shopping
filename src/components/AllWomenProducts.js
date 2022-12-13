@@ -30,7 +30,7 @@ const AllWomenProducts = () => {
             <div key={product.id} className="grid-item">
               <Link to={`/women/${product.type}/${product.id}`}>
                 <img src={product.imageURL} />
-                <p>{product.name}</p>
+                <p className="productDisplayName">{product.name}</p>
               </Link>
             </div>
           );

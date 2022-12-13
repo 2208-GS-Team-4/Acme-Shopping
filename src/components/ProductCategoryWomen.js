@@ -1,19 +1,23 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 const ProductCategoryWomen = () => {
+  const {allWomensProducts} = useSelector((state)=>state.product);
   const [products, setProducts] = useState([]);
   const { productType } = useParams();
 
-  const getProducts = async (productType) => {
-    const response = await axios.get(`/api/women/productType/${productType}`);
-    const productData = await response.data;
-    setProducts(productData);
+  const getProducts = () => {
+    const filteredProducts = allWomensProducts.filter(product=>{
+      return product.type===productType;
+    });
+    setProducts(filteredProducts);
   };
 
   useEffect(() => {
-    getProducts(productType);
+    getProducts();
   }, []);
 
   return (

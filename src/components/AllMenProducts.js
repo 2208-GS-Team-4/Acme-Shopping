@@ -6,16 +6,6 @@ import { useSelector } from "react-redux";
 
 const AllMenProducts = () => {
   const {allMensProducts} = useSelector((state)=>state.product);
-  // const [products, setProducts] = useState([]);
-
-  // const grabProducts = async () => {
-  //   const allProducts = await axios.get("/api/men");
-  //   setProducts(allProducts.data);
-  // };
-
-  // useEffect(() => {
-  //   grabProducts();
-  // }, []);
 
   return (
     <div>

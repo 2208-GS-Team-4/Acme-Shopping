@@ -1,12 +1,24 @@
 import React, { useEffect } from "react";
-import Login from "./Login";
-import { setUser } from "../store/userSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {RouterComponent} from "./";
+import { setAllMensProducts,setAllWomensProducts } from "../store/productSlice";
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  const fetchProducts = async() => {
+    const allMensProducts = await axios.get('/api/men');
+    dispatch(setAllMensProducts(allMensProducts.data));
+    const allWomensProducts = await axios.get('/api/men');
+    dispatch(setAllWomensProducts(allWomensProducts.data));
+  };
+
+  useEffect(()=>{
+    fetchProducts();
+  },[]);
+
   return (
     <div>
       <Link to="/">

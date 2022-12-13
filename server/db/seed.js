@@ -1306,6 +1306,17 @@ let userList = [
     creditCard: 8816599003432312,
     phone: 13263105259,
   },
+  {
+    firstName: "Jack",
+    lastName: "Padalino",
+    email: "pada0867@gmail.com",
+    username: "pada0867",
+    password: "pada0867",
+    shippingAddress: "571 W 139th St New York NY 10031",
+    billingAddress: "571 W 139th St New York NY 10031",
+    creditCard: 8816599133432312,
+    phone: 13263485259,
+  },
 ];
 
 const seed = async () => {

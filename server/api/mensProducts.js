@@ -14,7 +14,7 @@ router.get("/", async (req, res, next) => {
 });
 
 // GET localhost:3000/api/men/:productType
-router.get("/:productType", async (req, res, next) => {
+router.get("/productType/:productType", async (req, res, next) => {
   //sweater
   const productType = req.params.productType;
   const products = await Product.findAll({
@@ -27,7 +27,7 @@ router.get("/:productType", async (req, res, next) => {
 });
 
 // GET localhost:3000/api/men/:productType/:productId
-router.get("/:productType/:id", async (req, res, next) => {
+router.get("/id/:id", async (req, res, next) => {
   //      sweater/1
   const id = req.params.id;
   const product = await Product.findAll({

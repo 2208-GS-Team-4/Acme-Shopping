@@ -9,7 +9,7 @@ const {
 } = require("./index.js");
 
 //-------------------------Men's Products--------------------------//
-const menJackets = [
+let mensJackets = [
   {
     name: "Wool-Blend Topcoat",
     imageURL: "/img/jacket/mensJacket1.jpg",
@@ -43,7 +43,7 @@ const menJackets = [
     ]
   },
   {
-    name: " Wool-Blend Hooded Topcoat",
+    name: "Wool-Blend Hooded Topcoat",
     imageURL: "/img/jacket/mensJacket3.jpg",
     description:
       "With a twist on the classic, this wool-blend topcoat features a drawstring hood and a covered zip closure. Pair with jeans and boots for a casual look",
@@ -91,7 +91,7 @@ const menJackets = [
     ]
   }
 ];
-const menSweaters = [
+let mensSweaters = [
   {
     name: "Cable Knit CrewNeck Sweater",
     imageURL: "/img/sweater/mensSweater1.jpg",
@@ -174,7 +174,7 @@ const menSweaters = [
   },
   
 ];
-const menPants = [
+let mensPants = [
   {
     name: "Slim Light Wash Stretch Jeans",
     imageURL: "/img/pants/mensPants1.jpg",
@@ -256,7 +256,7 @@ const menPants = [
     ]
   },
 ];
-const menShirts = [
+let mensShirts = [
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
     imageURL: "/img/shirts/mensShirt1.jpg",
@@ -372,7 +372,7 @@ const menShirts = [
 ];
 
 //~~~~~Mens underwear items~~~~~//
-const mensUnderwear = [
+let mensUnderwear = [
   {
     name: "Men's Boxers 3-Pack",
     imageURL: "/img/underwear/mensUnderwear1.jpg",
@@ -480,7 +480,7 @@ const mensUnderwear = [
 ];
 
 //~~~~~Mens socks items~~~~~//
-const mensSocks = [
+let mensSocks = [
   {
     name: "Men’s Ankle Socks 3-Pack",
     imageURL: "/img/socks/mensSocks1.jpg",
@@ -588,7 +588,7 @@ const mensSocks = [
   },
 ];
 //~~~~~Mens hat items~~~~~//
-const mensHats = [
+let mensHats = [
   {
     name: "Reversible Twill Bucket Hat",
     imageURL: "/img/hat/mensHat1.1.jpg",
@@ -637,7 +637,7 @@ const mensHats = [
 ];
 
 //-------------------------Women' Products--------------------------//
-let blouse = [
+let womensBlouses = [
   {
     type: "blouse",
     gender: "women",
@@ -715,7 +715,7 @@ let blouse = [
   },
 ];
 
-let womenPants = [
+let womensPants = [
   {
     type: "pants",
     gender: "women",
@@ -794,7 +794,7 @@ let womenPants = [
       "Flowy fabric. Suit style. Wide-leg design. Side zip fastening. ",
   },
 ];
-let womenJacket = [
+let womensJackets = [
   {
     type: "jacket",
     gender: "women",
@@ -875,7 +875,7 @@ let womenJacket = [
       "Cotton-blend fabric. Tweed fabric. Straight design. Long design. Blazer style. Lapel-collar V-neck collar. Long sleeve. Two pockets with flaps. Inner lining. Button fastening on the front.",
   },
 ];
-let dress = [
+let womensDresses = [
   {
     type: "dress",
     gender: "women",
@@ -956,7 +956,7 @@ let dress = [
       "Recycled polyester blend fabric. Long design. Evasé design. Crossover design. V-neck. Long sleeve. Side bow fastening.",
   },
 ];
-let womenHat = [
+let womensHats = [
   {
     type: "hat",
     gender: "women",
@@ -1031,7 +1031,7 @@ let womenHat = [
   },
 ];
 
-let womenSocks = [
+let womensSocks = [
   {
     type: "socks",
     gender: "women",
@@ -1105,7 +1105,7 @@ let womenSocks = [
     description: "Soft, fine-knit socks with elasticized tops.",
   },
 ];
-let womenUnderwear = [
+let womensUnderwear = [
   {
     type: "underwear",
     gender: "women",
@@ -1183,13 +1183,8 @@ let womenUnderwear = [
   },
 ];
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~Users~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
-const userList = [
+//-------------------------Users--------------------------//
+let userList = [
   {
     firstName: "Howell",
     lastName: "Altenwerth",
@@ -1311,6 +1306,17 @@ const userList = [
     creditCard: 8816599003432312,
     phone: 13263105259,
   },
+  {
+    firstName: "Jack",
+    lastName: "Padalino",
+    email: "pada0867@gmail.com",
+    username: "pada0867",
+    password: "pada0867",
+    shippingAddress: "571 W 139th St New York NY 10031",
+    billingAddress: "571 W 139th St New York NY 10031",
+    creditCard: 8816599133432312,
+    phone: 13263485259,
+  },
 ];
 
 const seed = async () => {
@@ -1318,7 +1324,53 @@ const seed = async () => {
 
   await db.sync({ force: true });
 
-  // ------------- create all users here-------------//
+  //-------------create all womens items here-------------//
+  womensBlouses = await Promise.all(
+    womensBlouses.map((item) => Product.create(item))
+  );
+  womensPants = await Promise.all(
+    womensPants.map((item) => Product.create(item))
+  );
+  womensJackets = await Promise.all(
+    womensJackets.map((item) => Product.create(item))
+  );
+  womensDresses = await Promise.all(
+    womensDresses.map((item) => Product.create(item))
+  );
+  womensHats = await Promise.all(
+    womensHats.map((item) => Product.create(item))
+  );
+  womensSocks = await Promise.all(
+    womensSocks.map((item) => Product.create(item))
+  );
+  womensUnderwear = await Promise.all(
+    womensUnderwear.map((item) => Product.create(item))
+  );
+
+  //-------------create all mens items here-------------//
+  mensJackets = await Promise.all(
+    mensJackets.map((jacket) => Product.create(jacket))
+  );
+  mensSweaters = await Promise.all(
+    mensSweaters.map((sweater) => Product.create(sweater))
+  );
+  mensUnderwear = await Promise.all(
+    mensUnderwear.map((item) => Product.create(item))
+  );
+  mensSocks = await Promise.all(
+    mensSocks.map((item) => Product.create(item))
+  );
+  mensHats = await Promise.all(
+    mensHats.map((item) => Product.create(item))
+  );
+  mensPants = await Promise.all(
+    mensPants.map((pant) => Product.create(pant))
+  );
+  mensShirts = await Promise.all(
+    mensShirts.map((shirt) => Product.create(shirt))
+  );
+
+  //-------------create all users here-------------//
   const [
     HowellAltenwerth,
     DaphneyBednar,
@@ -1330,6 +1382,7 @@ const seed = async () => {
     AlfredProhaska,
     CharleyKulas,
     HudsonLegros,
+<<<<<<< HEAD
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
   const cartList = [
@@ -1360,33 +1413,28 @@ const seed = async () => {
   womenHat = await Promise.all(womenHat.map((item) => Product.create(item)));
   womenSocks = await Promise.all(
     womenSocks.map((item) => Product.create(item))
+=======
+  ] = await Promise.all(
+    userList.map((singleUser) => User.create(singleUser))
+>>>>>>> 8a4cc23d7e61153db44c301c59aee9ef9b085b41
   );
-  womenUnderwear.map((item) => Product.create(item));
 
-  // ------------- create all mens items here-------------//
-  await Promise.all(mensUnderwear.map((item) => Product.create(item)));
-  await Promise.all(mensSocks.map((item) => Product.create(item)));
-  await Promise.all(mensHats.map((item) => Product.create(item)));
+  //-------------create all cart items here-------------//
+  let cartList = [
+    {total:0,userId:HowellAltenwerth.id},
+    {total:0,userId:DaphneyBednar.id},
+    {total:0,userId:BreanaPouros.id},
+    {total:0,userId:RosalindOberbrunner.id},
+    {total:0,userId:MalcolmBraun.id},
+    {total:0,userId:JacintoChamplin.id},
+    {total:0,userId:NyahLakin.id},
+    {total:0,userId:AlfredProhaska.id},
+    {total:0,userId:CharleyKulas.id},
+    {total:0,userId:HudsonLegros.id},
+  ];
 
-  const menJacket = await Promise.all(
-    menJackets.map((jacket) => {
-      Product.create(jacket);
-    })
-  );
-  const menSweater = await Promise.all(
-    menSweaters.map((sweater) => {
-      Product.create(sweater);
-    })
-  );
-  const menPant = await Promise.all(
-    menPants.map((pant) => {
-      Product.create(pant);
-    })
-  );
-  const menShirt = await Promise.all(
-    menShirts.map((shirt) => {
-      Product.create(shirt);
-    })
+  cartList = await Promise.all(
+    cartList.map((singleCart)=>Cart.create(singleCart))
   );
 
   console.log("DB SEED COMPLETE.");

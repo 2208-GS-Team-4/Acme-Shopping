@@ -7,7 +7,7 @@ const ProductCategoryWomen = () => {
   const { productType } = useParams();
 
   const getProducts = async (productType) => {
-    const response = await axios.get(`/api/women/${productType}`);
+    const response = await axios.get(`/api/women/productType/${productType}`);
     const productData = await response.data;
     setProducts(productData);
   };
@@ -31,8 +31,10 @@ const ProductCategoryWomen = () => {
         {products.map((product) => {
           return (
             <div className="grid-item">
-              <img src={product.imageURL} />
-              <p>{product.name}</p>
+              <Link to={`/women/${product.type}/${product.id}`}>
+                <img src={product.imageURL} />
+                <p className="productDisplayName">{product.name}</p>
+              </Link>
             </div>
           );
         })}

@@ -13,11 +13,24 @@ const Home = () => {
   };
 
   return (
-    <div id="loggedInDiv">
-      {user.id && <p>Welcome {user.username}!!</p>}
-      {user.id && <button onClick={logout}>Logout</button>}
-      {!user.id && <Link to="/login">Login</Link>}
-    </div>
+    <>
+      <div id="loggedInDiv">
+        <p>Welcome {user.username}!!</p>
+        <button onClick={logout}>Logout</button>
+      </div>
+      <div className="adDiv">
+        <img src="img/blouse/flowyBlouse2.png" />
+        <img src="img/blouse/polkaDotBlouse2.png" />
+        <img src="img/blouse/floralBlouse2.png" />
+        <img src="img/blouse/fineKnitBlouse2.png" />
+      </div>{" "}
+      <div className="adText">
+        <h1>New Arrivals</h1>
+        <p>
+          <Link to="/women">Discover more</Link>
+        </p>
+      </div>
+    </>
   );
 };
 

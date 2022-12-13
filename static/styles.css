@@ -1,19 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); 
 body {
-  font-family: Verdana, Tahoma, sans-serif
+  font-family: 'Playfair Display', serif;font-size: 14px;
+ color:navy;
 }
+a{ text-decoration: none;color:inherit}
 h2{margin:0;}
-#brandName{font-size: 60px;color:navy; font-family: 'Abril Fatface','Times New Roman', Times, serif;}
-.grid-container{display:inline-grid;grid-template-columns: auto auto auto;margin-left:250px;margin-top:-120px;}
-.sideMenu{
- margin-top:50px;
-  display:flex;
- flex-direction:column;
- background-color:#3f51b54d;
- width:200px;
-   align-items:center;
+#brandName{margin-left:2%;font-size: 60px;color:navy; font-family: 'Abril Fatface','Times New Roman', Times, serif;}
+nav {font-family: 'Abril Fatface','Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-around;
+ color:navy;
+ font-size:18px;
 }
-img{width:50%;}
+nav a:hover{color:yellow;
+           background-color:navy;}
+nav a{text-decoration:none;
+     color:inherit;padding:10px; }
+img{width:200px;}
+.sideMenu{ margin-top:5%;
+  padding:15px;
+  margin-left:2%;
+  margin-right:3%;
+   display:flex;
+  flex-direction:column;
+
+  background-color:navy;
+  color:yellow;
+  width:10%;
+
+  line-height:50px;
+  float:left;
+ }
+/*----------------------static ad div-------------------------*/
+.adText{position:absolute;z-index:2;margin-top:28%;font-family: 'Abril Fatface';margin-left:30%;color:#f0f014;
+}
+.adText h1{ font-size:70px;
+ margin-left:5%;padding:5px;width:100%;}
+.adText p{ font-size:14px;
+ margin-left:40%;margin-top:-15%;background-color:navy;width:100px;}
+.adDiv{position:absolute;z-index:1;
+display: flex;
+justify-content: center;
+margin-top:10%;
+margin-left:10px;
+
+}
+.adDiv img{width:300px;}
+/*----------------Display all products in grid-----------------------*/
+ .grid-container{display:inline-grid;grid-template-columns:auto auto auto;
+ margin-top:5%;
+align-items:center;float:left;width:70%;margin-left:10%;}
+     
+.productDisplayName{width:200px;text-align:center;}
+.productDisplayName:hover{
+text-decoration:underline;
+}
+  /*--------------------------display single product--------------*/
+  .singleProductImg{
+     float:left;
+     margin:5%;
+     width:300px;
+   }
+.singleProductText{float:left;width:40%;margin-top:5%;}
+.sizeInfo{
+  display:flex;
+  flex-direction: row;
+ justify-content:space-evenly;
+ width:50%;
+}
+/*--------------------------log in css------------------*/
 .formDiv{
   display:block;
     margin-left:auto;
@@ -29,14 +85,26 @@ img{width:50%;}
 
 .loginForm > * {
   margin: 1rem;
-}
+}.loginForm input{border:solid 2px navy;background-color:lightyellow;height:30px;width:200px;}
+.loginform button{margin-left:35%;margin-right:20%;background-color:navy;color:yellow;border:none;height:25px;}
 #loggedInDiv{
   display:flex;
    justify-content:end;
    align-items:center;
-   margin-top:-120px;
+   margin-top:-140px;
  }
-nav {
-  display: flex;
-  justify-content: space-around;
+
+#loggedInDiv p{margin-right:20px;
+              font-size:14px;}
+#loggedInDiv button{
+ background-color:navy;color:white;
+ border:none;
+ padding:5px;
+ font-size:12px;
+ margin-right:2%;
 }
+#loggedInDiv button:hover{
+ background-color:yellow;color:navy;
+
+}
+

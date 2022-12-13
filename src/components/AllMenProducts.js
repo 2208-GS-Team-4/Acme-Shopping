@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {SideMenuMen} from "./";
-import { useSelector } from "react-redux";
 
 const AllMenProducts = () => {
   const { allMensProducts } = useSelector((state) => state.product);

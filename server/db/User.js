@@ -29,7 +29,8 @@ const User = db.define('user', {
         // allowNull: false,
         validate: {
             isEmail: true,
-        }
+        },
+        unique: true
     },
     username: {
         type: STRING,
@@ -37,7 +38,10 @@ const User = db.define('user', {
         validate: {
             notEmpty: true
         },
-        unique: true
+        unique: true,
+        set(value) {
+            this.setDataValue('username',value.toLowerCase());
+        }
     },
     password: {
         type: STRING,

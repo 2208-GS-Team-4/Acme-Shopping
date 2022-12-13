@@ -7,27 +7,6 @@ import axios from "axios";
 import RouterComponent from "./RouterComponent";
 
 const App = () => {
-  const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-
-  const loginWithToken = async () => {
-    const token = window.localStorage.getItem("token");
-    if (token) {
-      const response = await axios.get("/api/auth", {
-        headers: {
-          authorization: token,
-        },
-      });
-
-      dispatch(setUser(response.data));
-    }
-  };
-
-  useEffect(() => {
-    loginWithToken();
-  }, []);
-
-  if (!user.id) return <Login />;
   return (
     <div>
       <nav>

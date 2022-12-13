@@ -13,8 +13,8 @@ User.hasOne(Cart);
 Cart.belongsTo(User);
 
 //Joined with CartProduct quantity/price | MAKE SURE TO DO LOWERCASE CARTPRODUCT TO SEE IN PSQL
-Cart.belongsToMany(Product,{through: CartProduct});
-Product.belongsToMany(Cart,{through: CartProduct});
+Cart.belongsToMany(Product,{through: {model:CartProduct,unique:false}});
+Product.belongsToMany(Cart,{through: {model:CartProduct,unique:false}});
 
 //Order table has UserId
 Order.belongsTo(User);

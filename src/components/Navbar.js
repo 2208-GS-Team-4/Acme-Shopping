@@ -9,8 +9,11 @@ const navStyle =  {
     alignItems:'center'
 };
 
-const Navbar = () => {
+const logoStyle = {
+    fontSize:30
+};
 
+const Navbar = () => {
     const { user } = useSelector((state) => state.user);
     const dispatch = useDispatch();
 
@@ -21,7 +24,7 @@ const Navbar = () => {
 
     return (
         <div style={navStyle}>
-            <Link to="/">ACME</Link>
+            <Link to="/" style={logoStyle}>ACME</Link>
             <Link to="/">Home</Link>
             <Link to="/men">Men</Link>
             <Link to="/women">Women</Link>

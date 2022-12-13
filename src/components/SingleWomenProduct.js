@@ -2,19 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 const SingleWomenProduct = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
-  const getProduct = async () => {
+  const getProduct = async (id) => {
     const response = await axios.get(`/api/women/id/${id}`);
     setProduct(response.data);
   };
 
   useEffect(() => {
-    getProduct();
+    getProduct(id);
   }, []);
-
+  
   return (
     <div>
       {" "}

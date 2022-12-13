@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {SideMenuMen} from "./";
 import { useSelector } from "react-redux";
 
 const AllMenProducts = () => {
-  const {allMensProducts} = useSelector((state)=>state.product);
+  const { allMensProducts } = useSelector((state) => state.product);
 
   return (
     <div>
       <SideMenuMen />
-      {/* <Link to="/men/accessories">Accessories</Link> */}
       <div className="grid-container">
         {allMensProducts.map((product) => {
           return (

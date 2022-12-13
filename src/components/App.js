@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import {RouterComponent} from "./";
+import {Navbar,RouterComponent} from "./";
 import { setAllMensProducts,setAllWomensProducts } from "../store/productSlice";
 
 const App = () => {
@@ -23,15 +22,7 @@ const App = () => {
 
   return (
     <div>
-      <Link to="/">
-        <h1>STORE LOGO GOES HERE</h1>
-      </Link>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/men">Men</Link>
-        <Link to="/women">Women</Link>
-      </nav>
-      <p>LOGIN COMP GOES HERE</p>
+      <Navbar />
       <RouterComponent />
     </div>
   );

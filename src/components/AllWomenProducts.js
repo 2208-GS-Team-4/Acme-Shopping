@@ -2,23 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import {SideMenuWomen} from "./";
+import { useSelector } from "react-redux";
 
 const AllWomenProducts = () => {
-  const [products, setProducts] = useState([]);
-
-  const grabProducts = async () => {
-    const allProducts = await axios.get("/api/women");
-    setProducts(allProducts.data);
-  };
-  useEffect(() => {
-    grabProducts();
-  }, []);
+  const {allWomensProducts} = useSelector((state)=>state.product);
 
   return (
     <div>
       <SideMenuWomen />
       <div className="grid-container">
-        {products.map((product) => {
+        {allWomensProducts.map((product) => {
           return (
             <div key={product.id} className="grid-item">
               <Link to={`/women/${product.type}/${product.id}`}>

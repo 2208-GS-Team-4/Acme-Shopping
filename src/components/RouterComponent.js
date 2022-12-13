@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
-import AllMenProducts from "./AllMenProducts";
-import AllWomenProducts from "./AllWomenProducts";
-import ProductCategoryMen from "./ProductCategoryMen";
-import ProductCategoryWomen from "./ProductCategoryWomen";
-import SingleMenProduct from "./SingleMenProduct";
-import SingleWomenProduct from "./SingleWomenProduct";
-import Login from "./Login";
-import Register from "./Register";
+import {
+  AllMenProducts,
+  AllWomenProducts,
+  Home,
+  Login,
+  ProductCategoryMen,
+  ProductCategoryWomen,
+  Register,
+  SideMenuMen,
+  SideMenuWomen,
+  SingleMenProduct,
+  SingleWomenProduct
+} from './';
 
 import { setUser } from "../store/userSlice";
 import { useSelector, useDispatch } from "react-redux";

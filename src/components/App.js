@@ -4,7 +4,7 @@ import { setUser } from "../store/userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, Routes, Route } from "react-router-dom";
 import axios from "axios";
-import RouterComponent from "./RouterComponent";
+import RouterComponent from "./";
 
 const App = () => {
   return (

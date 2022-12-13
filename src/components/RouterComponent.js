@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import {
   AllMenProducts,
   AllWomenProducts,
@@ -13,10 +14,6 @@ import {
   SingleMenProduct,
   SingleWomenProduct
 } from './';
-
-import { setUser } from "../store/userSlice";
-import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
 
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);

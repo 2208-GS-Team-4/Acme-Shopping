@@ -12,7 +12,8 @@ import {
   SideMenuMen,
   SideMenuWomen,
   SingleMenProduct,
-  SingleWomenProduct
+  SingleWomenProduct,
+  Cart
 } from './';
 
 const RouterComponent = () => {
@@ -22,6 +23,7 @@ const RouterComponent = () => {
     <Routes>
       {!user.id && <Route path='/login' element={<Login />}/>}
       {!user.id && <Route path='/register' element={<Register />}/>}
+      {!user.id && <Route path='/cart' element={<Cart />}/>}
       <Route exact path="/" element={<Home />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />

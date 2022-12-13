@@ -6,6 +6,9 @@ const ProductCategoryMen = () => {
   const [products, setProducts] = useState([]);
   const { productType } = useParams();
 
+  // Rather than making this API call, we should pull all the men's products from the Redux store,
+  // then filter based on the productType that was passed into the URL. This saves us from having
+  // potentially too many API calls as users switch back and forth between pages.
   const getProducts = async (productType) => {
     const response = await axios.get(`/api/men/productType/${productType}`);
     setProducts(response.data);

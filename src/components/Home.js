@@ -15,7 +15,11 @@ const Home = () => {
   return (
     <>
       <div id="loggedInDiv">
-        {user.id ? <p>Welcome {user.username}!!</p> : <Link to="/login">Login</Link>}
+        {user.id ? (
+          <p>Welcome {user.username}!!</p>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
         {user.id && <button onClick={logout}>Logout</button>}
       </div>
       <div className="adDiv">

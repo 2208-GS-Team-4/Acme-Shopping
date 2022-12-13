@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import SideMenuMen from "./SideMenuMen";
 
 const AllMenProducts = () => {
   const [products, setProducts] = useState([]);
@@ -16,15 +17,7 @@ const AllMenProducts = () => {
 
   return (
     <div>
-      <div className="sideMenu">
-        <Link to="/men/jacket">Jackets</Link>
-        <Link to="/men/sweater">Sweaters</Link>
-        <Link to="/men/pants">Pants</Link>
-        <Link to="/men/shirt">Shirts</Link>
-        <Link to="/men/socks">Socks</Link>
-        <Link to="/men/hat">Hats</Link>
-        <Link to="/men/underwear">Underwear</Link>
-      </div>
+      <SideMenuMen />
       {/* <Link to="/men/accessories">Accessories</Link> */}
       <div className="grid-container">
         {products.map((product) => {

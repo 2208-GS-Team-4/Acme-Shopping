@@ -17,7 +17,7 @@ const App = () => {
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
       </nav>
-
+      <p>LOGIN COMP GOES HERE</p>
       <RouterComponent />
     </div>
   );

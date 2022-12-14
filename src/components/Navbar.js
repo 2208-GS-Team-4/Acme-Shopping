@@ -14,6 +14,7 @@ const Navbar = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (
         <div style={navStyle}>
             <Link to="/" style={logoStyle}>ACME</Link>
@@ -25,7 +26,7 @@ const Navbar = () => {
             {user.id && <button onClick={logout}>Logout</button>}
         </div>
     );
-=======
+  
   return (
     <div>
       <Link to="/" id="brandName">
@@ -42,11 +43,11 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
+        {user.id && <Link to='/cart'>Cart</Link>}
         {user.id && <button onClick={logout}>Logout</button>}
       </div>
     </div>
   );
->>>>>>> 359cf6bb61206002a09bd2b386b6843eb867507b
 };
 
 export default Navbar;

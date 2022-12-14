@@ -11,6 +11,9 @@ const CartProduct = db.define('cartproduct', {
     quantity: {
         type: Sequelize.INTEGER
         },
+    size: {
+        type: Sequelize.STRING
+        },
     price: {
         type: Sequelize.DECIMAL(5,2)
         },

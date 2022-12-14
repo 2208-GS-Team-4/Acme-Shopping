@@ -1,22 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const SingleWomenProduct = () => {
+  const { allWomensProducts } = useSelector((state)=>state.product);
+  const { user } = useSelector((state)=>state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
-  // Rather than making this API call, we should pull all the women's products from the Redux store,
-  // then filter based on the id that was passed into the URL. This saves us from having
-  // potentially too many API calls as users switch back and forth between pages.
-  const getProduct = async (id) => {
-    const response = await axios.get(`/api/women/id/${id}`);
-    setProduct(response.data);
+  const getProduct =  () => {
+    const foundProduct = allWomensProducts.filter(product=>product.id===Number(id));
+    setProduct(foundProduct);
+  };
+
+  const addToCart = async () => {
+    const quantity = 1;
+    const price = product[0].price;
+    const productId = product[0].id;
+    const data = {
+      quantity,
+      price,
+      productId
+    };
+    await axios.post(`/api/users/${user.id}/cart`,data);
   };
 
   useEffect(() => {
-    getProduct(id);
+    getProduct();
   }, []);
   
   return (
@@ -53,6 +65,7 @@ const SingleWomenProduct = () => {
                   );
                 })}
               </selection>
+              {user.id && <button onClick={addToCart}>Add to cart</button>}
             </div>
           </div>
         );

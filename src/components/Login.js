@@ -27,7 +27,7 @@ const Login = () => {
       });
 
       dispatch(setUser(response.data));
-      navigate('/');
+      navigate("/");
     }
   };
 
@@ -41,25 +41,29 @@ const Login = () => {
   };
 
   return (
-    <div className="formDiv">
-      <h2>Login</h2>
-      <form onSubmit={attemptLogin} className="loginForm">
-        <input
-          placeholder="username"
-          value={credentials.username}
-          name="username"
-          onChange={onChange}
-        />
-        <input
-          placeholder="password"
-          name="password"
-          value={credentials.password}
-          onChange={onChange}
-        />
-        <button>Login</button>
-      </form>
-      <Link to="/register">Need an account?</Link>
-    </div>
+    <>
+      <div className="formDiv">
+        <h2>Login</h2>
+        <form onSubmit={attemptLogin} className="loginForm">
+          <input
+            placeholder="username"
+            value={credentials.username}
+            name="username"
+            onChange={onChange}
+          />
+          <input
+            placeholder="password"
+            name="password"
+            value={credentials.password}
+            onChange={onChange}
+          />
+          <button>Login</button>
+        </form>
+        <div className="registerAccount">
+          <Link to="/register">Need an account?</Link>
+        </div>
+      </div>
+    </>
   );
 };
 

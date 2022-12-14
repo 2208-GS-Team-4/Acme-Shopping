@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { resetUser } from "../store/userSlice";
+import { NavDropdown } from './';
 
 const navStyle =  {
     display: 'flex',
@@ -29,6 +30,7 @@ const Navbar = () => {
             <Link to="/men">Men</Link>
             <Link to="/women">Women</Link>
             {user.id ? <p>Welcome {user.username}!!</p> : <Link to="/login">Login</Link>}
+            {user.id && <Link to="/cart">Cart</Link>}
             {user.id && <button onClick={logout}>Logout</button>}
         </div>
     );

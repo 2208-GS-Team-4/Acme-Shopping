@@ -5,22 +5,29 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { user } = useSelector((state) => state.user);
-  const [cartProducts,setCartProducts] = useState([]);
+  const [cart,setCart] = useState([]);
 
-  const fetchCartProducts = async() => {
-    const cartProducts = await axios.get(`/api/users/${user.id}/cart`);
-    setCartProducts(cartProducts.data);
+  const fetchCart = async() => {
+    const response = await axios.get(`/api/users/${user.id}/cart`);
+    setCart(response.data.products);
   };
 
   useEffect(()=>{
-    fetchCartProducts();
+    fetchCart();
   },[]);
-
-  console.log(cartProducts);
 
   return (
     <div>
-      <h1>User cart</h1>
+      <h1>Cart</h1>
+      {cart.map((product) => {
+          return (
+            <div key={product.id} className="grid-item">
+              <img src={product.imageURL} />
+              <p className="productDisplayName">{product.name}</p>
+            </div>
+          );
+        })
+      }
     </div>
   );
 };

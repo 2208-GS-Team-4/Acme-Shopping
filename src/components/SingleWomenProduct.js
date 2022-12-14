@@ -18,7 +18,7 @@ const SingleWomenProduct = () => {
   useEffect(() => {
     getProduct(id);
   }, []);
-  
+
   return (
     <div>
       {" "}
@@ -40,7 +40,7 @@ const SingleWomenProduct = () => {
               <p>{item.description}</p>
               <p>{item.color}</p>
               <h3>${item.price}</h3> <h4>Please Select Your Size:</h4>
-              <selection className="sizeInfo">
+              <select className="sizeInfo">
                 {item.option.map((eachOption) => {
                   return (
                     // <div key={eachOption.id}>
@@ -52,7 +52,7 @@ const SingleWomenProduct = () => {
                     // </div>
                   );
                 })}
-              </selection>
+              </select>
             </div>
           </div>
         );

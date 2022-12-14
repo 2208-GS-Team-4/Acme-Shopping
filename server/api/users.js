@@ -36,20 +36,17 @@ router.get("/:userId", async (req, res, next) => {
 
 // GET localhost:3000/api/users/:userId/cart
 router.get("/:userId/cart", async (req, res, next) => {
-  const cart = await Cart.findOne({
-    where:{
-      userId:req.params.userId
-    },
-    include:[Product]
-  });
-  // const cartId = cart.id
-  // const cartProducts = await CartProduct.findAll({
-  //   where:{
-  //     cartId:cartId
-  //   }
-  // });
-  //res.send(cartProducts);
-  res.send(cart);
+  try{
+    const cart = await Cart.findOne({
+      where:{
+        userId:req.params.userId
+      },
+      include:[Product]
+    });
+    res.send(cart);
+  }catch(error){
+    next(error);
+  };
 });
 
 // POST localhost:3000/api/users/:userId/cart

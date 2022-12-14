@@ -13,19 +13,6 @@ const Navbar = () => {
     dispatch(resetUser());
   };
 
-<<<<<<< HEAD
-    return (
-        <div style={navStyle}>
-            <Link to="/" style={logoStyle}>ACME</Link>
-            <Link to="/">Home</Link>
-            <Link to="/men">Men</Link>
-            <Link to="/women">Women</Link>
-            {user.id ? <p>Welcome {user.username}!!</p> : <Link to="/login">Login</Link>}
-            {user.id && <Link to="/cart">Cart</Link>}
-            {user.id && <button onClick={logout}>Logout</button>}
-        </div>
-    );
-=======
   return (
     <div>
       <Link to="/" id="brandName">
@@ -42,11 +29,11 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
+        {user.id && <Link to='/cart'>Cart</Link>}
         {user.id && <button onClick={logout}>Logout</button>}
       </div>
     </div>
   );
->>>>>>> 1cf62da3b75292683b773d6466a26bebb8564028
 };
 
 export default Navbar;

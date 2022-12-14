@@ -4,25 +4,16 @@ import { Link } from "react-router-dom";
 import { resetUser } from "../store/userSlice";
 import { NavDropdown } from './';
 
-const navStyle =  {
-    display: 'flex',
-    justifyContent:'space-evenly',
-    alignItems:'center'
-};
-
-const logoStyle = {
-    fontSize:30
-};
-
 const Navbar = () => {
-    const { user } = useSelector((state) => state.user);
-    const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
-    const logout = () => {
-        window.localStorage.removeItem("token");
-        dispatch(resetUser());
-    };
+  const logout = () => {
+    window.localStorage.removeItem("token");
+    dispatch(resetUser());
+  };
 
+<<<<<<< HEAD
     return (
         <div style={navStyle}>
             <Link to="/" style={logoStyle}>ACME</Link>
@@ -34,6 +25,28 @@ const Navbar = () => {
             {user.id && <button onClick={logout}>Logout</button>}
         </div>
     );
+=======
+  return (
+    <div>
+      <Link to="/" id="brandName">
+        ACME
+      </Link>
+      <div id="navBar">
+        <Link to="/">Home</Link>
+        <Link to="/men">Men</Link>
+        <Link to="/women">Women</Link>
+      </div>
+      <div className="loggedInDiv">
+        {user.id ? (
+          <p>Welcome {user.username}!!</p>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
+        {user.id && <button onClick={logout}>Logout</button>}
+      </div>
+    </div>
+  );
+>>>>>>> 359cf6bb61206002a09bd2b386b6843eb867507b
 };
 
 export default Navbar;

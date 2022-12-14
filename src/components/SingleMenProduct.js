@@ -30,7 +30,7 @@ const SingleMenProduct = () => {
   useEffect(() => {
     getProduct();
   }, []);
-  
+
   return (
     <>
       <div className="sideMenu">
@@ -52,7 +52,7 @@ const SingleMenProduct = () => {
                 <p>{item.description}</p>
                 <p>{item.color}</p>
                 <h3>${item.price}</h3> <h4>Please Select Your Size:</h4>
-                <selection className="sizeInfo">
+                <select className="sizeInfo">
                   {item.option.map((eachOption) => {
                     return (
                       // <div key={eachOption.id}>
@@ -64,8 +64,7 @@ const SingleMenProduct = () => {
                       // </div>
                     );
                   })}
-                </selection>
-                {user.id && <button onClick={addToCart}>Add to cart</button>}
+                </select>
               </div>
             </div>
           );

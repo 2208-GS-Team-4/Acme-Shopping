@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { resetUser } from "../store/userSlice";
+import { NavDropdown } from './';
 
 const Navbar = () => {
   const { user } = useSelector((state) => state.user);
@@ -28,6 +29,7 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
+        {user.id && <Link to='/cart'>Cart</Link>}
         {user.id && <button onClick={logout}>Logout</button>}
       </div>
     </div>

@@ -1382,6 +1382,8 @@ const seed = async () => {
     AlfredProhaska,
     CharleyKulas,
     HudsonLegros,
+    BenOdisho,
+    JackPadalino
   ] = await Promise.all(
     userList.map((singleUser) => User.create(singleUser))
   );
@@ -1398,6 +1400,8 @@ const seed = async () => {
     {total:0,userId:AlfredProhaska.id},
     {total:0,userId:CharleyKulas.id},
     {total:0,userId:HudsonLegros.id},
+    {total:0,userId:BenOdisho.id},
+    {total:0,userId:JackPadalino.id},
   ];
 
   cartList = await Promise.all(

@@ -1,24 +1,42 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const SingleMenProduct = () => {
+  const { allMensProducts } = useSelector((state)=>state.product);
+  const { user } = useSelector((state)=>state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
-  // Rather than making this API call, we should pull all the men's products from the Redux store,
-  // then filter based on the id that was passed into the URL. This saves us from having
-  // potentially too many API calls as users switch back and forth between pages.
-  const getProduct = async (id) => {
-    const response = await axios.get(`/api/men/id/${id}`);
-    setProduct(response.data);
+  const getProduct =  () => {
+    const foundProduct = allMensProducts.filter(product=>product.id===Number(id));
+    setProduct(foundProduct);
+  };
+
+  const addToCart = async () => {
+    const name = product[0].name;
+    const size = 'M';
+    const imageURL = product[0].imageURL;;
+    const quantity = 1;
+    const price = product[0].price;
+    const productId = product[0].id;
+    const data = {
+      name,
+      size,
+      imageURL,
+      quantity,
+      price,
+      productId
+    };
+    await axios.post(`/api/users/${user.id}/cart`,data);
   };
 
   useEffect(() => {
-    getProduct(id);
+    getProduct();
   }, []);
-
+  
   return (
     <>
       <div className="sideMenu">
@@ -53,13 +71,7 @@ const SingleMenProduct = () => {
                     );
                   })}
                 </select>
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
+                {user.id && <button onClick={addToCart}>Add to cart</button>}
               </div>
             </div>
           );

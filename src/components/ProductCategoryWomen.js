@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import SideMenuWomen from "./SideMenuWomen";
 
 const ProductCategoryWomen = () => {
   const { allWomensProducts } = useSelector((state) => state.product);
@@ -25,15 +26,7 @@ const ProductCategoryWomen = () => {
 
   return (
     <>
-      <div className="sideMenu">
-        <Link to="/women/jacket">Jackets</Link>
-        <Link to="/women/dress">Dress</Link>
-        <Link to="/women/pants">Pants</Link>
-        <Link to="/women/blouse">Blouse</Link>
-        <Link to="/women/socks">Socks</Link>
-        <Link to="/women/hat">Hats</Link>
-        <Link to="/women/underwear">Underwear</Link>
-      </div>
+      <SideMenuWomen />
       <div className="grid-container">
         {products.map((product) => {
           return (

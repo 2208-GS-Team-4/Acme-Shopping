@@ -3,22 +3,25 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import SideMenuMen from "./SideMenuMen";
 
 const SingleMenProduct = () => {
-  const { allMensProducts } = useSelector((state)=>state.product);
-  const { user } = useSelector((state)=>state.user);
+  const { allMensProducts } = useSelector((state) => state.product);
+  const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
-  const getProduct =  () => {
-    const foundProduct = allMensProducts.filter(product=>product.id===Number(id));
+  const getProduct = () => {
+    const foundProduct = allMensProducts.filter(
+      (product) => product.id === Number(id)
+    );
     setProduct(foundProduct);
   };
 
   const addToCart = async () => {
     const name = product[0].name;
-    const size = 'M';
-    const imageURL = product[0].imageURL;;
+    const size = "M";
+    const imageURL = product[0].imageURL;
     const quantity = 1;
     const price = product[0].price;
     const productId = product[0].id;
@@ -28,25 +31,19 @@ const SingleMenProduct = () => {
       imageURL,
       quantity,
       price,
-      productId
+      productId,
     };
-    await axios.post(`/api/users/${user.id}/cart`,data);
+    await axios.post(`/api/users/${user.id}/cart`, data);
   };
 
   useEffect(() => {
     getProduct();
   }, []);
-  
+
   return (
     <>
       <div className="sideMenu">
-        <Link to="/men/jacket">Jackets</Link>
-        <Link to="/men/sweater">Sweaters</Link>
-        <Link to="/men/pants">Pants</Link>
-        <Link to="/men/shirt">Shirts</Link>
-        <Link to="/men/socks">Socks</Link>
-        <Link to="/men/hat">Hats</Link>
-        <Link to="/men/underwear">Underwear</Link>
+        <SideMenuMen />
       </div>
       <div>
         {product.map((item) => {

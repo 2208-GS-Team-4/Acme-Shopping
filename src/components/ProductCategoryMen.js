@@ -26,9 +26,7 @@ const ProductCategoryMen = () => {
   }, [allMensProducts, productType]);
   return (
     <>
-      <div className="sideMenu">
-        <SideMenuMen />
-      </div>{" "}
+      <SideMenuMen />
       <div className="grid-container">
         {products.map((product) => {
           return (

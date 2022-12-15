@@ -1390,18 +1390,18 @@ const seed = async () => {
 
   //-------------create all cart items here-------------//
   let cartList = [
-    {total:0,userId:HowellAltenwerth.id},
-    {total:0,userId:DaphneyBednar.id},
-    {total:0,userId:BreanaPouros.id},
-    {total:0,userId:RosalindOberbrunner.id},
-    {total:0,userId:MalcolmBraun.id},
-    {total:0,userId:JacintoChamplin.id},
-    {total:0,userId:NyahLakin.id},
-    {total:0,userId:AlfredProhaska.id},
-    {total:0,userId:CharleyKulas.id},
-    {total:0,userId:HudsonLegros.id},
-    {total:0,userId:BenOdisho.id},
-    {total:0,userId:JackPadalino.id},
+    {userId:HowellAltenwerth.id},
+    {userId:DaphneyBednar.id},
+    {userId:BreanaPouros.id},
+    {userId:RosalindOberbrunner.id},
+    {userId:MalcolmBraun.id},
+    {userId:JacintoChamplin.id},
+    {userId:NyahLakin.id},
+    {userId:AlfredProhaska.id},
+    {userId:CharleyKulas.id},
+    {userId:HudsonLegros.id},
+    {userId:BenOdisho.id},
+    {userId:JackPadalino.id},
   ];
 
   cartList = await Promise.all(

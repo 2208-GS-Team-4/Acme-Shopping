@@ -23,7 +23,7 @@ router.post("/", async (req, res, next) => {
     //phone
   } = req.body;
   const newUser = await User.create(data);
-  await Cart.create({total:0,userId:newUser.id})
+  await Cart.create({userId:newUser.id})
   res.send(newUser);
 });
 

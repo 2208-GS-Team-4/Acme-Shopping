@@ -9,12 +9,14 @@ const Cart = () => {
 
   const fetchCart = async() => {
     const response = await axios.get(`/api/users/${user.id}/cart`);
-    setCart(response.data.products);
+    setCart(response.data);
   };
 
   useEffect(()=>{
     fetchCart();
   },[]);
+
+  console.log(cart);
 
   return (
     <div>
@@ -25,6 +27,7 @@ const Cart = () => {
               <img src={product.imageURL} />
               <p className="productDisplayName">{product.name}</p>
             </div>
+            //<p>{product.price}</p>
           );
         })
       }

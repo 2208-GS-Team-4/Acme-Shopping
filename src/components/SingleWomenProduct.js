@@ -16,10 +16,16 @@ const SingleWomenProduct = () => {
   };
 
   const addToCart = async () => {
+    const name = product[0].name;
+    const size = 'M';
+    const imageURL = product[0].imageURL;;
     const quantity = 1;
     const price = product[0].price;
     const productId = product[0].id;
     const data = {
+      name,
+      size,
+      imageURL,
       quantity,
       price,
       productId

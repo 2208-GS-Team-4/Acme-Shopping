@@ -41,10 +41,14 @@ router.get("/:userId/cart", async (req, res, next) => {
     const cart = await Cart.findOne({
       where:{
         userId:req.params.userId
-      },
-      include:[Product]
+      }
     });
-    res.send(cart);
+    const allProducts = await CartProduct.findAll({
+      where:{
+        cartId:cart.id
+      }
+    });
+    res.send(allProducts);
   }catch(error){
     next(error);
   };
@@ -53,6 +57,9 @@ router.get("/:userId/cart", async (req, res, next) => {
 // POST localhost:3000/api/users/:userId/cart
 router.post("/:userId/cart", async (req, res, next) => {
   let {
+    name,
+    size,
+    imageURL,
     quantity,
     price,
     productId
@@ -65,10 +72,13 @@ router.post("/:userId/cart", async (req, res, next) => {
   });
   const cartId = cart.id;
   await CartProduct.create({
+    name,
+    size,
+    imageURL,
     quantity,
     price,
-    cartId,
-    productId
+    productId,
+    cartId
   });
   res.sendStatus(200);
 });

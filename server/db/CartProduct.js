@@ -8,9 +8,18 @@ const CartProduct = db.define('cartproduct', {
         autoIncrement:true,
         allowNull:false
     },
+    name: {
+        type: Sequelize.STRING
+    },
+    imageURL: {
+        type: Sequelize.STRING
+    },
     quantity: {
         type: Sequelize.INTEGER
-        },
+    },
+    size: {
+        type: Sequelize.STRING
+    },
     price: {
         type: Sequelize.DECIMAL(5,2)
         },

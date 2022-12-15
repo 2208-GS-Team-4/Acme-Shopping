@@ -12,7 +12,8 @@ import {
   SideMenuMen,
   SideMenuWomen,
   SingleMenProduct,
-  SingleWomenProduct
+  SingleWomenProduct,
+  Cart
 } from './';
 import CheckoutPage from "./Checkout/CheckoutPage";
 
@@ -21,9 +22,10 @@ const RouterComponent = () => {
 
   return (
     <Routes>
-      {!user.id && <Route path='/login' element={<Login />}/>}
-      {!user.id && <Route path='/register' element={<Register />}/>}
+      <Route path='/login' element={<Login />}/>
+      <Route path='/register' element={<Register />}/>
       <Route exact path="/" element={<Home />} />
+      <Route exact path="/cart" element={<Cart />}/>
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
       <Route exact path="/men/:productType/:id" element={<SingleMenProduct />}/>

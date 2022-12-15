@@ -5,13 +5,14 @@ import Delivery from "./Delivery";
 import Payment from "./Payment";
 
 const CheckoutPage = () => {
+  
   return (
-    <div>
+    <form>
       <ContactInfo />
       <BillingShipping />
       <Delivery />
       <Payment />
-    </div>
+    </form>
   );
 };
 

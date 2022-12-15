@@ -19,34 +19,32 @@ const Payment = () => {
     <div>
       <Card variant="outlined">
         <h4>Payment:</h4>
-        <form>
-          <label>Credit Card:</label>
-          <input
-            required
-            type="text"
-            value={cardNumber}
-            onChange={handleCardNumberChange}
-            placeholder="0000-0000-0000-0000"
-          ></input>
-          <label>Expiration:</label>
-          <input
-            required
-            type="text"
-            value={expiration}
-            onChange={handleExpirationChange}
-            maxLength="5"
-            placeholder="00/00"
-          ></input>
-          <label>CVV:</label>
-          <input
-            required
-            type="text"
-            value={code}
-            onChange={handleCodeChange}
-            maxLength="3"
-            placeholder="000"
-          ></input>
-        </form>
+        <label>Credit Card:</label>
+        <input
+          required
+          type="text"
+          value={cardNumber}
+          onChange={handleCardNumberChange}
+          placeholder="0000-0000-0000-0000"
+        ></input>
+        <label>Expiration:</label>
+        <input
+          required
+          type="text"
+          value={expiration}
+          onChange={handleExpirationChange}
+          maxLength="5"
+          placeholder="00/00"
+        ></input>
+        <label>CVV:</label>
+        <input
+          required
+          type="text"
+          value={code}
+          onChange={handleCodeChange}
+          maxLength="3"
+          placeholder="000"
+        ></input>
       </Card>
     </div>
   );

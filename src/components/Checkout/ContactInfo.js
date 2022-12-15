@@ -24,40 +24,38 @@ const ContactInfo = () => {
     <div>
       <Card variant="outlined">
         <h4>Contact Info</h4>
-        <form>
-          <label>First Name:</label>
-          <input
-            required
-            type="text"
-            value={firstName}
-            onChange={handleFirstNameChange}
-            placeholder="John"
-          ></input>
-          <label>Last Name:</label>
-          <input
-            required
-            type="text"
-            value={lastName}
-            onChange={handleLastNameChange}
-            placeholder="Smith"
-          ></input>
-          <label>Email:</label>
-          <input
-            required
-            type="text"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="johnsmith@johnsmith.com"
-          ></input>
-          <label>Phone Number:</label>
-          <input
-            required
-            type="text"
-            value={phoneNumber}
-            onChange={handlePhoneNumberChange}
-            placeholder="123-456-7890"
-          ></input>
-        </form>
+        <label>First Name:</label>
+        <input
+          required
+          type="text"
+          value={firstName}
+          onChange={handleFirstNameChange}
+          placeholder="John"
+        ></input>
+        <label>Last Name:</label>
+        <input
+          required
+          type="text"
+          value={lastName}
+          onChange={handleLastNameChange}
+          placeholder="Smith"
+        ></input>
+        <label>Email:</label>
+        <input
+          required
+          type="text"
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="johnsmith@johnsmith.com"
+        ></input>
+        <label>Phone Number:</label>
+        <input
+          required
+          type="text"
+          value={phoneNumber}
+          onChange={handlePhoneNumberChange}
+          placeholder="123-456-7890"
+        ></input>
       </Card>
     </div>
   );

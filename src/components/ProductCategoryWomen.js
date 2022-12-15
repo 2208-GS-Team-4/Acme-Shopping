@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const ProductCategoryWomen = () => {
-  const {allWomensProducts} = useSelector((state)=>state.product);
+  const { allWomensProducts } = useSelector((state) => state.product);
   const [products, setProducts] = useState([]);
   const { productType } = useParams();
 
@@ -13,14 +13,15 @@ const ProductCategoryWomen = () => {
   // then filter based on the productType that was passed into the URL. This saves us from having
   // potentially too many API calls as users switch back and forth between pages.
   const getProducts = async (productType) => {
-    const response = await axios.get(`/api/women/productType/${productType}`);
-    const productData = await response.data;
-    setProducts(productData);
+    const filteredProduct = allWomensProducts.filter(
+      (product) => product.type === productType
+    );
+    setProducts(filteredProduct);
   };
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts(productType);
+  }, [allWomensProducts, productType]);
 
   return (
     <>

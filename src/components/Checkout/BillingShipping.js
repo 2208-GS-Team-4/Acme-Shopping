@@ -39,71 +39,69 @@ const BillingShipping = () => {
     <div>
       <Card variant="outlined">
         <h4>Billing & Shipping Address</h4>
-        <form>
-          <label>First Name:</label>
-          <input
-            required
-            type="text"
-            value={firstName}
-            onChange={handleFirstNameChange}
-            placeholder="John"
-          ></input>
-          <label>Last Name:</label>
-          <input
-            required
-            type="text"
-            value={lastName}
-            onChange={handleLastNameChange}
-            placeholder="Smith"
-          ></input>
-          <label>Country:</label>
-          <input
-            required
-            type="text"
-            value={country}
-            onChange={handleCountryChange}
-            placeholder="United States of John Smith"
-          ></input>
-          <label>Address:</label>
-          <input
-            required
-            type="text"
-            value={address}
-            onChange={handleAddressChange}
-            placeholder="123 John St"
-          ></input>
-          <label>Address Two:</label>
-          <input
-            type="text"
-            value={addressTwo}
-            onChange={handleAddressTwoChange}
-            placeholder="Apartment 123"
-          ></input>
-          <label>Postal Code:</label>
-          <input
-            required
-            type="text"
-            value={postalCode}
-            onChange={handlePostalCodeChange}
-            placeholder="00000"
-          ></input>
-          <label>City:</label>
-          <input
-            required
-            type="text"
-            value={city}
-            onChange={handleCityChange}
-            placeholder="John Smith City"
-          ></input>
-          <label>State / Province:</label>
-          <input
-            required
-            type="text"
-            value={stateProvince}
-            onChange={handleStateProvinceChange}
-            placeholder="John Smith York?"
-          ></input>
-        </form>
+        <label>First Name:</label>
+        <input
+          required
+          type="text"
+          value={firstName}
+          onChange={handleFirstNameChange}
+          placeholder="John"
+        ></input>
+        <label>Last Name:</label>
+        <input
+          required
+          type="text"
+          value={lastName}
+          onChange={handleLastNameChange}
+          placeholder="Smith"
+        ></input>
+        <label>Country:</label>
+        <input
+          required
+          type="text"
+          value={country}
+          onChange={handleCountryChange}
+          placeholder="United States of John Smith"
+        ></input>
+        <label>Address:</label>
+        <input
+          required
+          type="text"
+          value={address}
+          onChange={handleAddressChange}
+          placeholder="123 John St"
+        ></input>
+        <label>Address Two:</label>
+        <input
+          type="text"
+          value={addressTwo}
+          onChange={handleAddressTwoChange}
+          placeholder="Apartment 123"
+        ></input>
+        <label>Postal Code:</label>
+        <input
+          required
+          type="text"
+          value={postalCode}
+          onChange={handlePostalCodeChange}
+          placeholder="00000"
+        ></input>
+        <label>City:</label>
+        <input
+          required
+          type="text"
+          value={city}
+          onChange={handleCityChange}
+          placeholder="John Smith City"
+        ></input>
+        <label>State / Province:</label>
+        <input
+          required
+          type="text"
+          value={stateProvince}
+          onChange={handleStateProvinceChange}
+          placeholder="John Smith York?"
+        ></input>
       </Card>
     </div>
   );

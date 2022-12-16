@@ -13,7 +13,8 @@ import {
   SideMenuWomen,
   SingleMenProduct,
   SingleWomenProduct,
-  Cart
+  Cart,
+  TestAdmin
 } from './';
 import CheckoutPage from "./Checkout/CheckoutPage";
 
@@ -33,6 +34,7 @@ const RouterComponent = () => {
       <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
       <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
       <Route exact path="/checkout" element={<CheckoutPage />}/>
+      <Route exact path="/admin" element={<TestAdmin />}/>
     </Routes>
   );
 };

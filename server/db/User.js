@@ -38,9 +38,9 @@ const User = db.define('user', {
             notEmpty: true
         },
         unique: true,
-        set(value) {
-            this.setDataValue('username',value.toLowerCase());
-        }
+        // set(value) {
+        //     this.setDataValue('username',value.toLowerCase());
+        // }
     },
     password: {
         type: STRING,

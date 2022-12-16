@@ -1,39 +1,55 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setBillingFirstName,
+  setBillingLastName,
+  setCountry,
+  setAddress,
+  setAddressTwo,
+  setPostalCode,
+  setCity,
+  setStateProvince,
+} from "../../store/CheckoutSlice";
 
 const BillingShipping = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [country, setCountry] = useState("");
-  const [address, setAddress] = useState("");
-  const [addressTwo, setAddressTwo] = useState("");
-  const [postalCode, setPostalCode] = useState("");
-  const [city, setCity] = useState("");
-  const [stateProvince, setStateProvince] = useState("");
+  const dispatch = useDispatch();
+  const billingFirstName = useSelector(
+    (state) => state.checkout.billingFirstName
+  );
+  const billingLastName = useSelector(
+    (state) => state.checkout.billingLastName
+  );
+  const country = useSelector((state) => state.checkout.country);
+  const address = useSelector((state) => state.checkout.address);
+  const addressTwo = useSelector((state) => state.checkout.addressTwo);
+  const postalCode = useSelector((state) => state.checkout.postalCode);
+  const city = useSelector((state) => state.checkout.city);
+  const stateProvince = useSelector((state) => state.checkout.stateProvince);
 
   const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value);
+    dispatch(setBillingFirstName(event.target.value));
   };
   const handleLastNameChange = (event) => {
-    setLastName(event.target.value);
+    dispatch(setBillingLastName(event.target.value));
   };
   const handleCountryChange = (event) => {
-    setCountry(event.target.value);
+    dispatch(setCountry(event.target.value));
   };
   const handleAddressChange = (event) => {
-    setAddress(event.target.value);
+    dispatch(setAddress(event.target.value));
   };
   const handleAddressTwoChange = (event) => {
-    setAddressTwo(event.target.value);
+    dispatch(setAddressTwo(event.target.value));
   };
   const handlePostalCodeChange = (event) => {
-    setPostalCode(event.target.value);
+    dispatch(setPostalCode(event.target.value));
   };
   const handleCityChange = (event) => {
-    setCity(event.target.value);
+    dispatch(setCity(event.target.value));
   };
   const handleStateProvinceChange = (event) => {
-    setStateProvince(event.target.value);
+    dispatch(setStateProvince(event.target.value));
   };
   return (
     <div>
@@ -43,7 +59,7 @@ const BillingShipping = () => {
         <input
           required
           type="text"
-          value={firstName}
+          value={billingFirstName}
           onChange={handleFirstNameChange}
           placeholder="John"
         ></input>
@@ -51,7 +67,7 @@ const BillingShipping = () => {
         <input
           required
           type="text"
-          value={lastName}
+          value={billingLastName}
           onChange={handleLastNameChange}
           placeholder="Smith"
         ></input>

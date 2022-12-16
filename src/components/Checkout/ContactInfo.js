@@ -1,23 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setFirstName,
+  setLastName,
+  setEmail,
+  setPhoneNumber,
+} from "../../store/CheckoutSlice";
 
 const ContactInfo = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const dispatch = useDispatch();
+  const firstName = useSelector((state) => state.checkout.firstName);
+  const lastName = useSelector((state) => state.checkout.lastName);
+  const email = useSelector((state) => state.checkout.email);
+  const phoneNumber = useSelector((state) => state.checkout.phoneNumber);
 
   const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value);
+    dispatch(setFirstName(event.target.value));
   };
   const handleLastNameChange = (event) => {
-    setLastName(event.target.value);
+    dispatch(setLastName(event.target.value));
   };
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    dispatch(setEmail(event.target.value));
   };
   const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
+    dispatch(setPhoneNumber(event.target.value));
   };
 
   return (

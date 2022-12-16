@@ -89,11 +89,11 @@ const Register = () => {
         <div>
             <h2>Create new account</h2>
             <form onSubmit={registerUser}>
-                <input placeholder="First name" onChange={handleFirstNameChange}/>
-                <input placeholder="Last name" onChange={handleLastNameChange}/>
-                <input placeholder="email" onChange={handleEmailChange}/>
-                <input placeholder="Username" onChange={handleUsernameChange}/>
-                <input placeholder="Password" onChange={handlePasswordChange}/>
+                <input require placeholder="First name" onChange={handleFirstNameChange}/>
+                <input require placeholder="Last name" onChange={handleLastNameChange}/>
+                <input require placeholder="email" onChange={handleEmailChange}/>
+                <input require placeholder="Username" onChange={handleUsernameChange}/>
+                <input require placeholder="Password" onChange={handlePasswordChange}/>
                 <button>Register</button>
             </form>
             {emailErrorMessage && <p style={{color:'red',marginTop:'10px'}}>Sorry, this email is already in use.</p>}

@@ -6,7 +6,7 @@ import { NotFoundPage } from '..';
 const AdminHome = () => {
     const { user } = useSelector((state) => state.user);
     const { allProducts } = useSelector((state) => state.product);
-    const [token,setToken] = useState(window.localStorage.getItem('token'))
+    //const [token,setToken] = useState(window.localStorage.getItem('token'))
 
     const [name,setName] = useState('');
     const [description,setDescription] = useState('');
@@ -31,7 +31,7 @@ const AdminHome = () => {
     };
 
     const addNewProduct = async (event) => {
-        //const token = window.localStorage.getItem('token');
+        const token = window.localStorage.getItem('token');
         event.preventDefault();
         if(validProductName){
             const body = {
@@ -42,10 +42,13 @@ const AdminHome = () => {
                 type,
                 gender
             };
+            // await axios.post('/api/products',{
+            //     headers: {
+            //         Authorization: 'Bearer ' + token
+            //     },
+            //     body
+            // });
             await axios.post('/api/products',{
-                headers: {
-                    Authorization: 'Bearer ' + token
-                },
                 body
             });
             setProductCreatedMessage(true);
@@ -53,32 +56,29 @@ const AdminHome = () => {
         };
     };
 
-    const testAuth = async () => {
-        // Grab token off of localstorage
-        //const token = window.localStorage.getItem('token');
+    // const testAuth = async () => {
+    //     // Grab token off of localstorage
+    //     const token = window.localStorage.getItem('token');
+    //     // Pass token over to the back-end
+    //     const res = await axios.get("/api/products/testAuth", {
+    //         headers: {
+    //             Authorization: 'Bearer ' + token
+    //         }
+    //     });
+    //     console.log("RES", res );
+    // };
 
-        // Pass token over to the back-end
-        //const res = await axios.get("/api/products/testAuth", {
-        const res = await axios.get("/api/products/testAddProduct", {
-            headers: {
-                Authorization: 'Bearer ' + token
-            }
-        });
-        console.log("RES", res );
-    };
-
-    const testAddProduct = async () => {
-        // Grab token off of localstorage
-        //const token = window.localStorage.getItem('token');
-
-        // Pass token over to the back-end
-        const res = await axios.get("/api/products/testAddProduct", {
-            headers: {
-                Authorization: 'Bearer ' + token
-            }
-        });
-        console.log("RES", res);
-    };
+    // const testAddProduct = async () => {
+    //     // Grab token off of localstorage
+    //     const token = window.localStorage.getItem('token');
+    //     // Pass token over to the back-end
+    //     const res = await axios.get("/api/products/testAddProduct", {
+    //         headers: {
+    //             Authorization: 'Bearer ' + token
+    //         }
+    //     });
+    //     console.log("RES", res);
+    // };
 
     const handleTypeChange = (event) => {
         setType(event.target.value);
@@ -100,14 +100,12 @@ const AdminHome = () => {
         setDescription(event.target.value);
     };
 
-    //console.log(token);
-
     if(!user.isAdmin) return <NotFoundPage />
     return (
         <>
             <h2>Add new product</h2>
-            <button onClick={testAddProduct}>Test auth</button>
-            {/* <form onSubmit={addNewProduct}>
+            {/* <button onClick={testAddProduct}>Test auth</button> */}
+            <form onSubmit={addNewProduct}>
                 <input required placeholder="Name" onChange={handleNameChange}/>
                 <input required placeholder="Description" onChange={handleDescriptionChange}/>
                 <input required placeholder="Color" onChange={handleColorChange}/>
@@ -117,7 +115,7 @@ const AdminHome = () => {
                 <button>Add</button>
             </form>
             {validProductErrorMessage && <p style={{color:'red',marginTop:'10px'}}>Sorry, this product name is already in use.</p>}
-            {productCreatedMessage && <p style={{color:'green',marginTop:'10px'}}>Product successfully created.</p>} */}
+            {productCreatedMessage && <p style={{color:'green',marginTop:'10px'}}>Product successfully created.</p>}
         </>
     );
 };

@@ -1,35 +1,50 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import SideMenuWomen from "./SideMenuWomen";
 
 const SingleWomenProduct = () => {
+  const { allWomensProducts } = useSelector((state) => state.product);
+  const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
-  // Rather than making this API call, we should pull all the women's products from the Redux store,
-  // then filter based on the id that was passed into the URL. This saves us from having
-  // potentially too many API calls as users switch back and forth between pages.
-  const getProduct = async (id) => {
-    const response = await axios.get(`/api/women/id/${id}`);
-    setProduct(response.data);
+  const getProduct = () => {
+    const foundProduct = allWomensProducts.filter(
+      (product) => product.id === Number(id)
+    );
+    setProduct(foundProduct);
+  };
+
+  const addToCart = async () => {
+    const name = product[0].name;
+    const size = "M";
+    const imageURL = product[0].imageURL;
+    const quantity = 1;
+    const price = product[0].price;
+    const productId = product[0].id;
+    const data = {
+      name,
+      size,
+      imageURL,
+      quantity,
+      price,
+      productId,
+    };
+    await axios.post(`/api/users/${user.id}/cart`, data);
   };
 
   useEffect(() => {
-    getProduct(id);
+    getProduct();
   }, []);
-  
+
   return (
     <div>
       {" "}
       <div className="sideMenu">
-        <Link to="/women/jacket">Jackets</Link>
-        <Link to="/women/dress">Dress</Link>
-        <Link to="/women/pants">Pants</Link>
-        <Link to="/women/blouse">Blouse</Link>
-        <Link to="/women/socks">Socks</Link>
-        <Link to="/women/hat">Hats</Link>
-        <Link to="/women/underwear">Underwear</Link>
+        <SideMenuWomen />
       </div>
       {product.map((item) => {
         return (
@@ -40,7 +55,7 @@ const SingleWomenProduct = () => {
               <p>{item.description}</p>
               <p>{item.color}</p>
               <h3>${item.price}</h3> <h4>Please Select Your Size:</h4>
-              <selection className="sizeInfo">
+              <select className="sizeInfo">
                 {item.option.map((eachOption) => {
                   return (
                     // <div key={eachOption.id}>
@@ -52,7 +67,8 @@ const SingleWomenProduct = () => {
                     // </div>
                   );
                 })}
-              </selection>
+              </select>
+              {user.id && <button onClick={addToCart}>Add to cart</button>}
             </div>
           </div>
         );

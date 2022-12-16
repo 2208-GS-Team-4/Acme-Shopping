@@ -1303,6 +1303,7 @@ let userList = [
     billingAddress: "421 Swift Trace Waco DE 26930-7286",
     creditCard: 8816599003432313,
     phone: 13263105256,
+    isAdmin:false
   },
   {
     firstName: "Ben",

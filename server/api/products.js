@@ -5,10 +5,10 @@ const { Product } = require("../db");
 const { authenticateUser } = require('./helpers/authUserMiddleware');
 
 // GETlocalhost:3000/api/products
-// router.get("/", async (req, res, next) => {
-//   const allProducts = await Product.findAll();
-//   res.send(allProducts);
-// });
+router.get("/", async (req, res, next) => {
+  const allProducts = await Product.findAll();
+  res.send(allProducts);
+});
 
 // GETlocalhost:3000/api/products/testAuth
 // router.get('/testAuth', authenticateUser, (req, res, next) => {

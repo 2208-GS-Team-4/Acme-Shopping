@@ -13,6 +13,8 @@ const CheckoutPage = () => {
   //post request everything
   const handleFormSubmit = () => {
     event.preventDefault();
+    // api post request 
+    // 
   };
   return (
     <form onSubmit={handleFormSubmit}>

@@ -5,7 +5,7 @@ import {
   setCreditCardNumber,
   setExpiration,
   setCode,
-} from "../../store/CheckoutSlice";
+} from "../../store/checkoutSlice";
 
 const Payment = () => {
   const dispatch = useDispatch();

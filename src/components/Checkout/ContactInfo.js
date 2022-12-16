@@ -6,7 +6,7 @@ import {
   setLastName,
   setEmail,
   setPhoneNumber,
-} from "../../store/CheckoutSlice";
+} from "../../store/checkoutSlice";
 
 const ContactInfo = () => {
   const dispatch = useDispatch();

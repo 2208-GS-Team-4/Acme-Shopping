@@ -10,7 +10,7 @@ import {
   setPostalCode,
   setCity,
   setStateProvince,
-} from "../../store/CheckoutSlice";
+} from "../../store/checkoutSlice";
 
 const BillingShipping = () => {
   const dispatch = useDispatch();

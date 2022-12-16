@@ -1,19 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setCreditCardNumber,
+  setExpiration,
+  setCode,
+} from "../../store/checkoutSlice";
 
 const Payment = () => {
-  const [cardNumber, setCardNumber] = useState("");
-  const [expiration, setExpiration] = useState("");
-  const [code, setCode] = useState("");
+  const dispatch = useDispatch();
+  const creditCardNumber = useSelector(
+    (state) => state.checkout.creditCardNumber
+  );
+  const expiration = useSelector((state) => state.checkout.expiration);
+  const code = useSelector((state) => state.checkout.code);
 
-  const handleCardNumberChange = (event) => {
-    setCardNumber(event.target.value);
+  const handleCreditCardNumberChange = (event) => {
+    dispatch(setCreditCardNumber(event.target.value));
   };
   const handleExpirationChange = (event) => {
-    setExpiration(event.target.value);
+    dispatch(setExpiration(event.target.value));
   };
   const handleCodeChange = (event) => {
-    setCode(event.target.value);
+    dispatch(setCode(event.target.value));
   };
   return (
     <div>
@@ -23,8 +32,8 @@ const Payment = () => {
         <input
           required
           type="text"
-          value={cardNumber}
-          onChange={handleCardNumberChange}
+          value={creditCardNumber}
+          onChange={handleCreditCardNumberChange}
           placeholder="0000-0000-0000-0000"
         ></input>
         <label>Expiration:</label>

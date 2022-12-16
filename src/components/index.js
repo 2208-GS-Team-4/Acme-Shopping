@@ -13,5 +13,8 @@ export { default as SideMenuWomen } from './SideMenuWomen';
 export { default as SingleMenProduct } from './SingleMenProduct';
 export { default as SingleWomenProduct } from './SingleWomenProduct';
 export { default as Cart } from './Cart';
-export { default as TestAdmin } from './TestAdmin';
+export { default as AdminHome } from './Admin/AdminHome';
 export { default as NotFoundPage } from './NotFoundPage';
+// Checkout folder
+export { default as CheckoutPage } from './Checkout/CheckoutPage';
+// FAQ folder

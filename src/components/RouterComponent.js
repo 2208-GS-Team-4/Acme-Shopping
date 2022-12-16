@@ -14,9 +14,9 @@ import {
   SingleMenProduct,
   SingleWomenProduct,
   Cart,
-  TestAdmin
+  AdminHome,
+  CheckoutPage
 } from './';
-import CheckoutPage from "./Checkout/CheckoutPage";
 
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
@@ -26,7 +26,7 @@ const RouterComponent = () => {
       <Route exact path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route exact path="/admin" element={<TestAdmin />} />
+      <Route exact path="/admin" element={<AdminHome />} />
       <Route exact path="/cart" element={<Cart />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />

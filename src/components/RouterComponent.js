@@ -28,22 +28,10 @@ const RouterComponent = () => {
       <Route exact path="/cart" element={<Cart />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
-      <Route
-        exact
-        path="/men/:productType/:id"
-        element={<SingleMenProduct />}
-      />
+      <Route exact path="/men/:productType/:id" element={<SingleMenProduct />}/>
       <Route exact path="/women" element={<AllWomenProducts />} />
-      <Route
-        exact
-        path="/women/:productType"
-        element={<ProductCategoryWomen />}
-      />
-      <Route
-        exact
-        path="/women/:productType/:id"
-        element={<SingleWomenProduct />}
-      />
+      <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
+      <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
       <Route exact path="/checkout" element={<CheckoutPage />} />
     </Routes>
   );

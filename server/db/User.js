@@ -11,22 +11,21 @@ const User = db.define('user', {
     //     primaryKey: true,
     //     defaultValue: UUIDV4
     // },
-    // UNDO THESE AT THE END OF THE PROJECT
     firstName: {
         type: Sequelize.STRING, 
-        // allowNull: false,
+        allowNull: false,
         validate: {
         }
     },
     lastName: {
         type: Sequelize.STRING, 
-        // allowNull: false,
+        allowNull: false,
         validate: {
         }
     },
     email: {
         type: Sequelize.STRING, 
-        // allowNull: false,
+        allowNull: false,
         validate: {
             isEmail: true,
         },
@@ -34,7 +33,7 @@ const User = db.define('user', {
     },
     username: {
         type: STRING,
-        // allowNull: false,
+        allowNull: false,
         validate: {
             notEmpty: true
         },
@@ -45,7 +44,7 @@ const User = db.define('user', {
     },
     password: {
         type: STRING,
-        // allowNull: false,
+        allowNull: false,
         validate: {
             notEmpty: true,
             //len: [10,18],
@@ -66,6 +65,11 @@ const User = db.define('user', {
     },
     phone:{
         type:Sequelize.BIGINT,
+    },
+    isAdmin:{
+        type:Sequelize.BOOLEAN,
+        defaultValue:false,
+        allowNull:false        
     }
 });
 

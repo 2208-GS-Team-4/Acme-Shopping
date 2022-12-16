@@ -2,6 +2,7 @@ const { User } = require('../../db');
 const jwt = require('jsonwebtoken');
 
 const authenticateUser = (req, res, next) => {
+    console.log('authentication middleware hit')
     // Get the header sent by the user = Bearer 1234254asdfawef
     const header = req.headers.authorization;
 

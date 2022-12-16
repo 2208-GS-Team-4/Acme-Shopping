@@ -29,12 +29,8 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
-<<<<<<< HEAD
-        {user.id && <Link to='/cart'>Cart</Link>}
-        {user.isAdmin && <Link to='/admin'>Admin</Link>}
-=======
+        {user.isAdmin && <Link to="/admin">Admin</Link>}
         {user.id && <Link to="/cart">Cart</Link>}
->>>>>>> b13cb247ce0e684fa525861847ccf79ec3863440
         {user.id && <button onClick={logout}>Logout</button>}
       </div>
     </div>

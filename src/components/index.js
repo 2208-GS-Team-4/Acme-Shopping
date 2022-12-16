@@ -14,3 +14,4 @@ export { default as SingleMenProduct } from './SingleMenProduct';
 export { default as SingleWomenProduct } from './SingleWomenProduct';
 export { default as Cart } from './Cart';
 export { default as TestAdmin } from './TestAdmin';
+export { default as NotFoundPage } from './NotFoundPage';

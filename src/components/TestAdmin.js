@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { NotFoundPage } from './';
 
 const TestAdmin = () => {
     const { user } = useSelector((state) => state.user);
@@ -22,17 +23,11 @@ const TestAdmin = () => {
     //     testAuth();
     // }, []);
 
-    if(!user.isAdmin){
-        return(
-        <>
-            <p>Sorry. You not s'posed to be here.</p>
-        </>
-        )
-    };
+    if(!user.isAdmin) return <NotFoundPage />
     return (
-        <>
+        <div>
             <p>If you can read this, you must be an admin!</p>
-        </>
+        </div>
     );
 };
 

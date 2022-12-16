@@ -16,6 +16,7 @@ import {
   Cart,
 } from "./";
 import CheckoutPage from "./Checkout/CheckoutPage";
+import UserProfile from "./Profile/UserProfile";
 
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
@@ -45,6 +46,7 @@ const RouterComponent = () => {
         element={<SingleWomenProduct />}
       />
       <Route exact path="/checkout" element={<CheckoutPage />} />
+      <Route exact path="/profile" element={<UserProfile />} />
     </Routes>
   );
 };

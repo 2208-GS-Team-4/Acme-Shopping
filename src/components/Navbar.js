@@ -22,6 +22,7 @@ const Navbar = () => {
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
         <Link to="/checkout">Temp Checkout</Link>
+        <Link to="/profile">Temp ProfileChange</Link>
       </div>
       <div className="loggedInDiv">
         {user.id ? (

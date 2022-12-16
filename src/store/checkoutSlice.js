@@ -13,7 +13,7 @@ const initialState = {
   postalCode: "",
   city: "",
   stateProvince: "",
-  creditCard: "",
+  creditCardNumber: "",
   expiration: "",
   code: "",
 };
@@ -59,7 +59,7 @@ export const checkoutSlice = createSlice({
       state.stateProvince = action.payload;
     },
     setCreditCardNumber: (state, action) => {
-      state.creditCard = action.payload;
+      state.creditCardNumber = action.payload;
     },
     setExpiration: (state, action) => {
       state.expiration = action.payload;

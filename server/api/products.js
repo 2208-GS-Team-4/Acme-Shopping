@@ -9,4 +9,18 @@ router.get("/", async (req, res, next) => {
   res.send(allProducts);
 });
 
+// GETlocalhost:3000/api/products
+router.post("/", async (req, res, next) => {
+    const data = {
+        name,
+        description,
+        color,
+        price,
+        type,
+        gender
+    } = req.body;
+    await Product.create(data)
+    res.sendStatus(200);
+  });
+
 module.exports = router;

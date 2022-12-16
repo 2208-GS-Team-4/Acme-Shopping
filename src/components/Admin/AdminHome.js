@@ -7,15 +7,16 @@ const AdminHome = () => {
     const { user } = useSelector((state) => state.user);
     const { allProducts } = useSelector((state) => state.product);
 
-    const [Type,setType] = useState('');
-    const [Gender,setGender] = useState('');
-    const [Name,setName] = useState('');
-    const [Color,setColor] = useState('');
-    const [Price,setPrice] = useState('');
-    const [Description,setDescription] = useState('');
-
+    const [name,setName] = useState('');
+    const [description,setDescription] = useState('');
+    const [color,setColor] = useState('');
+    const [price,setPrice] = useState('');
+    const [type,setType] = useState('');
+    const [gender,setGender] = useState('');
+    
     const [validProductName,setValidProductName] = useState(false);
     const [validProductErrorMessage,setValidProductErrorMessage] = useState(false);
+    const [productCreatedMessage,setProductCreatedMessage] = useState(false);
 
     const isValidProductName = productNameInput => {
         const foundProduct = allProducts.find(product=>product.name===productNameInput);
@@ -28,6 +29,23 @@ const AdminHome = () => {
         };
     };
 
+    const addNewProduct = async (event) => {
+        event.preventDefault();
+        if(validProductName){
+            const body = {
+                name,
+                description,
+                color,
+                price,
+                type,
+                gender
+            };
+            await axios.post('/api/products', body);
+            setProductCreatedMessage(true);
+            //navigate("/admin");
+        };
+    };
+
     const handleTypeChange = (event) => {
         setType(event.target.value);
     };
@@ -36,6 +54,7 @@ const AdminHome = () => {
     };
     const handleNameChange = (event) => {
         setName(event.target.value);
+        isValidProductName(event.target.value);
     };
     const handleColorChange = (event) => {
         setColor(event.target.value);
@@ -52,14 +71,16 @@ const AdminHome = () => {
         <>
             <h2>Add new product</h2>
             <form onSubmit={addNewProduct}>
-                <input required placeholder="Type" onChange={handleTypeChange}/>
-                <input required placeholder="Gender" onChange={handleGenderChange}/>
                 <input required placeholder="Name" onChange={handleNameChange}/>
+                <input required placeholder="Description" onChange={handleDescriptionChange}/>
                 <input required placeholder="Color" onChange={handleColorChange}/>
                 <input required placeholder="Price" onChange={handlePriceChange}/>
-                <input required placeholder="Description" onChange={handleDescriptionChange}/>
+                <input required placeholder="Type" onChange={handleTypeChange}/>
+                <input required placeholder="Gender" onChange={handleGenderChange}/>
                 <button>Add</button>
             </form>
+            {validProductErrorMessage && <p style={{color:'red',marginTop:'10px'}}>Sorry, this product name is already in use.</p>}
+            {productCreatedMessage && <p style={{color:'green',marginTop:'10px'}}>Product successfully created.</p>}
         </>
     );
 };

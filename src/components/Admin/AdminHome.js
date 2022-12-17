@@ -42,17 +42,13 @@ const AdminHome = () => {
                 type,
                 gender
             };
-            // await axios.post('/api/products',{
-            //     headers: {
-            //         Authorization: 'Bearer ' + token
-            //     },
-            //     body
-            // });
-            await axios.post('/api/products',{
+            await axios.post('/api/products', {
+                headers: {Authorization: 'Bearer ' + token}
+                },
                 body
-            });
+            );
+            //await axios.post('/api/products',body);
             setProductCreatedMessage(true);
-            //navigate("/admin");
         };
     };
 
@@ -65,46 +61,34 @@ const AdminHome = () => {
     //             Authorization: 'Bearer ' + token
     //         }
     //     });
-    //     console.log("RES", res );
+    //     console.log("RES", res.data );
     // };
 
-    // const testAddProduct = async () => {
-    //     // Grab token off of localstorage
-    //     const token = window.localStorage.getItem('token');
-    //     // Pass token over to the back-end
-    //     const res = await axios.get("/api/products/testAddProduct", {
-    //         headers: {
-    //             Authorization: 'Bearer ' + token
-    //         }
-    //     });
-    //     console.log("RES", res);
-    // };
-
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+        isValidProductName(event.target.value);
+    };
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
+    };
+    const handleColorChange = (event) => {
+        setColor(event.target.value);
+    };
+    const handlePriceChange = (event) => {
+        setPrice(parseFloat(event.target.value));
+    };
     const handleTypeChange = (event) => {
         setType(event.target.value);
     };
     const handleGenderChange = (event) => {
         setGender(event.target.value);
     };
-    const handleNameChange = (event) => {
-        setName(event.target.value);
-        isValidProductName(event.target.value);
-    };
-    const handleColorChange = (event) => {
-        setColor(event.target.value);
-    };
-    const handlePriceChange = (event) => {
-        setPrice(event.target.value);
-    };
-    const handleDescriptionChange = (event) => {
-        setDescription(event.target.value);
-    };
-
-    if(!user.isAdmin) return <NotFoundPage />
+    
+    if(user.role!=='admin') return <NotFoundPage />
     return (
         <>
             <h2>Add new product</h2>
-            {/* <button onClick={testAddProduct}>Test auth</button> */}
+            {/* <button onClick={testAuth}>Test auth</button> */}
             <form onSubmit={addNewProduct}>
                 <input required placeholder="Name" onChange={handleNameChange}/>
                 <input required placeholder="Description" onChange={handleDescriptionChange}/>

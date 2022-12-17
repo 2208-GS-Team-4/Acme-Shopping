@@ -42,11 +42,7 @@ const AdminHome = () => {
                 type,
                 gender
             };
-            await axios.post("/api/products", {
-                headers: {Authorization: 'Bearer ' + token},
-                body
-            })
-            //await axios.post('/api/products',body);
+            await axios.post("/api/products", body,{headers: {Authorization: 'Bearer ' + token}});
             setProductCreatedMessage(true);
         };
     };
@@ -87,8 +83,8 @@ const AdminHome = () => {
     return (
         <>
             <h2>Add new product</h2>
-            <button onClick={testAuth}>Test auth</button>
-            {/* <form onSubmit={addNewProduct}>
+            {/* <button onClick={testAuth}>Test auth</button> */}
+            <form onSubmit={addNewProduct}>
                 <input required placeholder="Name" onChange={handleNameChange}/>
                 <input required placeholder="Description" onChange={handleDescriptionChange}/>
                 <input required placeholder="Color" onChange={handleColorChange}/>
@@ -98,7 +94,7 @@ const AdminHome = () => {
                 <button>Add</button>
             </form>
             {validProductErrorMessage && <p style={{color:'red',marginTop:'10px'}}>Sorry, this product name is already in use.</p>}
-            {productCreatedMessage && <p style={{color:'green',marginTop:'10px'}}>Product successfully created.</p>} */}
+            {productCreatedMessage && <p style={{color:'green',marginTop:'10px'}}>Product successfully created.</p>}
         </>
     );
 };

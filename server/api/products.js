@@ -12,7 +12,6 @@ router.get("/", async (req, res, next) => {
 
 // GETlocalhost:3000/api/products/testAuth
 router.get('/testAuth', authenticateUser, (req, res, next) => {
-  console.log('api route hit')
   const { role } = req.user;
   if(role!=='admin'){
       return res.sendStatus(403);
@@ -35,9 +34,9 @@ router.get('/testAuth', authenticateUser, (req, res, next) => {
 //   };
 // });
 
-router.post("/",async (req, res, next) => {
-    await Product.create(req.body)
-    res.sendStatus(200);
-});
+// router.post("/",async (req, res, next) => {
+//     await Product.create(req.body)
+//     res.sendStatus(200);
+// });
 
 module.exports = router;

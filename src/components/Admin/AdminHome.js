@@ -31,8 +31,8 @@ const AdminHome = () => {
     };
 
     const addNewProduct = async (event) => {
-        const token = window.localStorage.getItem('token');
         event.preventDefault();
+        const token = window.localStorage.getItem('token');
         if(validProductName){
             const body = {
                 name,
@@ -42,12 +42,11 @@ const AdminHome = () => {
                 type,
                 gender
             };
-            await axios.post('/api/products', {
-                headers: {Authorization: 'Bearer ' + token}
-                },
-                body
-            );
-            //await axios.post('/api/products',body);
+            // await axios.post("/api/products", {
+            //     headers: {Authorization: 'Bearer ' + token},
+            //     body
+            // })
+            await axios.post('/api/products',body);
             setProductCreatedMessage(true);
         };
     };
@@ -75,7 +74,7 @@ const AdminHome = () => {
         setColor(event.target.value);
     };
     const handlePriceChange = (event) => {
-        setPrice(parseFloat(event.target.value));
+        setPrice(event.target.value);
     };
     const handleTypeChange = (event) => {
         setType(event.target.value);
@@ -93,7 +92,7 @@ const AdminHome = () => {
                 <input required placeholder="Name" onChange={handleNameChange}/>
                 <input required placeholder="Description" onChange={handleDescriptionChange}/>
                 <input required placeholder="Color" onChange={handleColorChange}/>
-                <input required placeholder="Price" onChange={handlePriceChange}/>
+                <input required type='number' placeholder="Price" onChange={handlePriceChange}/>
                 <input required placeholder="Type" onChange={handleTypeChange}/>
                 <input required placeholder="Gender" onChange={handleGenderChange}/>
                 <button>Add</button>

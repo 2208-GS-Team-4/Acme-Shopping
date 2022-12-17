@@ -27,16 +27,7 @@ router.post("/",authenticateUser,async (req, res, next) => {
     if(role!=='admin'){
         return res.sendStatus(403);
     };
-    // const data = {
-    //   name,
-    //   description,
-    //   color,
-    //   price,
-    //   type,
-    //   gender
-    //   } = req.body;
     await Product.create(req.body)
-    //console.log(req.body);
     res.sendStatus(200);
   });
 

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import SideMenuMen from "./SideMenuMen";
 
 const SingleMenProduct = () => {
-  const { allMensProducts } = useSelector((state) => state.product);
   const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -58,13 +57,10 @@ const SingleMenProduct = () => {
                 <select className="sizeInfo">
                   {item.option.map((eachOption) => {
                     return (
-                      // <div key={eachOption.id}>
-                      //  <p>Stock Available: {eachOption.stock}</p>
                       <option key={eachOption.id} value={eachOption.size}>
                         {" "}
                         {eachOption.size}
                       </option>
-                      // </div>
                     );
                   })}
                 </select>

@@ -66,8 +66,10 @@ const User = db.define("user", {
   phone: {
     type: Sequelize.BIGINT,
   },
-  isAdmin:{
-    type:Sequelize.BOOLEAN
+  role:{
+    type:Sequelize.ENUM,
+    values:['member','admin','guest'],
+    defaultValue:'member'
   }
 });
 
@@ -103,7 +105,7 @@ User.authenticate = async function ({ username, password }) {
     },
   });
   if (user && (await bcrypt.compare(password, user.password))) {
-    return jwt.sign({ id: user.id }, JWT);
+    return jwt.sign({ id:user.id,username:user.username,role:user.role }, JWT);
   }
   const error = new Error("bad credentials");
   error.status = 401;

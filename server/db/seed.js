@@ -1195,7 +1195,7 @@ let userList = [
     billingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
     creditCard: 1091912919591108,
     phone: 19707903316,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Daphney",
@@ -1207,7 +1207,7 @@ let userList = [
     billingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
     creditCard: 5300928774079660,
     phone: 18308483238,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Breana",
@@ -1219,7 +1219,7 @@ let userList = [
     billingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
     creditCard: 6126705686865986,
     phone: 17287174888,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Rosalind",
@@ -1231,7 +1231,7 @@ let userList = [
     billingAddress: "042 Pete Loaf North Port AR 16937-0238",
     creditCard: 2412230806194861,
     phone: 19479118987,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Malcolm",
@@ -1243,7 +1243,7 @@ let userList = [
     billingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
     creditCard: 4700230406942715,
     phone: 14767958468,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Jacinto",
@@ -1255,7 +1255,7 @@ let userList = [
     billingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
     creditCard: 8921191716513859,
     phone: 17170204691,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Nyah",
@@ -1267,7 +1267,7 @@ let userList = [
     billingAddress: "4604 Marie Parkway Palmdale NM 14716",
     creditCard: 765497338784545,
     phone: 14158656327,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Alfred",
@@ -1279,7 +1279,7 @@ let userList = [
     billingAddress: "547 Mona Ranch Austin MO 94675",
     creditCard: 433396684457011,
     phone: 10874875469,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Charley",
@@ -1291,7 +1291,7 @@ let userList = [
     billingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
     creditCard: 3028772250274834,
     phone: 10323967825,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Hudson",
@@ -1303,7 +1303,7 @@ let userList = [
     billingAddress: "421 Swift Trace Waco DE 26930-7286",
     creditCard: 8816599003432313,
     phone: 13263105256,
-    isAdmin:false
+    role:'member'
   },
   {
     firstName: "Ben",
@@ -1315,7 +1315,7 @@ let userList = [
     billingAddress: "123 ben st",
     creditCard: 8816599003432312,
     phone: 13263105259,
-    isAdmin:true
+    role:'admin'
   },
   {
     firstName: "Louis",
@@ -1327,7 +1327,7 @@ let userList = [
     billingAddress: "123 Rab st",
     creditCard: 8816399003452312,
     phone: 13223115259,
-    isAdmin:true
+    role:'admin'
   },
   {
     firstName: "Jack",
@@ -1339,7 +1339,7 @@ let userList = [
     billingAddress: "571 W 139th St New York NY 10031",
     creditCard: 8816599133432312,
     phone: 13263485259,
-    isAdmin:true
+    role:'admin'
   },
 ];
 

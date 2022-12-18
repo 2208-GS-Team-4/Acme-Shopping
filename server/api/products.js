@@ -25,12 +25,12 @@ router.post("/",authenticateUser, async (req, res, next) => {
 });
 
 // DELETE localhost:3000/api/products/:id
-router.delete("/:id", async (req, res, next) => {
+router.delete("/:id",authenticateUser,async (req, res, next) => {
   try{
-    // const { role } = req.user;
-    // if(role!=='admin'){
-    //     return res.sendStatus(403);
-    // };
+    const { role } = req.user;
+    if(role!=='admin'){
+        return res.sendStatus(403);
+    };
     const product = await Product.findByPk(req.params.id);
     await product.destroy();
     res.sendStatus(204);

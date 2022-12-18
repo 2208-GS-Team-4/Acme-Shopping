@@ -23,7 +23,7 @@ const AdminEditProduct = () => {
   const deleteProduct = async() =>{
     try{
         // will probably have to delete this product from the front end using Redux and store
-        await axios.delete(`/api/products/${id}`);
+        await axios.delete(`/api/products/${id}`,{headers: {Authorization: 'Bearer ' + token}});
         navigate("/admin");
     }catch(error){
         console.log(error);

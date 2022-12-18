@@ -62,6 +62,7 @@ const UpdateProfileForm = ({ handleDisplayForm }) => {
       firstName,
       lastName,
       username,
+      email,
       password,
       shippingAddress,
       billingAddress,

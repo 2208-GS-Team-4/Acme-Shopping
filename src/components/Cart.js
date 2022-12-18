@@ -3,12 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import DeleteFromCart from "./DeleteCartItem";
 import setCart from "../store/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { user } = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cartProduct.cartProduct);
   const [quantity, setQuantity] = useState([]);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const fetchCart = async () => {
     const response = await axios.get(`/api/users/${user.id}/cart`);
     dispatch(setCart(response.data));
@@ -30,10 +32,13 @@ const Cart = () => {
     dispatch(setCart(response.data));
   };
   const checkOut = async (event) => {
-    // event.preventDefault();
-    // const newOrder = { cart };
-    // //orderRoute
-    // const response = await axios.post("/api/orderRoute", newOrder);
+    event.preventDefault();
+
+    const newOrder = { cart };
+    const response = await axios.post(`/api/users/${user.id}/order`, {
+      newOrder,
+    });
+    navigate("/checkout");
   };
 
   return (

@@ -21,7 +21,6 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
-        <Link to="/checkout">Temp Checkout</Link>
       </div>
       <div className="loggedInDiv">
         {user.id ? (
@@ -29,8 +28,6 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
-
-
 
         {user.id && (
           <Link to="/cart" className="cartText">

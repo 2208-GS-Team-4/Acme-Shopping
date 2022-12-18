@@ -118,6 +118,27 @@ router.put("/:userId/cart", async (req, res, next) => {
     next(err);
   }
 });
+
+// POST localhost:3000/api/users/:userId/order
+router.post("/:userId/order", async (req, res, next) => {
+  let { newOrder } = req.body;
+  const userId = req.params.userId;
+  const status = "unpaid";
+  // create an order that associated with that user
+  const order = await Order.create({ userId, status });
+  for (let i = 0; i < newOrder.cart.length; i++) {
+    delete newOrder.cart[i].cartId;
+    newOrder.cart[i].orderId = order.id;
+  }
+
+  const toCreate = newOrder.cart;
+  await Promise.all(
+    toCreate.map((singleProduct) => OrderProduct.create(singleProduct))
+  );
+
+  res.sendStatus(200);
+});
+
 module.exports = router;
 
 /*

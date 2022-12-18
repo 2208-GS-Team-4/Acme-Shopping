@@ -53,6 +53,7 @@ router.put("/:userId", async (req, res, next) => {
     firstName,
     lastName,
     username,
+    email,
     password,
     shippingAddress,
     billingAddress,

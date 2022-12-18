@@ -16,6 +16,7 @@ const SingleMenProduct = () => {
       (product) => product.id === Number(id)
     );
     setProduct(foundProduct);
+    console.log(allMensProducts);
   };
 
   const addToCart = async () => {
@@ -58,13 +59,10 @@ const SingleMenProduct = () => {
                 <select className="sizeInfo">
                   {item.option.map((eachOption) => {
                     return (
-                      // <div key={eachOption.id}>
-                      //  <p>Stock Available: {eachOption.stock}</p>
                       <option key={eachOption.id} value={eachOption.size}>
                         {" "}
                         {eachOption.size}
                       </option>
-                      // </div>
                     );
                   })}
                 </select>

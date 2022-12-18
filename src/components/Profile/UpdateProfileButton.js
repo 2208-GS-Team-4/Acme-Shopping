@@ -15,7 +15,7 @@ const UpdateProfileButton = () => {
       <Button variant="contained" onClick={handleDisplayForm}>
         Update Profile Information
       </Button>
-      {displayForm && <UpdateProfileForm />}
+      {displayForm && <UpdateProfileForm handleDisplayForm={handleDisplayForm}/>}
     </div>
   );
 };

@@ -34,6 +34,34 @@ router.post("/", async (req, res, next) => {
   res.send(newUser);
 });
 
+//PUT localhost:3000/api/users/:userId
+router.put("/:userId", async (req, res, next) => {
+  const userId = req.params.userId;
+  const {
+    firstName,
+    lastName,
+    username,
+    password,
+    shippingAddress,
+    billingAddress,
+    creditCard,
+    phone,
+  } = req.body;
+
+  const selectedUser = await User.findByPk(userId);
+  selectedUser.update({
+    firstName,
+    lastName,
+    username,
+    password,
+    shippingAddress,
+    billingAddress,
+    creditCard,
+    phone,
+  });
+  res.sendStatus(200);
+});
+
 // GET localhost:3000/api/users/:userId
 router.get("/:userId", async (req, res, next) => {
   const user = await User.findByPk(req.params.userId, {

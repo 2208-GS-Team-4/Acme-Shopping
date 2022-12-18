@@ -11,7 +11,7 @@ const Navbar = () => {
     window.localStorage.removeItem("token");
     dispatch(resetUser());
   };
-
+  
   return (
     <div>
       <Link to="/" id="brandName">

@@ -20,6 +20,9 @@ export const userSlice = createSlice({
     setLastName: (state, action) => {
       state.user.lastName = action.payload;
     },
+    setEmail: (state, action) => {
+      state.user.email = action.payload;
+    },
     setUsername: (state, action) => {
       state.user.username = action.payload;
     },
@@ -46,6 +49,7 @@ export const {
   resetUser,
   setFirstName,
   setLastName,
+  setEmail,
   setUsername,
   setPassword,
   setShippingAddress,

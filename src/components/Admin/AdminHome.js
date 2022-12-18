@@ -47,18 +47,6 @@ const AdminHome = () => {
         };
     };
 
-    const testAuth = async () => {
-        // Grab token off of localstorage
-        const token = window.localStorage.getItem('token');
-        // Pass token over to the back-end
-        const res = await axios.get("/api/products/testAuth", {
-            headers: {
-                Authorization: 'Bearer ' + token
-            }
-        });
-        console.log(res.data );
-    };
-
     const handleNameChange = (event) => {
         setName(event.target.value);
         isValidProductName(event.target.value);

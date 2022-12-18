@@ -10,15 +10,6 @@ router.get("/", async (req, res, next) => {
   res.send(allProducts);
 });
 
-// GETlocalhost:3000/api/products/testAuth
-router.get('/testAuth', authenticateUser, (req, res, next) => {
-  const { role } = req.user;
-  if(role!=='admin'){
-      return res.sendStatus(403);
-  };
-  res.send('This user is an admin');
-});
-
 // GETlocalhost:3000/api/products
 router.post("/",authenticateUser, async (req, res, next) => {
   console.log('api route hit');
@@ -33,10 +24,5 @@ router.post("/",authenticateUser, async (req, res, next) => {
     next(error);
   };
 });
-
-// router.post("/",async (req, res, next) => {
-//     await Product.create(req.body)
-//     res.sendStatus(200);
-// });
 
 module.exports = router;

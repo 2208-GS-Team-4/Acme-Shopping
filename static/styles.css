@@ -32,6 +32,12 @@ img{width:200px;}
   line-height:50px;
   float:left;
  }
+ .cartText{background-color:yellow;color:navy;width:40px;text-align:center;
+  border:none;
+  padding:5px;
+  font-size:12px;
+  margin-right:1%;}
+ .cartText:hover{background-color:navy;color:white}
 /*----------------------static ad div-------------------------*/
 .adText{display:flex;font-family: 'Abril Fatface';justify-content: center;color:#f0f014;align-items:center;flex-direction:column;
         

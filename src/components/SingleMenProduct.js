@@ -16,6 +16,7 @@ const SingleMenProduct = () => {
       (product) => product.id === Number(id)
     );
     setProduct(foundProduct);
+    console.log(allMensProducts);
   };
 
   const addToCart = async () => {

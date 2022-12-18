@@ -19,10 +19,10 @@ const UserProfile = () => {
       <h2>{user.lastName}</h2>
       <h2>{user.username}</h2>
       <h2>{user.password}</h2>
-      {user.shippingAddress} && <h2>{user.shippingAddress}</h2>
-      {user.billingAddress} && <h2>{user.billingAddress}</h2>
-      {user.creditCard} && <h2>{user.creditCard}</h2>
-      {user.phone} && <h2>{user.phone}</h2>
+      {user.shippingAddress && <h2>{user.shippingAddress}</h2>}
+      {user.billingAddress && <h2>{user.billingAddress}</h2>}
+      {user.creditCard && <h2>{user.creditCard}</h2>}
+      {user.phone && <h2>{user.phone}</h2>}
       <UpdateProfileButton />
     </div>
   );

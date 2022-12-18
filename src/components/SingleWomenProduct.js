@@ -10,8 +10,9 @@ const SingleWomenProduct = () => {
   const dispatch = useDispatch();
   const [sizeAlert, setSizeAlert] = useState(false);
   const { allWomensProducts } = useSelector((state) => state.product);
-  const cartItems = useSelector((state) => state.cartProduct);
-  const itemsArray = cartItems.cartProduct;
+  const cartItems = useSelector((state) => state.cartProduct.cartProduct);
+  console.log(cartItems);
+  // const itemsArray = cartItems.cartProduct;
   const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -24,6 +25,13 @@ const SingleWomenProduct = () => {
     );
     setProduct(foundProduct);
   };
+  const fetchCart = async () => {
+    const response = await axios.get(`/api/users/${user.id}/cart`);
+    dispatch(setCart(response.data));
+  };
+  useEffect(() => {
+    fetchCart();
+  }, []);
   const handleSizeChange = (event) => {
     setAddSize(event.target.value);
   };
@@ -48,9 +56,9 @@ const SingleWomenProduct = () => {
       productId,
     };
 
-    const result = itemsArray.find(({ name }) => name === product[0].name);
-    console.log(result);
-    if (itemsArray.length === 0 || result === undefined) {
+    const result = cartItems.find(({ name }) => name === product[0].name);
+
+    if (cartItems.length === 0 || !result) {
       setSizeAlert(false);
       axios.post(`/api/users/${user.id}/cart`, data);
       dispatch(setCart(data));

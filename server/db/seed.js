@@ -24,7 +24,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Puffer Bomber Jacket",
@@ -40,7 +40,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Hooded Topcoat",
@@ -56,7 +56,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Trucker Jacket",
@@ -72,7 +72,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Water Resistant Topcoat",
@@ -88,8 +88,8 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 let mensSweaters = [
   {
@@ -106,7 +106,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Waffle Knit Shawl Collar Cardigan",
@@ -122,7 +122,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Vine Cable Knit CrewNeck Sweater",
@@ -138,7 +138,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Solid Mock Neck Quarter Zip Sweater",
@@ -154,7 +154,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "V-Neck Popover Sweater",
@@ -170,9 +170,8 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
-  
 ];
 let mensPants = [
   {
@@ -189,7 +188,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Dark Wash Selvedge Jeans",
@@ -205,7 +204,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Hyper Stretch Jeans",
@@ -221,7 +220,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Straight Medium Wash Hyper Stretch Jeans",
@@ -237,7 +236,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Straight Warm Stone Hyper Stretch Jeans",
@@ -253,7 +252,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 let mensShirts = [
@@ -271,7 +270,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -287,7 +286,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -303,7 +302,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -319,7 +318,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -335,7 +334,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Solid Corduroy Shirt",
@@ -351,7 +350,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim plaid Stretch Flannel Shirt",
@@ -367,7 +366,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 
@@ -1357,15 +1356,9 @@ const seed = async () => {
   mensUnderwear = await Promise.all(
     mensUnderwear.map((item) => Product.create(item))
   );
-  mensSocks = await Promise.all(
-    mensSocks.map((item) => Product.create(item))
-  );
-  mensHats = await Promise.all(
-    mensHats.map((item) => Product.create(item))
-  );
-  mensPants = await Promise.all(
-    mensPants.map((pant) => Product.create(pant))
-  );
+  mensSocks = await Promise.all(mensSocks.map((item) => Product.create(item)));
+  mensHats = await Promise.all(mensHats.map((item) => Product.create(item)));
+  mensPants = await Promise.all(mensPants.map((pant) => Product.create(pant)));
   mensShirts = await Promise.all(
     mensShirts.map((shirt) => Product.create(shirt))
   );
@@ -1383,29 +1376,27 @@ const seed = async () => {
     CharleyKulas,
     HudsonLegros,
     BenOdisho,
-    JackPadalino
-  ] = await Promise.all(
-    userList.map((singleUser) => User.create(singleUser))
-  );
+    JackPadalino,
+  ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
   //-------------create all cart items here-------------//
   let cartList = [
-    {userId:HowellAltenwerth.id},
-    {userId:DaphneyBednar.id},
-    {userId:BreanaPouros.id},
-    {userId:RosalindOberbrunner.id},
-    {userId:MalcolmBraun.id},
-    {userId:JacintoChamplin.id},
-    {userId:NyahLakin.id},
-    {userId:AlfredProhaska.id},
-    {userId:CharleyKulas.id},
-    {userId:HudsonLegros.id},
-    {userId:BenOdisho.id},
-    {userId:JackPadalino.id},
+    { userId: HowellAltenwerth.id },
+    { userId: DaphneyBednar.id },
+    { userId: BreanaPouros.id },
+    { userId: RosalindOberbrunner.id },
+    { userId: MalcolmBraun.id },
+    { userId: JacintoChamplin.id },
+    { userId: NyahLakin.id },
+    { userId: AlfredProhaska.id },
+    { userId: CharleyKulas.id },
+    { userId: HudsonLegros.id },
+    { userId: BenOdisho.id },
+    { userId: JackPadalino.id },
   ];
 
   cartList = await Promise.all(
-    cartList.map((singleCart)=>Cart.create(singleCart))
+    cartList.map((singleCart) => Cart.create(singleCart))
   );
 
   console.log("DB SEED COMPLETE.");

@@ -1,4 +1,5 @@
 const express = require("express");
+const { Test } = require("mocha");
 const router = express.Router();
 const sequelize = require("sequelize");
 const {
@@ -82,22 +83,17 @@ router.post("/:userId/cart", async (req, res, next) => {
   });
   res.sendStatus(200);
 });
-router.put("/:userId/cart", async (req, res, next) => {
-  let { quantity } = req.body;
-  // find the cart associated with that user
-  const cart = await Cart.findOne({
-    where: {
-      userId: req.params.userId,
-    },
-  });
-  const findItem = await CartProduct.findOne({
-    where: {
-      cartId: cart.id,
-    },
-  });
-  findItem.update({ quantity });
-  console.log(quantity);
-  res.sendStatus(200);
+router.delete("/:userId/cart/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const itemToDelete = await CartProduct.findByPk(id);
+
+    await itemToDelete.destroy();
+    res.sendStatus(204);
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
 });
 
 module.exports = router;

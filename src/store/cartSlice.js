@@ -1,3 +1,4 @@
+import { SelectUnstyledContext } from "@mui/base";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -11,8 +12,14 @@ export const cartSlice = createSlice({
     setCart: (state, action) => {
       state.cartProduct = action.payload;
     },
+    setDeleteList: (state, action) => {
+      const tobeDeleted = action.payload;
+      state.cartProduct = state.cartProduct.filter(
+        (item) => item.id !== tobeDeleted
+      );
+    },
   },
 });
 
-export const { setCart } = cartSlice.actions;
+export const { setCart, setDeleteList } = cartSlice.actions;
 export default cartSlice.reducer;

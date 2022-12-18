@@ -5,6 +5,7 @@ import { SideMenuMen } from "./";
 
 const AllMenProducts = () => {
   const { allMensProducts } = useSelector((state) => state.product);
+  const { user } = useSelector((state) => state.user);
 
   return (
     <div>
@@ -17,9 +18,10 @@ const AllMenProducts = () => {
                 <img src={product.imageURL} />
                 <p className="productDisplayName">{product.name}</p>
               </Link>
+              {user.role==='admin' && <Link to={`/admin/edit-product/${product.id}`} style={{color:'red'}}>Edit</Link>}
             </div>
           );
-        })}{" "}
+        })}
       </div>
     </div>
   );

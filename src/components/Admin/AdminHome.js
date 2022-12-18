@@ -78,7 +78,11 @@ const AdminHome = () => {
                 <input required placeholder="Color" onChange={handleColorChange}/>
                 <input required type='number' placeholder="Price" onChange={handlePriceChange}/>
                 <input required placeholder="Type" onChange={handleTypeChange}/>
-                <input required placeholder="Gender" onChange={handleGenderChange}/>
+                {/* <input required placeholder="Gender" onChange={handleGenderChange}/> */}
+                <select onChange={handleGenderChange}>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                </select>
                 <button>Add</button>
             </form>
             {validProductErrorMessage && <p style={{color:'red',marginTop:'10px'}}>Sorry, this product name is already in use.</p>}

@@ -40,6 +40,7 @@ router.put("/:userId", async (req, res, next) => {
   const {
     firstName,
     lastName,
+    email,
     username,
     password,
     shippingAddress,

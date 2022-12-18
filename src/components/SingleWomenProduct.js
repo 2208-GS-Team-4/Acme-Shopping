@@ -11,8 +11,7 @@ const SingleWomenProduct = () => {
   const [sizeAlert, setSizeAlert] = useState(false);
   const { allWomensProducts } = useSelector((state) => state.product);
   const cartItems = useSelector((state) => state.cartProduct.cartProduct);
-  console.log(cartItems);
-  // const itemsArray = cartItems.cartProduct;
+
   const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -35,7 +34,7 @@ const SingleWomenProduct = () => {
   const handleSizeChange = (event) => {
     setAddSize(event.target.value);
   };
-  const handleQuantityChange = () => {
+  const handleQuantity = () => {
     setAddQuantity(addQuantity + 1);
   };
 
@@ -64,7 +63,6 @@ const SingleWomenProduct = () => {
       dispatch(setCart(data));
       console.log("fire");
       const newData = await axios.get(`/api/users/${user.id}/cart`);
-      console.log(newData);
       dispatch(setCart(newData.data));
     }
 
@@ -74,7 +72,6 @@ const SingleWomenProduct = () => {
       dispatch(setCart(data));
       console.log("water");
       const newData = await axios.get(`/api/users/${user.id}/cart`);
-      console.log(newData);
       dispatch(setCart(newData.data));
     }
     if (result && result.size === addSize) {
@@ -115,8 +112,13 @@ const SingleWomenProduct = () => {
                 })}
               </select>{" "}
               <div>
-                <p>{addQuantity}</p>
-                <button onClick={handleQuantityChange}>+</button>
+                <input
+                  onChange={handleQuantity}
+                  id={product.id}
+                  className="quantity"
+                  data-value={addQuantity}
+                  defaultValue={addQuantity}
+                ></input>
               </div>
               {user.id && <button onClick={addToCart}>Add to cart</button>}
               {sizeAlert && (

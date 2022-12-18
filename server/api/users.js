@@ -95,7 +95,29 @@ router.delete("/:userId/cart/:id", async (req, res, next) => {
     next(err);
   }
 });
+router.put("/:userId/cart", async (req, res, next) => {
+  try {
+    const { quantity, id } = req.body;
+    const cart = await Cart.findOne({
+      where: {
+        userId: req.params.userId,
+      },
+    });
+    const itemToChange = await CartProduct.findOne({
+      where: {
+        cartId: cart.id,
+        id: id,
+      },
+    });
 
+    itemToChange.update({ quantity });
+    console.log();
+    res.sendStatus(201);
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
+});
 module.exports = router;
 
 /*

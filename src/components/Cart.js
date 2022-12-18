@@ -7,58 +7,65 @@ import setCart from "../store/cartSlice";
 const Cart = () => {
   const { user } = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cartProduct.cartProduct);
+  const [quantity, setQuantity] = useState([]);
   const dispatch = useDispatch();
   const fetchCart = async () => {
     const response = await axios.get(`/api/users/${user.id}/cart`);
-    console.log(response);
     dispatch(setCart(response.data));
   };
   useEffect(() => {
     fetchCart();
   }, []);
+
+  const handleQuantity = async (event) => {
+    event.preventDefault();
+    setQuantity(event.target.value);
+  };
+  const saveCartEdit = async (event) => {
+    event.preventDefault();
+    const id = event.target.id;
+    const newQuantity = { quantity, id };
+    await axios.put(`/api/users/${user.id}/cart`, newQuantity);
+    const response = await axios.get(`/api/users/${user.id}/cart`);
+    dispatch(setCart(response.data));
+  };
   const checkOut = async (event) => {
     // event.preventDefault();
     // const newOrder = { cart };
     // //orderRoute
     // const response = await axios.post("/api/orderRoute", newOrder);
   };
+
   return (
     <div>
-      <h1>Cart</h1>
       <form onSubmit={checkOut} className="cartForm">
+        <h1 className="cart">Cart</h1>
         <ul className="cartItem">
           {cart.map((product) => {
-            const handlePlus = (event) => {
-              event.preventDefault();
-              document.getElementById(product.id).innerHTML =
-                product.quantity += 1;
-            };
-            const handleMinus = (event) => {
-              event.preventDefault();
-              document.getElementById(product.id).innerHTML =
-                product.quantity -= 1;
-            };
-
             return (
               <li key={product.id}>
                 <img src={product.imageURL} />
                 <p> {product.name}</p>
                 <p>{product.size}</p>
-                <button onClick={handlePlus} className="itemButton">
-                  +
-                </button>{" "}
-                <p id={product.id} className="quantity">
-                  {product.quantity}{" "}
-                </p>
-                <button onClick={handleMinus} className="itemButton">
-                  -
+                <input
+                  onInput={handleQuantity}
+                  className="quantity"
+                  placeholder={product.quantity}
+                  data-value={quantity}
+                ></input>
+                <button
+                  onClick={saveCartEdit}
+                  id={product.id}
+                  className="saveButton"
+                >
+                  Save
                 </button>
                 <DeleteFromCart product={product} />
               </li>
             );
           })}{" "}
         </ul>{" "}
-        <button className="submit">Check out</button>
+        <button className="submit">Check Out</button>
       </form>
     </div>
   );

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import SideMenuMen from "./SideMenuMen";
 
 const SingleMenProduct = () => {
+  const { allMensProducts } = useSelector((state) => state.product);
   const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();

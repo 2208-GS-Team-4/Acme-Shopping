@@ -8,7 +8,14 @@ const AllWomenProducts = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
   const { allWomensProducts } = useSelector((state) => state.product);
-
+  const cartItems = useSelector((state) => state.cartProduct.cartProduct);
+  const fetchCart = async () => {
+    const response = await axios.get(`/api/users/${user.id}/cart`);
+    dispatch(setCart(response.data));
+  };
+  useEffect(() => {
+    fetchCart();
+  }, []);
   return (
     <div>
       <SideMenuWomen />

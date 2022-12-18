@@ -17,9 +17,12 @@ const DeleteFromCart = ({ product }) => {
       console.error(err);
     }
   };
+
   return (
     <div>
-      <button onClick={handleDelete}>X</button>
+      <button onClick={handleDelete} className="itemButton">
+        X
+      </button>
     </div>
   );
 };

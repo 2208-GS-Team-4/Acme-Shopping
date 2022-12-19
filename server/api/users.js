@@ -41,7 +41,7 @@ router.get("/:userId", async (req, res, next) => {
     include: [Cart][Order],
   });
   const { newOrder } = req.body;
-  console.log(newOrder);
+
   res.send(user);
 });
 router.put("/:userId", async (req, res, next) => {
@@ -77,7 +77,7 @@ router.put("/:userId", async (req, res, next) => {
   const userToUpdate = await user.update({
     creditCard: { number, expiration, cvv },
   });
-  console.log(user);
+
   res.send(orderToUpdate);
 });
 // GET localhost:3000/api/users/:userId/cart
@@ -136,7 +136,6 @@ router.delete("/:userId/cart/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const itemToDelete = await CartProduct.findByPk(id);
-
     await itemToDelete.destroy();
     res.sendStatus(204);
   } catch (err) {
@@ -161,6 +160,26 @@ router.put("/:userId/cart", async (req, res, next) => {
 
     itemToChange.update({ quantity });
 
+    res.sendStatus(201);
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
+});
+router.delete("/:userId/cart", async (req, res, next) => {
+  try {
+    const cart = await Cart.findOne({
+      where: {
+        userId: req.params.userId,
+      },
+    });
+    const itemToDelete = await CartProduct.findAll({
+      where: {
+        cartId: cart.id,
+      },
+    });
+
+    await Promise.all(itemToDelete.map((item) => item.destroy()));
     res.sendStatus(201);
   } catch (err) {
     console.log(err);

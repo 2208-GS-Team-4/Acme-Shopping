@@ -31,4 +31,29 @@ router.get("/id/:id", async (req, res, next) => {
   const product = await Product.findAll({ where: { id: id } });
   res.send(product);
 });
+
+//update stock number for women's products
+// router.put("/", async (req, res, next) => {
+//   const { cart } = req.body;
+//   const productToChange = [];
+//   let product = [];
+//   for (let i = 0; i < cart.length; i++) {
+//     productToChange.push({
+//       productId: cart[i].productId,
+//       quantity: cart[i].quantity,
+//       size: cart[i].size,
+//     });
+//   }
+//   for (let j = 0; j < productToChange.length; j++) {
+//     product = await Product.findAll({
+//       where: {
+//         id: productToChange[j].productId,
+//       },
+//     });
+//   }
+//   console.log(product[0].option);
+//   product[0].update();
+//   console.log(product[0]);
+//   res.send(200);
+// });
 module.exports = router;

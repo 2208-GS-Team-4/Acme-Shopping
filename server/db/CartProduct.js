@@ -1,32 +1,31 @@
 const Sequelize = require("sequelize");
 const db = require("./db");
 
-const CartProduct = db.define('cartproduct', {
-    id:{
-        type:Sequelize.INTEGER,
-        primaryKey:true,
-        autoIncrement:true,
-        allowNull:false
-    },
-    name: {
-        type: Sequelize.STRING
-    },
-    imageURL: {
-        type: Sequelize.STRING
-    },
-    quantity: {
-        type: Sequelize.INTEGER
-    },
-    size: {
-        type: Sequelize.STRING
-    },
-    price: {
-        type: Sequelize.DECIMAL(5,2)
-        },
-    })
+const CartProduct = db.define("cartproduct", {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+    allowNull: false,
+  },
+  name: {
+    type: Sequelize.STRING,
+  },
+  imageURL: {
+    type: Sequelize.STRING,
+  },
+  quantity: {
+    type: Sequelize.INTEGER,
+  },
+  size: {
+    type: Sequelize.STRING,
+  },
+  price: {
+    type: Sequelize.DECIMAL(5, 2),
+  },
+});
 
 module.exports = CartProduct;
-
 
 // const ActorMovies = sequelize.define('ActorMovies', {
 //     MovieId: {

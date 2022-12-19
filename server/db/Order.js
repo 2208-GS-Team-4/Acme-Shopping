@@ -7,7 +7,7 @@ const Order = db.define("order", {
   },
   status: {
     type: Sequelize.ENUM,
-    values: ["unpaid", "placed", "in-progress", "completed", "cancelled"],
+    values: ["click to pay", "placed", "in-progress", "completed", "cancelled"],
   },
   contactName: { type: Sequelize.STRING },
   contactPhone: {

@@ -189,30 +189,40 @@ router.delete("/:userId/cart", async (req, res, next) => {
 
 // POST localhost:3000/api/users/:userId/order
 router.post("/:userId/order", async (req, res, next) => {
-  let { newOrder } = req.body;
+  try {
+    let { newOrder } = req.body;
 
-  const userId = req.params.userId;
-  const status = "unpaid";
-  // create an order that associated with that user
-  const order = await Order.create({ userId, status });
-  for (let i = 0; i < newOrder.length; i++) {
-    delete newOrder[i].cartId;
-    newOrder[i].orderId = order.id;
+    const userId = req.params.userId;
+    const status = "click to pay";
+    // create an order that associated with that user
+    const order = await Order.create({ userId, status });
+    for (let i = 0; i < newOrder.length; i++) {
+      delete newOrder[i].cartId;
+      newOrder[i].orderId = order.id;
+    }
+
+    await Promise.all(
+      newOrder.map((singleProduct) => OrderProduct.create(singleProduct))
+    );
+
+    res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+    next(err);
   }
-
-  await Promise.all(
-    newOrder.map((singleProduct) => OrderProduct.create(singleProduct))
-  );
-
-  res.sendStatus(200);
 });
 router.get("/:userId/order", async (req, res, next) => {
-  const findOrders = await Order.findAll({
-    where: {
-      userId: req.params.userId,
-    },
-  });
-  res.send(findOrders);
+  try {
+    const findOrders = await Order.findAll({
+      where: {
+        userId: req.params.userId,
+      },
+    });
+    res.send(findOrders);
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
 });
 
 module.exports = router;

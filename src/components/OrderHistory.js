@@ -4,7 +4,7 @@ import axios from "axios";
 import DeleteFromCart from "./DeleteCartItem";
 import { setCart, setTotal } from "../store/cartSlice";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const OrderHistory = () => {
   const { user } = useSelector((state) => state.user);
   const [order, setOrder] = useState([]);
@@ -18,21 +18,30 @@ const OrderHistory = () => {
   }, []);
   return (
     <div className="orderHistoryForm">
-      <h1>Your Orders</h1>
-      {order.map((singleOrder) => {
-        return (
-          <div>
-            <div className="orderHistory">
-              Order Number: {singleOrder.id}:
-              <p>Order Total: {singleOrder.total}</p>
-              <p>Order Status: {singleOrder.status}</p>
-              <p>Order Recipient: {singleOrder.contactName}</p>
-              <p>Recipient Contact Number: {singleOrder.contactPhone}</p>
-              <p>Order Shipping Option:{singleOrder.shippingOption}</p>
-            </div>
-          </div>
-        );
-      })}{" "}
+      <h1>Your Orders</h1>{" "}
+      <div>
+        {order.map((singleOrder) => {
+          return (
+            <>
+              <p className="orderGridItem"> Order Number: {singleOrder.id}</p>
+
+              <div className="orderGrid">
+                <p className="orderGridItem">Status: </p>{" "}
+                <Link to="/checkout">
+                  {" "}
+                  <p className="orderGridItem">{singleOrder.status}</p>
+                </Link>
+                <p className="orderGridItem">Total: </p>
+                <p className="orderGridItem">{singleOrder.total}</p>
+                <p className="orderGridItem">Recipient: </p>{" "}
+                <p className="orderGridItem">{singleOrder.contactName}</p>
+                <p className="orderGridItem">Shipping: </p>
+                <p className="orderGridItem">{singleOrder.shippingOption}</p>
+              </div>
+            </>
+          );
+        })}{" "}
+      </div>
     </div>
   );
 };

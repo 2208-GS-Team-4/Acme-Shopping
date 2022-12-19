@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setDeleteList, setCart } from "../store/cartSlice";
+import { setDeleteList, setCart, setTotal } from "../store/cartSlice";
 import axios from "axios";
 
 const DeleteFromCart = ({ product }) => {
@@ -8,6 +8,7 @@ const DeleteFromCart = ({ product }) => {
   const { user } = useSelector((state) => state.user);
   const handleDelete = async (event) => {
     event.preventDefault();
+
     try {
       dispatch(setDeleteList(product.id));
       await axios.delete(`/api/users/${user.id}/cart/${product.id}`);

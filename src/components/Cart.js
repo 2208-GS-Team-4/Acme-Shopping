@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import DeleteFromCart from "./DeleteCartItem";
-import setCart from "../store/cartSlice";
+import { setCart, setTotal } from "../store/cartSlice";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { user } = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cartProduct.cartProduct);
+  const total = useSelector((state) => state.cartProduct.cartProduct);
   const [quantity, setQuantity] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const fetchCart = async () => {
     const response = await axios.get(`/api/users/${user.id}/cart`);
     dispatch(setCart(response.data));
+    dispatch(setTotal(response.data));
   };
   useEffect(() => {
     fetchCart();
@@ -33,20 +35,21 @@ const Cart = () => {
   };
   const checkOut = async (event) => {
     event.preventDefault();
-
-    const newOrder = { cart };
+    const newOrder = cart.allProducts;
     const response = await axios.post(`/api/users/${user.id}/order`, {
       newOrder,
     });
     navigate("/checkout");
   };
-
+  if (!cart.allProducts) {
+    return "wait a moment";
+  }
   return (
     <div>
       <form onSubmit={checkOut} className="cartForm">
         <h1 className="cart">Cart</h1>
         <ul className="cartItem">
-          {cart.map((product) => {
+          {cart.allProducts.map((product) => {
             return (
               <li key={product.id}>
                 <img src={product.imageURL} />
@@ -70,6 +73,8 @@ const Cart = () => {
             );
           })}{" "}
         </ul>{" "}
+        <p>Cart Total:{total.cart.total}</p>
+        <p>* Tax and shipping are not included</p>
         <button className="submit">Check Out</button>
       </form>
     </div>

@@ -56,13 +56,13 @@ const User = db.define("user", {
     type: Sequelize.STRING,
   },
   creditCard: {
-    type: Sequelize.BIGINT,
+    type: Sequelize.JSON,
     // commenting out this validator to create fake data use FakerJS
     //validate: {
     //    isCreditCard: true,
     //}
   },
-  //add CVV and expiration date for credit card
+  //add CVV and expiration date for credit card -- same method as size and quantity
   phone: {
     type: Sequelize.BIGINT,
   },

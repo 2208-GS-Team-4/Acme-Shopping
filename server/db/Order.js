@@ -9,6 +9,19 @@ const Order = db.define("order", {
     type: Sequelize.ENUM,
     values: ["unpaid", "placed", "in-progress", "completed", "cancelled"],
   },
+  contactName: { type: Sequelize.STRING },
+  contactPhone: {
+    type: Sequelize.BIGINT,
+  },
+  contactEmail: {
+    type: Sequelize.STRING,
+    // allowNull: false,
+    validate: {
+      isEmail: true,
+    },
+    unique: true,
+  },
+  shippingOption: { type: Sequelize.STRING },
 });
 
 module.exports = Order;

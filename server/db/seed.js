@@ -1192,7 +1192,7 @@ let userList = [
     password: "dezezugebuzawiv",
     shippingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
     billingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
-    creditCard: 1091912919591108,
+    creditCard: [{ number: 1091912919591108, expiration: 15 / 23, cvv: 123 }],
     phone: 19707903316,
   },
   {
@@ -1203,7 +1203,7 @@ let userList = [
     password: "pipepeluxijusoz",
     shippingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
     billingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
-    creditCard: 5300928774079660,
+    creditCard: [{ number: 5300928774079660, expiration: 15 / 23, cvv: 123 }],
     phone: 18308483238,
   },
   {
@@ -1214,7 +1214,7 @@ let userList = [
     password: "tudaxahucilupol",
     shippingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
     billingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
-    creditCard: 6126705686865986,
+    creditCard: [{ number: 6126705686865986, expiration: 15 / 23, cvv: 123 }],
     phone: 17287174888,
   },
   {
@@ -1225,7 +1225,7 @@ let userList = [
     password: "fituqutegakisum",
     shippingAddress: "042 Pete Loaf North Port AR 16937-0238",
     billingAddress: "042 Pete Loaf North Port AR 16937-0238",
-    creditCard: 2412230806194861,
+    creditCard: [{ number: 2412230806194861, expiration: 15 / 23, cvv: 123 }],
     phone: 19479118987,
   },
   {
@@ -1236,7 +1236,7 @@ let userList = [
     password: "datuhowesejupux",
     shippingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
     billingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
-    creditCard: 4700230406942715,
+    creditCard: [{ number: 4700230406942715, expiration: 15 / 23, cvv: 123 }],
     phone: 14767958468,
   },
   {
@@ -1247,7 +1247,7 @@ let userList = [
     password: "pexiyuyihavamox",
     shippingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
     billingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
-    creditCard: 8921191716513859,
+    creditCard: [{ number: 8921191716513859, expiration: 15 / 23, cvv: 123 }],
     phone: 17170204691,
   },
   {
@@ -1258,7 +1258,7 @@ let userList = [
     password: "lofizuyeyikerup",
     shippingAddress: "4604 Marie Parkway Palmdale NM 14716",
     billingAddress: "4604 Marie Parkway Palmdale NM 14716",
-    creditCard: 765497338784545,
+    creditCard: [{ number: 765497338784545, expiration: 15 / 23, cvv: 123 }],
     phone: 14158656327,
   },
   {
@@ -1269,7 +1269,7 @@ let userList = [
     password: "daromojinijemiv",
     shippingAddress: "547 Mona Ranch Austin MO 94675",
     billingAddress: "547 Mona Ranch Austin MO 94675",
-    creditCard: 433396684457011,
+    creditCard: [{ number: 433396684457011, expiration: 15 / 23, cvv: 123 }],
     phone: 10874875469,
   },
   {
@@ -1280,7 +1280,7 @@ let userList = [
     password: "xadakavajizeqof",
     shippingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
     billingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
-    creditCard: 3028772250274834,
+    creditCard: [{ number: 3028772250274834, expiration: 15 / 23, cvv: 123 }],
     phone: 10323967825,
   },
   {
@@ -1291,7 +1291,7 @@ let userList = [
     password: "jigedasakulowen",
     shippingAddress: "421 Swift Trace Waco DE 26930-7286",
     billingAddress: "421 Swift Trace Waco DE 26930-7286",
-    creditCard: 8816599003432313,
+    creditCard: [{ number: 8816599003432313, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105256,
   },
   {
@@ -1302,7 +1302,7 @@ let userList = [
     password: "ben123",
     shippingAddress: "123 ben st",
     billingAddress: "123 ben st",
-    creditCard: 8816599003432312,
+    creditCard: [{ number: 8816599003432312, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105259,
   },
   {
@@ -1313,7 +1313,7 @@ let userList = [
     password: "pada0867",
     shippingAddress: "571 W 139th St New York NY 10031",
     billingAddress: "571 W 139th St New York NY 10031",
-    creditCard: 8816599133432312,
+    creditCard: [{ number: 8816599003432323, expiration: 15 / 23, cvv: 123 }],
     phone: 13263485259,
   },
 ];

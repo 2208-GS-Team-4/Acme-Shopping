@@ -2,67 +2,54 @@ import React from "react";
 import { Card } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  setFirstName,
-  setLastName,
-  setEmail,
-  setPhoneNumber,
+  setContactName,
+  setContactEmail,
+  setContactPhone,
 } from "../../store/checkoutSlice";
 
 const ContactInfo = () => {
   const dispatch = useDispatch();
-  const firstName = useSelector((state) => state.checkout.firstName);
-  const lastName = useSelector((state) => state.checkout.lastName);
-  const email = useSelector((state) => state.checkout.email);
-  const phoneNumber = useSelector((state) => state.checkout.phoneNumber);
+  const contactEmail = useSelector((state) => state.checkout.contactEmail);
+  const contactName = useSelector((state) => state.checkout.contactName);
+  const contactPhone = useSelector((state) => state.checkout.contactPhone);
 
-  const handleFirstNameChange = (event) => {
-    dispatch(setFirstName(event.target.value));
-  };
-  const handleLastNameChange = (event) => {
-    dispatch(setLastName(event.target.value));
+  const handleContactName = (event) => {
+    dispatch(setContactName(event.target.value));
   };
   const handleEmailChange = (event) => {
-    dispatch(setEmail(event.target.value));
+    dispatch(setContactEmail(event.target.value));
   };
-  const handlePhoneNumberChange = (event) => {
-    dispatch(setPhoneNumber(event.target.value));
+  const handlePhoneNumber = (event) => {
+    dispatch(setContactPhone(event.target.value));
   };
 
   return (
     <div>
       <Card variant="outlined">
         <h4>Contact Info</h4>
-        <label>First Name:</label>
+        <label>Recipient Name:</label>
         <input
           required
           type="text"
-          value={firstName}
-          onChange={handleFirstNameChange}
+          value={contactName}
+          onChange={handleContactName}
           placeholder="John"
         ></input>
-        <label>Last Name:</label>
+        <label>Contact Phone:</label>
         <input
           required
           type="text"
-          value={lastName}
-          onChange={handleLastNameChange}
-          placeholder="Smith"
+          value={contactPhone}
+          onChange={handlePhoneNumber}
+          placeholder="3333333333"
         ></input>
-        <label>Email:</label>
+        <label>Contact Email:</label>
         <input
           required
           type="text"
-          value={email}
+          value={contactEmail}
           onChange={handleEmailChange}
           placeholder="johnsmith@johnsmith.com"
-        ></input>
-        <label>Phone Number:</label>
-        <input
-          required
-          type="text"
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
-          placeholder="123-456-7890"
         ></input>
       </Card>
     </div>

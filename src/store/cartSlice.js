@@ -14,12 +14,15 @@ export const cartSlice = createSlice({
     },
     setDeleteList: (state, action) => {
       const tobeDeleted = action.payload;
-      state.cartProduct = state.cartProduct.filter(
+      state.cartProduct = state.cartProduct.allProducts.filter(
         (item) => item.id !== tobeDeleted
       );
+    },
+    setTotal: (state, action) => {
+      state.action = action.payload;
     },
   },
 });
 
-export const { setCart, setDeleteList } = cartSlice.actions;
+export const { setCart, setDeleteList, setTotal } = cartSlice.actions;
 export default cartSlice.reducer;

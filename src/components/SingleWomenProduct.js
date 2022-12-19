@@ -11,7 +11,6 @@ const SingleWomenProduct = () => {
   const [sizeAlert, setSizeAlert] = useState(false);
   const { allWomensProducts } = useSelector((state) => state.product);
   const cartItems = useSelector((state) => state.cartProduct.cartProduct);
-
   const { user } = useSelector((state) => state.user);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -31,6 +30,7 @@ const SingleWomenProduct = () => {
   useEffect(() => {
     fetchCart();
   }, []);
+
   const handleSizeChange = (event) => {
     setAddSize(event.target.value);
   };
@@ -55,7 +55,9 @@ const SingleWomenProduct = () => {
       productId,
     };
 
-    const result = cartItems.find(({ name }) => name === product[0].name);
+    const result = cartItems.allProducts.find(
+      ({ name }) => name === product[0].name
+    );
 
     if (cartItems.length === 0 || !result) {
       setSizeAlert(false);

@@ -53,7 +53,7 @@ const AdminEditProduct = () => {
             gender,
             imageURL
         };
-        await axios.put(`/api/products/${id}`, body,{headers: {Authorization: 'Bearer ' + token}});
+        await axios.put(`/api/products/${id}`,body,{headers: {Authorization: 'Bearer ' + token}});
         setProductUpdatedMessage(true);
     };
 

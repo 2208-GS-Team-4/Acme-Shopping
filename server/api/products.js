@@ -39,9 +39,13 @@ router.delete("/:id",authenticateUser,async (req, res, next) => {
   };
 });
 
-router.put("/:id", async (req, res, next) => {
+router.put("/:id",authenticateUser,async (req, res, next) => {
   const notFoundMessage = 'The object you are trying to update does not exist!';
   try{
+    const { role } = req.user;
+    if(role!=='admin'){
+        return res.sendStatus(403);
+    };
     const data = {
       name:req.body.name,
       description:req.body.description,

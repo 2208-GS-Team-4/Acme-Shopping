@@ -9,11 +9,11 @@ const AdminEditProduct = () => {
     const { allProducts } = useSelector((state) => state.product);
     const { user } = useSelector((state) => state.user);
 
-    // Page variables
+    // User variables
     const [token,setToken] = useState(window.localStorage.getItem('token'));
 
     // Form variables
-    const [productUpdatedMessage,setProductUpdateddMessage] = useState(false);
+    const [productUpdatedMessage,setProductUpdatedMessage] = useState(false);
 
     // Product variables
     const { id } = useParams();
@@ -33,30 +33,28 @@ const AdminEditProduct = () => {
         let foundProduct = allProducts.filter(product => product.id === Number(id));
         foundProduct = foundProduct[0];
         setProduct(foundProduct);
-        setImageURL(foundProduct.imageURL);
         setName(foundProduct.name);
         setDescription(foundProduct.description);
         setColor(foundProduct.color);
         setPrice(foundProduct.price);
         setType(foundProduct.type);
         setGender(foundProduct.gender);
+        setImageURL(foundProduct.imageURL);
     };
 
     const updateProduct = async (event) =>{
         event.preventDefault();
-        console.log('product updated!')
-        // if(validProductName){
-        //     const body = {
-        //         name,
-        //         description,
-        //         color,
-        //         price,
-        //         type,
-        //         gender
-        //     };
-        //     await axios.put(`/api/products/${id}`, body,{headers: {Authorization: 'Bearer ' + token}});
-        //     setProductUpdatedMessage(true);
-        // };
+        const body = {
+            name,
+            description,
+            color,
+            price,
+            type,
+            gender,
+            imageURL
+        };
+        await axios.put(`/api/products/${id}`, body,{headers: {Authorization: 'Bearer ' + token}});
+        setProductUpdatedMessage(true);
     };
 
     const deleteProduct = async() =>{

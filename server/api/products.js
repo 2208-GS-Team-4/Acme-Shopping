@@ -39,4 +39,28 @@ router.delete("/:id",authenticateUser,async (req, res, next) => {
   };
 });
 
+router.put("/:id", async (req, res, next) => {
+  const notFoundMessage = 'The object you are trying to update does not exist!';
+  try{
+    const data = {
+      name:req.body.name,
+      description:req.body.description,
+      color:req.body.color,
+      price:req.body.price,
+      type:req.body.type,
+      gender:req.body.gender,
+      imageURL:req.body.imageURL
+    };
+    const product = await Product.findByPk(req.params.id);
+    if(!product) throw new Error(notFoundMessage);
+    await product.update(data);
+    res.sendStatus(200);
+  }catch(error){
+      if(error.message===notFoundMessage){
+          return res.status(404).send({message:notFoundMessage});
+      }
+      next(error.message);
+  };
+});
+
 module.exports = router;

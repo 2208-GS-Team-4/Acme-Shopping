@@ -51,9 +51,7 @@ router.get("/id/:id", async (req, res, next) => {
 //       },
 //     });
 //   }
-//   console.log(product[0].option);
-//   product[0].update();
-//   console.log(product[0]);
+//const productToUpdate=await Promise.all(product.map((item)=>item.update({option:{}})))
 //   res.send(200);
 // });
 module.exports = router;

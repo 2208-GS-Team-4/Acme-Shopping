@@ -14,6 +14,7 @@ import {
   SingleMenProduct,
   SingleWomenProduct,
   Cart,
+  OrderHistory,
 } from "./";
 import CheckoutPage from "./Checkout/CheckoutPage";
 
@@ -45,6 +46,7 @@ const RouterComponent = () => {
         element={<SingleWomenProduct />}
       />
       <Route exact path="/checkout" element={<CheckoutPage />} />
+      <Route exact path="/orderhistory" element={<OrderHistory />} />
     </Routes>
   );
 };

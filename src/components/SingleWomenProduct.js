@@ -23,6 +23,9 @@ const SingleWomenProduct = () => {
     );
     setProduct(foundProduct);
   };
+  useEffect(() => {
+    getProduct();
+  }, []);
   const fetchCart = async () => {
     const response = await axios.get(`/api/users/${user.id}/cart`);
     dispatch(setCart(response.data));
@@ -83,10 +86,6 @@ const SingleWomenProduct = () => {
     const newData = await axios.get(`/api/users/${user.id}/cart`);
     dispatch(setCart(newData.data));
   };
-
-  useEffect(() => {
-    getProduct();
-  }, []);
 
   return (
     <div>

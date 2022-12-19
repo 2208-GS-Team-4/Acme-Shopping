@@ -42,7 +42,7 @@ const AdminAddProduct = () => {
                 type,
                 gender
             };
-            await axios.post("/api/products", body,{headers: {Authorization: 'Bearer ' + token}});
+            await axios.post("/api/products",body,{headers: {Authorization: 'Bearer ' + token}});
             setProductCreatedMessage(true);
         };
     };

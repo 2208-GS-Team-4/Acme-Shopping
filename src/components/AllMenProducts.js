@@ -18,7 +18,6 @@ const AllMenProducts = () => {
                 <img src={product.imageURL} />
                 <p className="productDisplayName">{product.name}</p>
               </Link>
-              {user.role==='admin' && <Link to={`/admin/edit-product/${product.id}`} style={{color:'red'}}>Edit</Link>}
             </div>
           );
         })}

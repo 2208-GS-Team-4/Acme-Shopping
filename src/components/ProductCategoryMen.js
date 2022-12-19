@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import SideMenuMen from "./SideMenuMen";
+import { SideMenuMen } from "./";
 
 const ProductCategoryMen = () => {
   const { allMensProducts } = useSelector((state) => state.product);
@@ -33,7 +33,6 @@ const ProductCategoryMen = () => {
                 <img src={product.imageURL} />
                 <p className="productDisplayName">{product.name}</p>
               </Link>
-              {user.role==='admin' && <Link to={`/admin/edit-product/${product.id}`} style={{color:'red'}}>Edit</Link>}
             </div>
           );
         })}

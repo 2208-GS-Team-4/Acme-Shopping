@@ -131,3 +131,7 @@ text-decoration:underline;
  .cartForm .saveButton{border:none;width:50px;margin-left:-80px;background-color:navy;color:white;height:20px;}
  .submit{width:120px;margin-left:auto;margin-right:auto;display:block;border:none;background-color:navy;color:white;height:40px;}
 .submit:hover{color:yellow}
+/*----------------order history page--------------------------*/
+.orderHistoryForm{padding-top:150px;width:1200px;display:block;margin:auto;}
+.orderHistory{display:flex;justify-content:center;}
+.orderhistory p{margin:20px;}

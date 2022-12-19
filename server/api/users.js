@@ -206,6 +206,14 @@ router.post("/:userId/order", async (req, res, next) => {
 
   res.sendStatus(200);
 });
+router.get("/:userId/order", async (req, res, next) => {
+  const findOrders = await Order.findAll({
+    where: {
+      userId: req.params.userId,
+    },
+  });
+  res.send(findOrders);
+});
 
 module.exports = router;
 

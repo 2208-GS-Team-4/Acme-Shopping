@@ -14,10 +14,9 @@ import {
   SingleMenProduct,
   SingleWomenProduct,
   Cart,
-  OrderHistory,
 } from "./";
 import CheckoutPage from "./Checkout/CheckoutPage";
-
+import OrderHistory from "./OrderHistory";
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
 

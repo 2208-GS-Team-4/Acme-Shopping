@@ -16,6 +16,7 @@ const SingleWomenProduct = () => {
   const { id } = useParams();
   const [addSize, setAddSize] = useState("S");
   const [addQuantity, setAddQuantity] = useState(1);
+  const [itemAlert, setItemAlert] = useState(false);
 
   const getProduct = () => {
     const foundProduct = allWomensProducts.filter(
@@ -61,7 +62,10 @@ const SingleWomenProduct = () => {
     const result = cartItems.allProducts.find(
       ({ name }) => name === product[0].name
     );
-
+    setItemAlert(true);
+    setTimeout(() => {
+      setItemAlert(false);
+    }, 2000);
     if (cartItems.length === 0 || !result) {
       setSizeAlert(false);
       axios.post(`/api/users/${user.id}/cart`, data);
@@ -122,6 +126,7 @@ const SingleWomenProduct = () => {
                 ></input>
               </div>
               {user.id && <button onClick={addToCart}>Add to cart</button>}
+              {itemAlert && <p>Item added to cart!</p>}
               {sizeAlert && (
                 <p style={{ color: "red", marginTop: "10px" }}>
                   This item is already in your cart, you can change the quantity

@@ -94,24 +94,32 @@ const SingleMenProduct = () => {
       <div>
         {product.map((item) => {
           return (
-            <div key={item.id}>
+            <div key={item.id} className="productDetail">
               <img src={item.imageURL} className="singleProductImg" />
-              <div className="singleProductText">
+              <div>
                 <h2>{item.name}</h2>
-                {user.role==='admin' && <Link to={`/admin/edit-product/${item.id}`} style={{color:'red'}}>Edit</Link>}
+                {user.role === "admin" && (
+                  <Link
+                    to={`/admin/edit-product/${item.id}`}
+                    style={{ color: "maroon" }}
+                  >
+                    Edit
+                  </Link>
+                )}
                 <p>{item.description}</p>
                 <p>{item.color}</p>
-                <h3>${item.price}</h3> <h4>Please Select Your Size:</h4>
-                <select className="sizeInfo" onChange={handleSizeChange}>
-                  {item.option.map((eachOption) => {
-                    return (
-                      <option key={eachOption.id} value={eachOption.size}>
-                        {eachOption.size}
-                      </option>
-                    );
-                  })}
-                </select>{" "}
-                <div>
+                <h3>${item.price}</h3>
+                <div className="pageSizeQuanDetials">
+                  <h4>Please Select Size and Quantity:</h4>
+                  <select className="sizeInfo" onChange={handleSizeChange}>
+                    {item.option.map((eachOption) => {
+                      return (
+                        <option key={eachOption.id} value={eachOption.size}>
+                          {eachOption.size}
+                        </option>
+                      );
+                    })}
+                  </select>{" "}
                   <input
                     onChange={handleQuantity}
                     id={product.id}
@@ -120,10 +128,14 @@ const SingleMenProduct = () => {
                     defaultValue={addQuantity}
                   ></input>
                 </div>
-                {user.id && <button onClick={addToCart}>Add to cart</button>}
-                {itemAlert && <p>Item added to cart!</p>}
+                {user.id && (
+                  <button onClick={addToCart} className="AddToCart">
+                    Add to cart
+                  </button>
+                )}
+                {itemAlert && !sizeAlert && <p>Item added to cart!</p>}
                 {sizeAlert && (
-                  <p style={{ color: "red", marginTop: "10px" }}>
+                  <p style={{ color: "maroon", marginTop: "10px" }}>
                     This item is already in your cart, you can change the
                     quantity in your shopping cart page
                   </p>

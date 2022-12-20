@@ -6,37 +6,38 @@ body {
 }
 a{ text-decoration: none;color:inherit}
 h2{margin:0;}
-#brandName{margin-left:5%;font-size: 60px;color:navy; font-family: 'Abril Fatface','Times New Roman', Times, serif;}
+#brandName{margin-left:5%;font-size: 80px;color:navy; font-family: 'Abril Fatface','Times New Roman', Times, serif;}
 #navBar {font-family: 'Abril Fatface','Times New Roman', Times, serif;
   display: flex;
   justify-content: space-around;
  color:navy;
  font-size:18px;
 }
-#navBar a:hover{color:yellow;
+#navBar a:hover{color:#f0f014;
            background-color:navy;}
 #navBar a{text-decoration:none;
      color:inherit;padding:10px; }
 img{width:200px;}
-.sideMenu{ margin-top:5%;
+.sideMenu{  margin-top:8%;
   padding:15px;
-  margin-left:2%;
-  margin-right:3%;
+  margin-left:5%;
+
    display:flex;
   flex-direction:column;
-
+font-size:14px;
   background-color:navy;
-  color:yellow;
+  color:#f0f014;
   width:10%;
-
-  line-height:50px;
+  line-height:45px;
   float:left;
  }
- .cartText{background-color:yellow;color:navy;width:40px;text-align:center;
+ .cartText{background-color:#f0f014;color:navy;width:50px;text-align:center;
   border:none;
-  padding:5px;
+padding-top:4px;
+margin-right:5px;          
   font-size:12px;
-  margin-right:1%;}
+
+ height:20px;}
  .cartText:hover{background-color:navy;color:white}
 /*----------------------static ad div-------------------------*/
 .adText{display:flex;font-family: 'Abril Fatface';justify-content: center;color:#f0f014;align-items:center;flex-direction:column;
@@ -54,26 +55,34 @@ margin-top:10%;
 .adDiv img{width:300px;}
 /*----------------Display all products in grid-----------------------*/
  .grid-container{display:inline-grid;grid-template-columns:auto auto auto;
- margin-top:5%;
+ margin-top:8%;
 align-items:center;float:left;width:70%;margin-left:10%;}
      
 .productDisplayName{width:200px;text-align:center;}
 .productDisplayName:hover{
 text-decoration:underline;
 }
+
+
   /*--------------------------display single product--------------*/
   .singleProductImg{
-     float:left;
-     margin:5%;
-     width:300px;
-   }
-.singleProductText{float:left;width:40%;margin-top:5%;}
+    float:left;
+    margin:5%;
+    width:300px;
+  }
+.singleproductimg{width:300px;margin:0 8% 0 0;}
 .sizeInfo{
-  display:flex;
-  flex-direction: row;
- justify-content:space-evenly;
- width:50%;
-}
+  margin:0 20px 0 20px;
+  width:50px;
+  }
+  .productDetail{float:left;width:50%;margin:8% }
+  .productdetail input{margin:5px 0px;}
+  .pageSizeQuanDetials{display: flex;align-items:center;}
+  .AddToCart{background-color:navy;color:white;
+    border:none;
+    padding:5px;
+    font-size:12px;
+    margin-right:2%;}
 /*--------------------------log in css------------------*/
 .formDiv{margin-top:150px;
   display:block;
@@ -82,21 +91,21 @@ text-decoration:underline;
   width:fit-content;
     
   }
-.loginForm {
+.loginRegForm {
   width:200px;
   display: flex;
   flex-direction: column;
 }
-
-.loginForm > * {
+.loginRegForm > * {
   margin: 1rem;
-}.loginForm input{border:solid 2px navy;background-color:lightyellow;height:30px;width:200px;}
-.loginform button{margin-left:35%;margin-right:20%;background-color:navy;color:yellow;border:none;height:25px;}
+}
+.loginRegForm input{border:solid 2px navy;background-color:lightyellow;height:30px;width:200px;}
+.loginRegForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:25px;}
 .loggedInDiv{
   display:flex;
    justify-content:end;
    align-items:center;
-   margin-top:-80px;
+   margin-top:-90px;
  margin-right:5%;
  }
 
@@ -110,10 +119,31 @@ text-decoration:underline;
  margin-right:2%;
 }
 .loggedInDiv button:hover{
- background-color:yellow;color:navy;
+ background-color:#f0f014;color:navy;
 
 }
 .registerAccount{margin-left:30%;}
+.createNewAccount{font-size:16px;margin-left:16px;}
+
+/*---------------------admin css--------------------*/
+.adminButton{margin-right: 14px;}
+.dashboard{margin-top:110px;
+align-items:center;float:left;width:70%;margin-left:10%;}
+.newProductForm > * {
+  margin: .5rem;
+}
+.newProductForm input{border:solid 1px navy;background-color:lightyellow;height:40px;width:500px;}
+.newProductForm select{border:solid 1px navy;background-color:lightyellow;height:40px;width:500px;}
+.newProductForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:35px;width:200px;margin-top:30px}
+.editProductForm{float:left;width:500px;margin:0px 0 0 30px;}
+.editProductForm > * {
+  margin: .5rem;
+}
+.editProductImg{float:left;width:250px;}
+.editProductForm input{border:solid navy 1px; background-color:lightyellow;height:35px;width:500px;}
+.editProductForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:30px;width:100px;}
+.deleteButton{margin:450px 0 0 -450px;background-color:maroon;color:#f0f014;border:none;height:30px;width:200px;}
+.dashboardNames{margin-top:0}
 /*-----------------cart form--------------*/
 .cartForm{
   width:1000px;
@@ -130,7 +160,7 @@ text-decoration:underline;
  .cartForm .itemButton{border:none;width:20px;background-color:navy;color:white;}
  .cartForm .saveButton{border:none;width:50px;margin-left:-80px;background-color:navy;color:white;height:20px;}
  .submit{width:120px;margin-left:auto;margin-right:auto;display:block;border:none;background-color:navy;color:white;height:40px;}
-.submit:hover{color:yellow}
+.submit:hover{color:#f0f014}
 /*----------------order history page--------------------------*/
 .orderHistoryForm{padding-top:120px;display:flex;flex-direction:column;align-items:center;}
 .orderGrid{display:inline-grid;grid-template-columns:80px 120px 80px 80px 80px 80px 80px 80px;background-color:lightgrey;border-top:solid 1px;border-left:solid 1px;border-right:solid 1px;}

@@ -11,7 +11,7 @@ const Navbar = () => {
     window.localStorage.removeItem("token");
     dispatch(resetUser());
   };
-  
+
   return (
     <div>
       <Link to="/" id="brandName">
@@ -21,21 +21,25 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
-
         <Link to="/orderhistory">Order History</Link>
-
-        <Link to="/profile">Temp ProfileChange</Link>
-
+        {/* <Link to="/profile">Temp ProfileChange</Link> */}
       </div>
       <div className="loggedInDiv">
         {user.id ? (
-          <p>Welcome {user.username}!!</p>
+          <div>
+            <h3>Welcome, {user.username}</h3>
+            <Link to="/profile">Profile</Link>
+          </div>
         ) : (
           <Link to="/login">Login</Link>
         )}
 
-        {user.role==='admin' && <Link to="/admin">Admin</Link>}
-        {user.id && <Link to="/cart" className="cartText">Cart</Link>}
+        {user.role === "admin" && <Link to="/admin">Admin</Link>}
+        {user.id && (
+          <Link to="/cart" className="cartText">
+            Cart
+          </Link>
+        )}
 
         {user.id && <button onClick={logout}>Logout</button>}
       </div>

@@ -1194,7 +1194,7 @@ let userList = [
     billingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
     creditCard: [{ number: 1091912919591108, expiration: 15 / 23, cvv: 123 }],
     phone: 19707903316,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Daphney",
@@ -1206,7 +1206,7 @@ let userList = [
     billingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
     creditCard: [{ number: 5300928774079660, expiration: 15 / 23, cvv: 123 }],
     phone: 18308483238,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Breana",
@@ -1218,7 +1218,7 @@ let userList = [
     billingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
     creditCard: [{ number: 6126705686865986, expiration: 15 / 23, cvv: 123 }],
     phone: 17287174888,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Rosalind",
@@ -1230,7 +1230,7 @@ let userList = [
     billingAddress: "042 Pete Loaf North Port AR 16937-0238",
     creditCard: [{ number: 2412230806194861, expiration: 15 / 23, cvv: 123 }],
     phone: 19479118987,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Malcolm",
@@ -1242,7 +1242,7 @@ let userList = [
     billingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
     creditCard: [{ number: 4700230406942715, expiration: 15 / 23, cvv: 123 }],
     phone: 14767958468,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Jacinto",
@@ -1254,7 +1254,7 @@ let userList = [
     billingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
     creditCard: [{ number: 8921191716513859, expiration: 15 / 23, cvv: 123 }],
     phone: 17170204691,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Nyah",
@@ -1266,7 +1266,7 @@ let userList = [
     billingAddress: "4604 Marie Parkway Palmdale NM 14716",
     creditCard: [{ number: 765497338784545, expiration: 15 / 23, cvv: 123 }],
     phone: 14158656327,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Alfred",
@@ -1278,7 +1278,7 @@ let userList = [
     billingAddress: "547 Mona Ranch Austin MO 94675",
     creditCard: [{ number: 433396684457011, expiration: 15 / 23, cvv: 123 }],
     phone: 10874875469,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Charley",
@@ -1290,7 +1290,7 @@ let userList = [
     billingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
     creditCard: [{ number: 3028772250274834, expiration: 15 / 23, cvv: 123 }],
     phone: 10323967825,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Hudson",
@@ -1302,19 +1302,19 @@ let userList = [
     billingAddress: "421 Swift Trace Waco DE 26930-7286",
     creditCard: [{ number: 8816599003432313, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105256,
-    role:'member'
+    role: "member",
   },
   {
     firstName: "Ben",
     lastName: "Odisho",
     email: "benodisho@gmail.com",
-    username: "OdishoShooterz",
-    password: "OdishoShooterz",
+    username: "ben123",
+    password: "ben123",
     shippingAddress: "123 ben st",
     billingAddress: "123 ben st",
     creditCard: [{ number: 8816599003432312, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105259,
-    role:'admin'
+    role: "admin",
   },
   {
     firstName: "Louis",
@@ -1326,7 +1326,7 @@ let userList = [
     billingAddress: "123 Rab st",
     creditCard: 8816399003452312,
     phone: 13223115259,
-    role:'admin'
+    role: "admin",
   },
   {
     firstName: "Jack",
@@ -1338,7 +1338,7 @@ let userList = [
     billingAddress: "571 W 139th St New York NY 10031",
     creditCard: [{ number: 8816599003432323, expiration: 15 / 23, cvv: 123 }],
     phone: 13263485259,
-    role:'admin'
+    role: "admin",
   },
 ];
 

@@ -56,6 +56,13 @@ const AdminEditProduct = () => {
             imageURL
         };
         await axios.put(`/api/products/${id}`,body,{headers: {Authorization: 'Bearer ' + token}});
+        if(gender === 'men'){
+            const allMensProducts = await axios.get("/api/men");
+            dispatch(setAllMensProducts(allMensProducts.data));
+        }else{
+            const allWomensProducts = await axios.get("/api/women");
+            dispatch(setAllWomensProducts(allWomensProducts.data));
+        }; 
         setProductUpdatedMessage(true);
     };
 

@@ -30,7 +30,15 @@ export const productSlice = createSlice({
         },
         setCategoryProducts: (state,action) => {
             state.categoryProducts = action.payload
-        }
+        },
+        updateSelectedProduct: (state, action) => {
+            const updatedProductInfo = action.payload;
+            const oldProductInfo = state.singleProduct;
+            state.singleProduct = {
+                ...oldProductInfo,
+                ...updatedProductInfo
+            };
+        },
     }
 })
 
@@ -40,7 +48,8 @@ export const {
     setAllWomensProducts,
     setSingleProduct,
     setGenderProducts,
-    setCategoryProducts
+    setCategoryProducts,
+    updateSelectedProduct
 } = productSlice.actions;
 
 export default productSlice.reducer;

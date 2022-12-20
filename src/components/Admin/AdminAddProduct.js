@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { NotFoundPage } from '..';
+import { setAllMensProducts,setAllWomensProducts } from '../../store/productSlice';
 
 const AdminAddProduct = () => {
+    const dispatch = useDispatch();
     const { user } = useSelector((state) => state.user);
     const { allProducts } = useSelector((state) => state.product);
     const [token,setToken] = useState(window.localStorage.getItem('token'));
@@ -43,6 +45,13 @@ const AdminAddProduct = () => {
                 gender
             };
             await axios.post("/api/products",body,{headers: {Authorization: 'Bearer ' + token}});
+            if(gender === 'men'){
+                const allMensProducts = await axios.get("/api/men");
+                dispatch(setAllMensProducts(allMensProducts.data));
+            }else{
+                const allWomensProducts = await axios.get("/api/women");
+                dispatch(setAllWomensProducts(allWomensProducts.data));
+            }; 
             setProductCreatedMessage(true);
         };
     };

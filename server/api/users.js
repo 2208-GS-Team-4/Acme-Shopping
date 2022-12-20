@@ -53,32 +53,15 @@ router.put("/:userId", async (req, res, next) => {
       userId: req.params.userId,
     },
   });
-  const { newOrder, total } = req.body;
-  const shippingAddress = newOrder.shippingAddress;
-  const billingAddress = newOrder.billingAddress;
-  const number = newOrder.creditCard;
-  const expiration = newOrder.creditCardExp;
-  const cvv = newOrder.creditCardCVV;
-  const contactName = newOrder.contactName;
-  const contactPhone = newOrder.contactPhone;
-  const contactEmail = newOrder.contactEmail;
-  const shippingOption = newOrder.shippingOption;
-  const status = "placed";
-  const orderToUpdate = await order.update({
-    shippingAddress,
-    billingAddress,
-    contactName,
-    contactPhone,
-    contactEmail,
-    total,
-    shippingOption,
-    status,
-  });
+  const { newOrderInfo } = req.body;
+  const number = newOrderInfo.number;
+  const expiration = newOrderInfo.expiration;
+  const cvv = newOrderInfo.cvv;
   const userToUpdate = await user.update({
     creditCard: { number, expiration, cvv },
   });
 
-  res.send(orderToUpdate);
+  res.send(201);
 });
 // GET localhost:3000/api/users/:userId/cart
 router.get("/:userId/cart", async (req, res, next) => {
@@ -190,21 +173,35 @@ router.delete("/:userId/cart", async (req, res, next) => {
 // POST localhost:3000/api/users/:userId/order
 router.post("/:userId/order", async (req, res, next) => {
   try {
-    let { newOrder } = req.body;
-
+    let { cart, newOrderInfo, total } = req.body;
+    console.log(cart);
+    const shippingAddress = newOrderInfo.shippingAddress;
+    const billingAddress = newOrderInfo.billingAddress;
+    const contactName = newOrderInfo.contactName;
+    const contactPhone = newOrderInfo.contactPhone;
+    const contactEmail = newOrderInfo.contactEmail;
+    const shippingOption = newOrderInfo.shippingOption;
     const userId = req.params.userId;
-    const status = "click to pay";
+    const status = "placed";
     // create an order that associated with that user
     const order = await Order.create({ userId, status });
-    for (let i = 0; i < newOrder.length; i++) {
-      delete newOrder[i].cartId;
-      newOrder[i].orderId = order.id;
+    for (let i = 0; i < cart.length; i++) {
+      delete cart[i].cartId;
+      delete cart[i].id;
+      cart[i].orderId = order.id;
     }
-
     await Promise.all(
-      newOrder.map((singleProduct) => OrderProduct.create(singleProduct))
+      cart.map((singleProduct) => OrderProduct.create(singleProduct))
     );
-
+    const orderToUpdate = await order.update({
+      shippingAddress,
+      billingAddress,
+      contactName,
+      contactPhone,
+      contactEmail,
+      total,
+      shippingOption,
+    });
     res.sendStatus(200);
   } catch (err) {
     console.log(err);

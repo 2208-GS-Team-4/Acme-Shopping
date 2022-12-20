@@ -14,24 +14,21 @@ const CheckoutPage = () => {
   const { user } = useSelector((state) => state.user);
   const cartItem = useSelector((state) => state.cartProduct.cartProduct);
   const totalPrice = useSelector((state) => state.cartProduct.cartProduct);
-
   const cart = cartItem.allProducts;
   const total = cartItem.cart.total;
-  // const fetchCart = async () => {
-  //   const response = await axios.get(`/api/users/${user.id}/cart`);
-  //   setOrderTotal(response.data.cart.total);
-  // };
-  // useEffect(() => {
-  //   fetchCart();
-  // }, []);
-  //post request everything
+  console.log(total);
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const newOrder = everything;
-    // const total = orderTotal;
+    const newOrderInfo = everything;
 
-    const response = await axios.put(`/api/users/${user.id}/`, {
-      newOrder,
+    await axios.post(`/api/users/${user.id}/order`, {
+      cart,
+      newOrderInfo,
+      total,
+    });
+
+    await axios.put(`/api/users/${user.id}/`, {
+      newOrderInfo,
       total,
     });
 

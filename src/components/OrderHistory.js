@@ -27,10 +27,7 @@ const OrderHistory = () => {
 
               <div className="orderGrid">
                 <p className="orderGridItem">Status: </p>{" "}
-                <Link to="/checkout">
-                  {" "}
-                  <p className="orderGridItem">{singleOrder.status}</p>
-                </Link>
+                <p className="orderGridItem">{singleOrder.status}</p>
                 <p className="orderGridItem">Total: </p>
                 <p className="orderGridItem">{singleOrder.total}</p>
                 <p className="orderGridItem">Recipient: </p>{" "}

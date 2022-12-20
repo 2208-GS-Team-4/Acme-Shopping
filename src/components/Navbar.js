@@ -34,13 +34,8 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         )}
 
-
-        {user.id && (
-          <Link to="/cart" className="cartText">
-            Cart
-          </Link>
-        )}
-
+        {user.role==='admin' && <Link to="/admin">Admin</Link>}
+        {user.id && <Link to="/cart" className="cartText">Cart</Link>}
 
         {user.id && <button onClick={logout}>Logout</button>}
       </div>

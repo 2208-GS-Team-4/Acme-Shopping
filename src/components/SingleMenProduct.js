@@ -98,6 +98,7 @@ const SingleMenProduct = () => {
               <img src={item.imageURL} className="singleProductImg" />
               <div className="singleProductText">
                 <h2>{item.name}</h2>
+                {user.role==='admin' && <Link to={`/admin/edit-product/${item.id}`} style={{color:'red'}}>Edit</Link>}
                 <p>{item.description}</p>
                 <p>{item.color}</p>
                 <h3>${item.price}</h3> <h4>Please Select Your Size:</h4>
@@ -105,7 +106,6 @@ const SingleMenProduct = () => {
                   {item.option.map((eachOption) => {
                     return (
                       <option key={eachOption.id} value={eachOption.size}>
-                        {" "}
                         {eachOption.size}
                       </option>
                     );

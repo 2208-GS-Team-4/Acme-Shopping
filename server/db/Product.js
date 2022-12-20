@@ -11,7 +11,7 @@ const Product = db.define("product", {
   },
   imageURL: {
     type: Sequelize.STRING,
-    defaultValue: "",
+    defaultValue: "/img/default.jpg",
   },
   description: {
     type: Sequelize.TEXT,
@@ -24,14 +24,19 @@ const Product = db.define("product", {
     type: Sequelize.STRING,
   },
   price: {
-    type: Sequelize.DECIMAL(5, 2),
+    type: Sequelize.DECIMAL(6, 2),
   },
   // Commenting this out to test running seed file -> need to add sizes to seed objects
   option: {
     type: Sequelize.JSON,
+    defaultValue: [
+      { size: "S", stock: 100 },
+      { size: "M", stock: 100 },
+      { size: "L", stock: 100 },
+    ]
   },
   type: {
-    type: Sequelize.STRING,
+    type: Sequelize.STRING
   },
   gender: {
     type: Sequelize.STRING,

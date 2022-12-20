@@ -5,6 +5,7 @@ import { SideMenuMen } from "./";
 
 const AllMenProducts = () => {
   const { allMensProducts } = useSelector((state) => state.product);
+  const { user } = useSelector((state) => state.user);
 
   return (
     <div>
@@ -19,7 +20,7 @@ const AllMenProducts = () => {
               </Link>
             </div>
           );
-        })}{" "}
+        })}
       </div>
     </div>
   );

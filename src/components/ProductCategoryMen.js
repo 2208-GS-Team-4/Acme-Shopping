@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import SideMenuMen from "./SideMenuMen";
-import AllMenProducts from "./AllMenProducts";
+import { SideMenuMen } from "./";
 
 const ProductCategoryMen = () => {
   const { allMensProducts } = useSelector((state) => state.product);
+  const { user } = useSelector((state) => state.user);
   const [products, setProducts] = useState([]);
   const { productType } = useParams();
 
@@ -21,6 +21,7 @@ const ProductCategoryMen = () => {
   useEffect(() => {
     getProducts(productType);
   }, [allMensProducts, productType]);
+
   return (
     <>
       <SideMenuMen />

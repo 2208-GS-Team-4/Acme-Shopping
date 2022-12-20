@@ -24,7 +24,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Puffer Bomber Jacket",
@@ -40,7 +40,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Hooded Topcoat",
@@ -56,7 +56,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Trucker Jacket",
@@ -72,7 +72,7 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Wool-Blend Water Resistant Topcoat",
@@ -88,8 +88,8 @@ let mensJackets = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
-  }
+    ],
+  },
 ];
 let mensSweaters = [
   {
@@ -106,7 +106,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Waffle Knit Shawl Collar Cardigan",
@@ -122,7 +122,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Vine Cable Knit CrewNeck Sweater",
@@ -138,7 +138,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Solid Mock Neck Quarter Zip Sweater",
@@ -154,7 +154,7 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "V-Neck Popover Sweater",
@@ -170,9 +170,8 @@ let mensSweaters = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
-  
 ];
 let mensPants = [
   {
@@ -189,7 +188,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Dark Wash Selvedge Jeans",
@@ -205,7 +204,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Hyper Stretch Jeans",
@@ -221,7 +220,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Straight Medium Wash Hyper Stretch Jeans",
@@ -237,7 +236,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Straight Warm Stone Hyper Stretch Jeans",
@@ -253,7 +252,7 @@ let mensPants = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 let mensShirts = [
@@ -271,7 +270,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -287,7 +286,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim Geo Print Stretch Corduroy Shirt",
@@ -303,7 +302,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -319,7 +318,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Floral Stretch Corduroy Shirt",
@@ -335,7 +334,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Solid Corduroy Shirt",
@@ -351,7 +350,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
   {
     name: "Slim plaid Stretch Flannel Shirt",
@@ -367,7 +366,7 @@ let mensShirts = [
       { size: "S", stock: 50 },
       { size: "M", stock: 50 },
       { size: "L", stock: 50 },
-    ]
+    ],
   },
 ];
 
@@ -1193,7 +1192,7 @@ let userList = [
     password: "dezezugebuzawiv",
     shippingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
     billingAddress: "3567 Vandervort Roads Chapel Hill OR 73525-8523",
-    creditCard: 1091912919591108,
+    creditCard: [{ number: 1091912919591108, expiration: 15 / 23, cvv: 123 }],
     phone: 19707903316,
     role:'member'
   },
@@ -1205,7 +1204,7 @@ let userList = [
     password: "pipepeluxijusoz",
     shippingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
     billingAddress: "70455 Boehm Orchard Wilson IA 16762-7988",
-    creditCard: 5300928774079660,
+    creditCard: [{ number: 5300928774079660, expiration: 15 / 23, cvv: 123 }],
     phone: 18308483238,
     role:'member'
   },
@@ -1217,7 +1216,7 @@ let userList = [
     password: "tudaxahucilupol",
     shippingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
     billingAddress: "318 Augusta Wall Rancho Cucamonga TN 59084",
-    creditCard: 6126705686865986,
+    creditCard: [{ number: 6126705686865986, expiration: 15 / 23, cvv: 123 }],
     phone: 17287174888,
     role:'member'
   },
@@ -1229,7 +1228,7 @@ let userList = [
     password: "fituqutegakisum",
     shippingAddress: "042 Pete Loaf North Port AR 16937-0238",
     billingAddress: "042 Pete Loaf North Port AR 16937-0238",
-    creditCard: 2412230806194861,
+    creditCard: [{ number: 2412230806194861, expiration: 15 / 23, cvv: 123 }],
     phone: 19479118987,
     role:'member'
   },
@@ -1241,7 +1240,7 @@ let userList = [
     password: "datuhowesejupux",
     shippingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
     billingAddress: "1481 Antonina Gateway Riverview KY 94360-3535",
-    creditCard: 4700230406942715,
+    creditCard: [{ number: 4700230406942715, expiration: 15 / 23, cvv: 123 }],
     phone: 14767958468,
     role:'member'
   },
@@ -1253,7 +1252,7 @@ let userList = [
     password: "pexiyuyihavamox",
     shippingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
     billingAddress: "1389 Vinnie Summit Santa Rosa VT 75847-7924",
-    creditCard: 8921191716513859,
+    creditCard: [{ number: 8921191716513859, expiration: 15 / 23, cvv: 123 }],
     phone: 17170204691,
     role:'member'
   },
@@ -1265,7 +1264,7 @@ let userList = [
     password: "lofizuyeyikerup",
     shippingAddress: "4604 Marie Parkway Palmdale NM 14716",
     billingAddress: "4604 Marie Parkway Palmdale NM 14716",
-    creditCard: 765497338784545,
+    creditCard: [{ number: 765497338784545, expiration: 15 / 23, cvv: 123 }],
     phone: 14158656327,
     role:'member'
   },
@@ -1277,7 +1276,7 @@ let userList = [
     password: "daromojinijemiv",
     shippingAddress: "547 Mona Ranch Austin MO 94675",
     billingAddress: "547 Mona Ranch Austin MO 94675",
-    creditCard: 433396684457011,
+    creditCard: [{ number: 433396684457011, expiration: 15 / 23, cvv: 123 }],
     phone: 10874875469,
     role:'member'
   },
@@ -1289,7 +1288,7 @@ let userList = [
     password: "xadakavajizeqof",
     shippingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
     billingAddress: "9547 Shanny Roads Spring Valley OR 03429-9180",
-    creditCard: 3028772250274834,
+    creditCard: [{ number: 3028772250274834, expiration: 15 / 23, cvv: 123 }],
     phone: 10323967825,
     role:'member'
   },
@@ -1301,7 +1300,7 @@ let userList = [
     password: "jigedasakulowen",
     shippingAddress: "421 Swift Trace Waco DE 26930-7286",
     billingAddress: "421 Swift Trace Waco DE 26930-7286",
-    creditCard: 8816599003432313,
+    creditCard: [{ number: 8816599003432313, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105256,
     role:'member'
   },
@@ -1313,7 +1312,7 @@ let userList = [
     password: "OdishoShooterz",
     shippingAddress: "123 ben st",
     billingAddress: "123 ben st",
-    creditCard: 8816599003432312,
+    creditCard: [{ number: 8816599003432312, expiration: 15 / 23, cvv: 123 }],
     phone: 13263105259,
     role:'admin'
   },
@@ -1337,7 +1336,7 @@ let userList = [
     password: "pada0867",
     shippingAddress: "571 W 139th St New York NY 10031",
     billingAddress: "571 W 139th St New York NY 10031",
-    creditCard: 8816599133432312,
+    creditCard: [{ number: 8816599003432323, expiration: 15 / 23, cvv: 123 }],
     phone: 13263485259,
     role:'admin'
   },
@@ -1381,15 +1380,9 @@ const seed = async () => {
   mensUnderwear = await Promise.all(
     mensUnderwear.map((item) => Product.create(item))
   );
-  mensSocks = await Promise.all(
-    mensSocks.map((item) => Product.create(item))
-  );
-  mensHats = await Promise.all(
-    mensHats.map((item) => Product.create(item))
-  );
-  mensPants = await Promise.all(
-    mensPants.map((pant) => Product.create(pant))
-  );
+  mensSocks = await Promise.all(mensSocks.map((item) => Product.create(item)));
+  mensHats = await Promise.all(mensHats.map((item) => Product.create(item)));
+  mensPants = await Promise.all(mensPants.map((pant) => Product.create(pant)));
   mensShirts = await Promise.all(
     mensShirts.map((shirt) => Product.create(shirt))
   );
@@ -1407,29 +1400,27 @@ const seed = async () => {
     CharleyKulas,
     HudsonLegros,
     BenOdisho,
-    JackPadalino
-  ] = await Promise.all(
-    userList.map((singleUser) => User.create(singleUser))
-  );
+    JackPadalino,
+  ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
   //-------------create all cart items here-------------//
   let cartList = [
-    {userId:HowellAltenwerth.id},
-    {userId:DaphneyBednar.id},
-    {userId:BreanaPouros.id},
-    {userId:RosalindOberbrunner.id},
-    {userId:MalcolmBraun.id},
-    {userId:JacintoChamplin.id},
-    {userId:NyahLakin.id},
-    {userId:AlfredProhaska.id},
-    {userId:CharleyKulas.id},
-    {userId:HudsonLegros.id},
-    {userId:BenOdisho.id},
-    {userId:JackPadalino.id},
+    { userId: HowellAltenwerth.id },
+    { userId: DaphneyBednar.id },
+    { userId: BreanaPouros.id },
+    { userId: RosalindOberbrunner.id },
+    { userId: MalcolmBraun.id },
+    { userId: JacintoChamplin.id },
+    { userId: NyahLakin.id },
+    { userId: AlfredProhaska.id },
+    { userId: CharleyKulas.id },
+    { userId: HudsonLegros.id },
+    { userId: BenOdisho.id },
+    { userId: JackPadalino.id },
   ];
 
   cartList = await Promise.all(
-    cartList.map((singleCart)=>Cart.create(singleCart))
+    cartList.map((singleCart) => Cart.create(singleCart))
   );
 
   console.log("DB SEED COMPLETE.");

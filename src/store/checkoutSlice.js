@@ -1,91 +1,67 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phoneNumber: "",
-  billingFirstName: "",
-  billingLastName: "",
-  country: "",
-  address: "",
-  addressTwo: "",
-  postalCode: "",
-  city: "",
-  stateProvince: "",
-  creditCardNumber: "",
-  expiration: "",
-  code: "",
+
+  billingAddress: "",
+  shippingAddress: "",
+  creditCard: "",
+  creditCardExp: "",
+  creditCardCVV: "",
+  contactName: "",
+  contactPhone: "",
+  contactEmail: "",
+  shippingOption: "",
+
 };
 
 export const checkoutSlice = createSlice({
   name: "checkout",
   initialState,
   reducers: {
-    setFirstName: (state, action) => {
-      state.firstName = action.payload;
+
+    setBillingAddress: (state, action) => {
+      state.billingAddress = action.payload;
     },
-    setLastName: (state, action) => {
-      state.lastName = action.payload;
+    setShippingAddress: (state, action) => {
+      state.shippingAddress = action.payload;
     },
-    setEmail: (state, action) => {
-      state.email = action.payload;
+    setCreditCard: (state, action) => {
+      state.creditCard = action.payload;
     },
-    setPhoneNumber: (state, action) => {
-      state.phoneNumber = action.payload;
+    setCreditCardExp: (state, action) => {
+      state.creditCardExp = action.payload;
     },
-    setBillingFirstName: (state, action) => {
-      state.billingFirstName = action.payload;
+    setCreditCardCVV: (state, action) => {
+      state.creditCardCVV = action.payload;
     },
-    setBillingLastName: (state, action) => {
-      state.billingLastName = action.payload;
+    setContactName: (state, action) => {
+      state.contactName = action.payload;
     },
-    setCountry: (state, action) => {
-      state.country = action.payload;
+    setContactPhone: (state, action) => {
+      state.contactPhone = action.payload;
     },
-    setAddress: (state, action) => {
-      state.address = action.payload;
+    setContactEmail: (state, action) => {
+      state.contactEmail = action.payload;
     },
-    setAddressTwo: (state, action) => {
-      state.addressTwo = action.payload;
-    },
-    setPostalCode: (state, action) => {
-      state.postalCode = action.payload;
-    },
-    setCity: (state, action) => {
-      state.city = action.payload;
-    },
-    setStateProvince: (state, action) => {
-      state.stateProvince = action.payload;
-    },
-    setCreditCardNumber: (state, action) => {
-      state.creditCardNumber = action.payload;
-    },
-    setExpiration: (state, action) => {
-      state.expiration = action.payload;
-    },
-    setCode: (state, action) => {
-      state.code = action.payload;
+    setShippingOption: (state, action) => {
+      state.shippingOption = action.payload;
+
     },
   },
 });
 
 export const {
-  setFirstName,
-  setLastName,
-  setEmail,
-  setPhoneNumber,
-  setBillingFirstName,
-  setBillingLastName,
-  setCountry,
-  setAddress,
-  setAddressTwo,
-  setPostalCode,
-  setCity,
-  setStateProvince,
-  setCreditCardNumber,
-  setExpiration,
-  setCode,
+
+  setShippingAddress,
+  setBillingAddress,
+  setCreditCard,
+  setCreditCardExp,
+  setCreditCardCVV,
+  setContactName,
+  setContactEmail,
+  setContactPhone,
+  setShippingOption,
+
 } = checkoutSlice.actions;
 
 export default checkoutSlice.reducer;

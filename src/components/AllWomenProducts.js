@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import {SideMenuWomen} from "./";
-
+import { setCart } from "../store/cartSlice";
+import { SideMenuWomen } from "./";
+import { useSelector, useDispatch } from "react-redux";
 const AllWomenProducts = () => {
   const { allWomensProducts } = useSelector((state) => state.product);
 

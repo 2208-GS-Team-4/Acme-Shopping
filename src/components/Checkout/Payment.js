@@ -2,46 +2,49 @@ import React from "react";
 import { Card } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  setCreditCardNumber,
-  setExpiration,
-  setCode,
+
+  setCreditCard,
+  setCreditCardExp,
+  setCreditCardCVV,
+
 } from "../../store/checkoutSlice";
 
 const Payment = () => {
   const dispatch = useDispatch();
-  const creditCardNumber = useSelector(
-    (state) => state.checkout.creditCardNumber
-  );
-  const expiration = useSelector((state) => state.checkout.expiration);
-  const code = useSelector((state) => state.checkout.code);
 
-  const handleCreditCardNumberChange = (event) => {
-    dispatch(setCreditCardNumber(event.target.value));
+  const creditCard = useSelector((state) => state.checkout.creditCard);
+  const creditCardExp = useSelector((state) => state.checkout.creditCardExp);
+  const creditCardCVV = useSelector((state) => state.checkout.creditCardCVV);
+  const handleCreditCard = (event) => {
+    dispatch(setCreditCard(event.target.value));
   };
-  const handleExpirationChange = (event) => {
-    dispatch(setExpiration(event.target.value));
+  const handleCreditCardExp = (event) => {
+    dispatch(setCreditCardExp(event.target.value));
   };
-  const handleCodeChange = (event) => {
-    dispatch(setCode(event.target.value));
+  const handleCreditCardCVV = (event) => {
+    dispatch(setCreditCardCVV(event.target.value));
+
   };
   return (
     <div>
       <Card variant="outlined">
-        <h4>Payment:</h4>
-        <label>Credit Card:</label>
+        <h4>Payment Information:</h4>
+        <label>Credit Card Number:</label>
         <input
           required
           type="text"
-          value={creditCardNumber}
-          onChange={handleCreditCardNumberChange}
+
+          value={creditCard}
+          onChange={handleCreditCard}
+
           placeholder="0000-0000-0000-0000"
         ></input>
         <label>Expiration:</label>
         <input
           required
           type="text"
-          value={expiration}
-          onChange={handleExpirationChange}
+          value={creditCardExp}
+          onChange={handleCreditCardExp}
           maxLength="5"
           placeholder="00/00"
         ></input>
@@ -49,8 +52,8 @@ const Payment = () => {
         <input
           required
           type="text"
-          value={code}
-          onChange={handleCodeChange}
+          value={creditCardCVV}
+          onChange={handleCreditCardCVV}
           maxLength="3"
           placeholder="000"
         ></input>

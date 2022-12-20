@@ -15,7 +15,7 @@ import {
   SingleWomenProduct,
   Cart,
 } from "./";
-import { CheckoutPage } from "../components/Checkout/CheckoutPage";
+import CheckoutPage from "../components/Checkout/CheckoutPage";
 
 import OrderHistory from "./OrderHistory";
 

@@ -1,6 +1,4 @@
-
 import React, { useState, useEffect } from "react";
-
 
 import BillingShipping from "./BillingShipping";
 import ContactInfo from "./ContactInfo";
@@ -26,7 +24,6 @@ const CheckoutPage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const newOrderInfo = everything;
-
     await axios.post(`/api/users/${user.id}/order`, {
       cart,
       newOrderInfo,
@@ -47,14 +44,11 @@ const CheckoutPage = () => {
     <div>
       {" "}
       <p>Total:{total}</p>
-
       <form onSubmit={handleFormSubmit}>
         <ContactInfo />
         <BillingShipping />
         <Delivery />
         <Payment />
-
-
         <Button type="submit" variant="contained">
           Place Your Order
         </Button>

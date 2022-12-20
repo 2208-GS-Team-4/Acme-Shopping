@@ -19,7 +19,6 @@ const Order = db.define("order", {
     validate: {
       isEmail: true,
     },
-    unique: true,
   },
   shippingOption: { type: Sequelize.STRING },
 });

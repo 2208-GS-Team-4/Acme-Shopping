@@ -13,6 +13,7 @@ const Admin = () => {
            <Link to="/admin/add-product">Add new</Link>
            <Link to="/men">Men's</Link>
            <Link to="/women">Women's</Link>
+           <Link to="/admin/view-users">Users</Link>
         </>
     );
 };

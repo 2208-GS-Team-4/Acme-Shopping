@@ -17,6 +17,7 @@ import {
   Admin,
   AdminAddProduct,
   AdminEditProduct,
+  AdminViewUsers,
   CheckoutPage
 } from './';
 
@@ -35,6 +36,7 @@ const RouterComponent = () => {
       <Route exact path="/admin" element={<Admin />} />
       <Route exact path="/admin/add-product" element={<AdminAddProduct />} />
       <Route exact path="/admin/edit-product/:id" element={<AdminEditProduct />} />
+      <Route exact path="/admin/view-users" element={<AdminViewUsers />} />
       <Route exact path="/cart" element={<Cart />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
@@ -42,7 +44,6 @@ const RouterComponent = () => {
       <Route exact path="/women" element={<AllWomenProducts />} />
       <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
       <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
-
       <Route exact path="/checkout" element={<CheckoutPage />} />
       <Route exact path="/orderhistory" element={<OrderHistory />} />
 

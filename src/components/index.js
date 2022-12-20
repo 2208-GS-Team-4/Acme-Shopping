@@ -13,10 +13,12 @@ export { default as SideMenuWomen } from './SideMenuWomen';
 export { default as SingleMenProduct } from './SingleMenProduct';
 export { default as SingleWomenProduct } from './SingleWomenProduct';
 export { default as Cart } from './Cart';
+// Admin components
 export { default as Admin } from './Admin/Admin';
 export { default as AdminAddProduct } from './Admin/AdminAddProduct';
 export { default as AdminEditProduct } from './Admin/AdminEditProduct';
+export { default as AdminViewUsers } from './Admin/AdminViewUsers';
 export { default as NotFoundPage } from './NotFoundPage';
-// Checkout folder
+// Checkout components
 export { default as CheckoutPage } from './Checkout/CheckoutPage';
-// FAQ folder
+// FAQ components

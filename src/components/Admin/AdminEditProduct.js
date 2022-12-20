@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { Link,useParams,useNavigate } from "react-router-dom";
 import { NotFoundPage } from '..';
+import { setAllMensProducts,setAllWomensProducts } from '../../store/productSlice';
 
 const AdminEditProduct = () => {
     // Redux variables
+    const dispatch = useDispatch();
     const { allProducts } = useSelector((state) => state.product);
     const { user } = useSelector((state) => state.user);
 
@@ -61,6 +63,13 @@ const AdminEditProduct = () => {
         try{
             // will probably have to delete this product from the front end using Redux and store
             await axios.delete(`/api/products/${id}`,{headers: {Authorization: 'Bearer ' + token}});
+            if(gender === 'men'){
+                const allMensProducts = await axios.get("/api/men");
+                dispatch(setAllMensProducts(allMensProducts.data));
+            }else{
+                const allWomensProducts = await axios.get("/api/women");
+                dispatch(setAllWomensProducts(allWomensProducts.data));
+            };
             navigate("/admin");
         }catch(error){
             console.log(error);

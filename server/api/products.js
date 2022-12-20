@@ -10,6 +10,16 @@ router.get("/", async (req, res, next) => {
   res.send(allProducts);
 });
 
+// GET localhost:3000/api/products
+router.get("/:id", async (req, res, next) => {
+  try{
+    const product = await Product.findByPk(req.params.id);
+    res.send(product);
+  }catch(error){
+    next(error);
+  };
+});
+
 // POST localhost:3000/api/products
 router.post("/",authenticateUser, async (req, res, next) => {
   try{

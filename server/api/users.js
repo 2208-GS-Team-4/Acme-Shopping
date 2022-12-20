@@ -2,6 +2,8 @@ const express = require("express");
 const { Test } = require("mocha");
 const router = express.Router();
 const sequelize = require("sequelize");
+const { authenticateUser } = require('./helpers/authUserMiddleware');
+
 const {
   User,
   Cart,
@@ -12,9 +14,21 @@ const {
 } = require("../db");
 
 // GET localhost:3000/api/users
-router.get("/", async (req, res, next) => {
-  const users = await User.findAll();
-  res.send(users);
+router.get("/",authenticateUser,async (req, res, next) => {
+  try{
+    const { role } = req.user;
+    if(role!=='admin'){
+        return res.sendStatus(403);
+    };
+    const users = await User.findAll({
+      order: [
+        ['lastName', 'ASC'],
+      ]
+    });
+    res.send(users);
+  }catch(error){
+    next(error);
+  };
 });
 
 // POST localhost:3000/api/users/

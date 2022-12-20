@@ -1,16 +1,22 @@
+
 import React, { useState, useEffect } from "react";
+
+
 import BillingShipping from "./BillingShipping";
 import ContactInfo from "./ContactInfo";
 import Delivery from "./Delivery";
 import Payment from "./Payment";
+
 import { useSelector, useDispatch } from "react-redux";
 import { Button } from "@mui/material";
 import axios from "axios";
+
 //USE MUI TEXTIFELD FOR BOXES AT THE END
 
 const CheckoutPage = () => {
   const [display, setDisplay] = useState(false);
   const everything = useSelector((state) => state.checkout);
+
   const { user } = useSelector((state) => state.user);
   const cartItem = useSelector((state) => state.cartProduct.cartProduct);
   const totalPrice = useSelector((state) => state.cartProduct.cartProduct);
@@ -41,11 +47,13 @@ const CheckoutPage = () => {
     <div>
       {" "}
       <p>Total:{total}</p>
+
       <form onSubmit={handleFormSubmit}>
         <ContactInfo />
         <BillingShipping />
         <Delivery />
         <Payment />
+
 
         <Button type="submit" variant="contained">
           Place Your Order

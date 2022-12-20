@@ -85,6 +85,7 @@ const Register = () => {
     }
   };
 
+
   return (
     <div className="formDiv">
       <h2>Create new account</h2>
@@ -108,6 +109,7 @@ const Register = () => {
       )}
     </div>
   );
+
 };
 
 export default Register;

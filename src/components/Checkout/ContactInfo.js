@@ -2,13 +2,16 @@ import React from "react";
 import { Card } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
+
   setContactName,
   setContactEmail,
   setContactPhone,
+
 } from "../../store/checkoutSlice";
 
 const ContactInfo = () => {
   const dispatch = useDispatch();
+
   const contactEmail = useSelector((state) => state.checkout.contactEmail);
   const contactName = useSelector((state) => state.checkout.contactName);
   const contactPhone = useSelector((state) => state.checkout.contactPhone);
@@ -21,6 +24,7 @@ const ContactInfo = () => {
   };
   const handlePhoneNumber = (event) => {
     dispatch(setContactPhone(event.target.value));
+
   };
 
   return (

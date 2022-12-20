@@ -2,12 +2,15 @@ import React from "react";
 import { Card } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
+
   setBillingAddress,
   setShippingAddress,
+
 } from "../../store/checkoutSlice";
 
 const BillingShipping = () => {
   const dispatch = useDispatch();
+
   const billingAddress = useSelector((state) => state.checkout.billingAddress);
   const shippingAddress = useSelector(
     (state) => state.checkout.shippingAddress
@@ -18,19 +21,23 @@ const BillingShipping = () => {
   };
   const handleShippingAddress = (event) => {
     dispatch(setShippingAddress(event.target.value));
+
   };
 
   return (
     <div>
       <Card variant="outlined">
+
         <h4>Shipping & Billing</h4>
         <label>Ship to:</label>
+=======
+ 
         <input
           required
           type="text"
           value={shippingAddress}
           onChange={handleShippingAddress}
-          placeholder="John Smith, 123th street apt1, American City, American State, USA, 10000"
+          placeholder=" 123th street apt1, American City, American State, USA, 10000"
         ></input>
 
         <label>Bill to:</label>
@@ -39,7 +46,7 @@ const BillingShipping = () => {
           type="text"
           value={billingAddress}
           onChange={handleBillingAddress}
-          placeholder="John Smith, 123th street apt1, American City, American State, USA, 10000"
+          placeholder="123th street apt1, American City, American State, USA, 10000"
         ></input>
       </Card>
     </div>

@@ -2,13 +2,16 @@ import React from "react";
 import { Card } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
+
   setCreditCard,
   setCreditCardExp,
   setCreditCardCVV,
+
 } from "../../store/checkoutSlice";
 
 const Payment = () => {
   const dispatch = useDispatch();
+
   const creditCard = useSelector((state) => state.checkout.creditCard);
   const creditCardExp = useSelector((state) => state.checkout.creditCardExp);
   const creditCardCVV = useSelector((state) => state.checkout.creditCardCVV);
@@ -20,6 +23,7 @@ const Payment = () => {
   };
   const handleCreditCardCVV = (event) => {
     dispatch(setCreditCardCVV(event.target.value));
+
   };
   return (
     <div>
@@ -29,8 +33,10 @@ const Payment = () => {
         <input
           required
           type="text"
+
           value={creditCard}
           onChange={handleCreditCard}
+
           placeholder="0000-0000-0000-0000"
         ></input>
         <label>Expiration:</label>

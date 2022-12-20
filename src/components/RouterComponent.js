@@ -15,8 +15,13 @@ import {
   SingleWomenProduct,
   Cart,
 } from "./";
-import CheckoutPage from "./Checkout/CheckoutPage";
+
+
 import OrderHistory from "./OrderHistory";
+
+import UserProfile from "./Profile/UserProfile";
+
+
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
 
@@ -34,6 +39,7 @@ const RouterComponent = () => {
         element={<SingleMenProduct />}
       />
       <Route exact path="/women" element={<AllWomenProducts />} />
+
       <Route
         exact
         path="/women/:productType"
@@ -46,6 +52,12 @@ const RouterComponent = () => {
       />
       <Route exact path="/checkout" element={<CheckoutPage />} />
       <Route exact path="/orderhistory" element={<OrderHistory />} />
+
+      <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
+      <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
+   
+      <Route exact path="/profile" element={<UserProfile />} />
+
     </Routes>
   );
 };

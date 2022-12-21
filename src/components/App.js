@@ -54,6 +54,8 @@ const App = () => {
     }
   });
 
+  localStorage.clear();
+
   return (
     <div>
       <Navbar />

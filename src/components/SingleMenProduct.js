@@ -22,6 +22,7 @@ const SingleMenProduct = () => {
     const foundProduct = allMensProducts.filter(
       (product) => product.id === Number(id)
     );
+    console.log(foundProduct);
     setProduct(foundProduct);
   };
   useEffect(() => {
@@ -40,6 +41,11 @@ const SingleMenProduct = () => {
   const handleQuantity = () => {
     setAddQuantity(addQuantity + 1);
   };
+
+  const addToGuestCart = () =>{
+    window.localStorage.setItem(product[0].name,JSON.stringify(product[0]));
+  };
+
   const addToCart = async () => {
     const name = product[0].name;
     const imageURL = product[0].imageURL;
@@ -86,6 +92,8 @@ const SingleMenProduct = () => {
     dispatch(setCart(newData.data));
   };
 
+  //console.log(product[0]);
+
   return (
     <>
       <SideMenuMen />
@@ -128,6 +136,11 @@ const SingleMenProduct = () => {
                 </div>
                 {user.id && (
                   <button onClick={addToCart} className="AddToCart">
+                    Add to cart
+                  </button>
+                )}
+                {!user.id && (
+                  <button onClick={addToGuestCart} className="AddToCart">
                     Add to cart
                   </button>
                 )}

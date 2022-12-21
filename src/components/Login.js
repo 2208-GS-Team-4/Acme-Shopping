@@ -44,7 +44,7 @@ const Login = () => {
     <>
       <div className="formDiv">
         <h2>Login</h2>
-        <form onSubmit={attemptLogin} className="loginForm">
+        <form onSubmit={attemptLogin} className="loginRegForm">
           <input
             placeholder="username"
             value={credentials.username}

@@ -22,7 +22,6 @@ const Navbar = () => {
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
         <Link to="/orderhistory">Order History</Link>
-        {/* <Link to="/profile">Temp ProfileChange</Link> */}
       </div>
       <div className="loggedInDiv">
         {user.id ? (
@@ -34,7 +33,11 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         )}
 
-        {user.role === "admin" && <Link to="/admin">Admin</Link>}
+        {user.role === "admin" && (
+          <Link to="/admin" className="adminButton">
+            Admin
+          </Link>
+        )}
         {user.id && (
           <Link to="/cart" className="cartText">
             Cart

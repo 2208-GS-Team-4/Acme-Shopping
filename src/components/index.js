@@ -18,6 +18,7 @@ export { default as Admin } from './Admin/Admin';
 export { default as AdminAddProduct } from './Admin/AdminAddProduct';
 export { default as AdminEditProduct } from './Admin/AdminEditProduct';
 export { default as AdminViewUsers } from './Admin/AdminViewUsers';
+export { default as AdminViewUserProfile } from './Admin/AdminViewUserProfile';
 export { default as NotFoundPage } from './NotFoundPage';
 // Checkout components
 export { default as CheckoutPage } from './Checkout/CheckoutPage';

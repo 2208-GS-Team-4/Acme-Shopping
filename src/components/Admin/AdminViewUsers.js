@@ -27,13 +27,13 @@ const AdminViewUsers = () => {
         <Link to="/men">Men's</Link>
         <Link to="/women">Women's</Link>
         <Link to="/admin/view-users">Users</Link>
-      </div>{" "}
+      </div>
       <div className="dashboard">
         {userList.map((user) => {
           return (
-            <p key={user.id}>
-              {user.lastName}, {user.firstName}
-            </p>
+            <div>
+              <Link to={`/admin/view-users/${user.id}`}>{user.lastName}, {user.firstName}</Link>
+            </div>
           );
         })}
       </div>

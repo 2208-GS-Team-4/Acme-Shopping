@@ -58,7 +58,6 @@ const App = () => {
     <div>
       <Navbar />
       <RouterComponent />
-      <FAQMain />
     </div>
   );
 };

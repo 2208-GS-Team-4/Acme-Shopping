@@ -6,15 +6,28 @@ import { Link } from "react-router-dom";
 const ProfileSettings = () => {
   const { user } = useSelector((state) => state.user);
   return (
-    <div>
-      <Card variant="outlined">
+    <Card variant="outlined" style={{ marginTop: "1px" }}>
+      <div
+        style={{
+          color: "navy",
+          padding: "10px 20px",
+        }}
+      >
         <h3>Profile Settings</h3>
-        <p>View & Edit Your Profile Information Here</p>
-        <Link to="/settings">
-          <Button>View</Button>
-        </Link>
-      </Card>
-    </div>
+        <p>
+          View & Edit Your Profile Information{" "}
+          <Link
+            to="/settings"
+            style={{
+              textWeight: "bold",
+              textDecoration: "underline",
+            }}
+          >
+            here
+          </Link>
+        </p>
+      </div>
+    </Card>
   );
 };
 

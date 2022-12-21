@@ -5,6 +5,7 @@ import DeleteFromCart from "./DeleteCartItem";
 import { setCart, setTotal } from "../store/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import FAQMain from "./FAQ/MainFAQ";
 const Cart = () => {
   const { user } = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cartProduct.cartProduct);
@@ -73,6 +74,7 @@ const Cart = () => {
           <button className="submit">Check Out</button>
         </Link>
       </form>
+      <FAQMain />
     </div>
   );
 };

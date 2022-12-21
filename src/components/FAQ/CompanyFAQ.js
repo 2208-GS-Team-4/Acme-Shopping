@@ -12,7 +12,7 @@ const Company = () => {
   return (
     <Card variant="none">
       <div style={styleChoice}>
-        <h3>Company</h3>
+        <h3 style={{ textDecoration: "underline" }}>Company</h3>
         <p>About Us</p>
         <p>Our Values</p>
         <p>Careers with Us</p>

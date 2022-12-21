@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import FAQMain from "./FAQ/MainFAQ";
 const Home = () => {
   return (
     <>
@@ -16,6 +16,7 @@ const Home = () => {
           <Link to="/women">Discover more</Link>
         </p>
       </div>
+      <FAQMain />
     </>
   );
 };

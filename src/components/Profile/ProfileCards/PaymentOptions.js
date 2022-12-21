@@ -6,15 +6,19 @@ import { Link } from "react-router-dom";
 const PaymentOptions = () => {
   const { user } = useSelector((state) => state.user);
   return (
-    <div>
-      <Card variant="outlined">
+    <Card variant="outlined" style={{ borderColor: "navy" }}>
+      <div
+        style={{
+          color: "navy",
+          padding: "10px 20px",
+        }}
+      >
         <h3>Payment Options</h3>
-        <p>Edit & Add Payment Options</p>
-        <Link to="/paymentoptions">
-          <Button>View</Button>
-        </Link>
-      </Card>
-    </div>
+        <p>
+          Edit & Add Payment Options <Link to="/paymentoptions">here</Link>
+        </p>
+      </div>
+    </Card>
   );
 };
 

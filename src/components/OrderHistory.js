@@ -5,6 +5,8 @@ import DeleteFromCart from "./DeleteCartItem";
 import { setCart, setTotal } from "../store/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import FAQMain from "./FAQ/MainFAQ";
+
 const OrderHistory = () => {
   const { user } = useSelector((state) => state.user);
   const [order, setOrder] = useState([]);
@@ -39,6 +41,7 @@ const OrderHistory = () => {
           );
         })}{" "}
       </div>
+      <FAQMain />
     </div>
   );
 };

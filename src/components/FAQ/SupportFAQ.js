@@ -12,7 +12,7 @@ const Support = () => {
   return (
     <Card variant="none">
       <div style={styleChoice}>
-        <h3>Support</h3>
+        <h3 style={{ textDecoration: "underline" }}>Support</h3>
         <p>Customer Service</p>
         <p>Returns and Exchanges</p>
         <p>Feedback</p>

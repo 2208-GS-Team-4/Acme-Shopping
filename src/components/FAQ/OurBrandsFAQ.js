@@ -12,7 +12,7 @@ const OurBrands = () => {
   return (
     <Card variant="none">
       <div style={styleChoice}>
-        <h3>Our Brands</h3>
+        <h3 style={{ textDecoration: "underline" }}>Our Brands</h3>
         <p>Hats by Heidi©</p>
         <h4>Jackets by Jack®</h4>
         <h4>Yogurts by YiFan™</h4>

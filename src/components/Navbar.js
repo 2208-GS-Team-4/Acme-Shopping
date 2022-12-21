@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="loggedInDiv">
         {user.id ? (
           <div>
-            <h3>Welcome, {user.username}</h3>
+            <p>Welcome, {user.username}</p>
             <Link to="/profile">Profile</Link>
           </div>
         ) : (

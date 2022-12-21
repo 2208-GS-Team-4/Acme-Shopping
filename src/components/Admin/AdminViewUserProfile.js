@@ -32,7 +32,7 @@ const AdminViewUserProfile = () => {
         <h3>User payment information</h3>
         <p>Shipping Address: {user.shippingAddress}</p>
         <p>Billing Address: {user.billingAddress}</p>
-        <div>Credit Card: </div>
+        {/* <div>Credit Card: {user.creditCard}</div> */}
       </div>
       <div>
         <h3>Login & Security</h3>

@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   AllMenProducts,
   AllWomenProducts,
@@ -9,8 +9,6 @@ import {
   ProductCategoryMen,
   ProductCategoryWomen,
   Register,
-  SideMenuMen,
-  SideMenuWomen,
   SingleMenProduct,
   SingleWomenProduct,
   Cart,
@@ -18,12 +16,14 @@ import {
   AdminAddProduct,
   AdminEditProduct,
   AdminViewUsers,
-  CheckoutPage
-} from './';
+  CheckoutPage,
+} from "./";
 
 import OrderHistory from "./OrderHistory";
-
-import UserProfile from "./Profile/UserProfile";
+import ProfilePage from "./Profile/ProfilePage";
+import LoginSecurityPage from "./Profile/LoginSecurityPage";
+import PaymentOptionsPage from "./Profile/PaymentOptionsPage";
+import SettingsPage from "./Profile/SettingsPage";
 
 const RouterComponent = () => {
   const { user } = useSelector((state) => state.user);
@@ -35,15 +35,31 @@ const RouterComponent = () => {
       <Route path="/register" element={<Register />} />
       <Route exact path="/admin" element={<Admin />} />
       <Route exact path="/admin/add-product" element={<AdminAddProduct />} />
-      <Route exact path="/admin/edit-product/:id" element={<AdminEditProduct />} />
+      <Route
+        exact
+        path="/admin/edit-product/:id"
+        element={<AdminEditProduct />}
+      />
       <Route exact path="/admin/view-users" element={<AdminViewUsers />} />
       <Route exact path="/cart" element={<Cart />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
-      <Route exact path="/men/:productType/:id" element={<SingleMenProduct />}/>
+      <Route
+        exact
+        path="/men/:productType/:id"
+        element={<SingleMenProduct />}
+      />
       <Route exact path="/women" element={<AllWomenProducts />} />
-      <Route exact path="/women/:productType" element={<ProductCategoryWomen />}/>
-      <Route exact path="/women/:productType/:id" element={<SingleWomenProduct />}/>
+      <Route
+        exact
+        path="/women/:productType"
+        element={<ProductCategoryWomen />}
+      />
+      <Route
+        exact
+        path="/women/:productType/:id"
+        element={<SingleWomenProduct />}
+      />
       <Route exact path="/checkout" element={<CheckoutPage />} />
       <Route exact path="/orderhistory" element={<OrderHistory />} />
 
@@ -58,7 +74,11 @@ const RouterComponent = () => {
         element={<SingleWomenProduct />}
       />
 
-      <Route exact path="/profile" element={<UserProfile />} />
+      {/* <Route exact path="/profile" element={<UserProfile />} /> */}
+      <Route exact path="/profile" element={<ProfilePage />} />
+      <Route exact path="/loginsecurity" element={<LoginSecurityPage />} />
+      <Route exact path="/paymentoptions" element={<PaymentOptionsPage />} />
+      <Route exact path="/settings" element={<SettingsPage />} />
     </Routes>
   );
 };

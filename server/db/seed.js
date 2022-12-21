@@ -273,38 +273,6 @@ let mensShirts = [
     ],
   },
   {
-    name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt1.jpg",
-    description:
-      "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "red",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    option: [
-      { size: "S", stock: 50 },
-      { size: "M", stock: 50 },
-      { size: "L", stock: 50 },
-    ],
-  },
-  {
-    name: "Slim Geo Print Stretch Corduroy Shirt",
-    imageURL: "/img/shirts/mensShirt1.jpg",
-    description:
-      "A soft, stretchy corduroy in a trendy geo print for the perfect blend of cozy and polished. Pair with chinos or jeans for effortless styling",
-    color: "red",
-    price: 79.99,
-    stock: 10,
-    type: "shirt",
-    gender: "men",
-    option: [
-      { size: "S", stock: 50 },
-      { size: "M", stock: 50 },
-      { size: "L", stock: 50 },
-    ],
-  },
-  {
     name: "Floral Stretch Corduroy Shirt",
     imageURL: "/img/shirts/mensShirt2.jpg",
     description:
@@ -354,7 +322,7 @@ let mensShirts = [
   },
   {
     name: "Slim plaid Stretch Flannel Shirt",
-    imageURL: "/img/shirts/mensShirt4.jpg",
+    imageURL: "/img/shirts/mensShirt5.jpg",
     description:
       "An dressier, ultra-soft flannel infused with stretch and featured in a classic plaid for versatile style. Pair with dark denim for an everyday look",
     color: "brown",

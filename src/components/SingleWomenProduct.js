@@ -93,9 +93,7 @@ const SingleWomenProduct = () => {
 
   return (
     <div>
-      <div className="sideMenu">
-        <SideMenuWomen />
-      </div>
+      <SideMenuWomen />
       {product.map((item) => {
         return (
           <div key={item.id} className="productDetail">

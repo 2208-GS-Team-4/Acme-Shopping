@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import SideMenuMen from "./SideMenuWomen";
+import SideMenuMen from "./SideMenuMen";
 import { setCart } from "../store/cartSlice";
 
 const SingleMenProduct = () => {
@@ -88,9 +88,7 @@ const SingleMenProduct = () => {
 
   return (
     <>
-      <div className="sideMenu">
-        <SideMenuMen />
-      </div>
+      <SideMenuMen />
       <div>
         {product.map((item) => {
           return (

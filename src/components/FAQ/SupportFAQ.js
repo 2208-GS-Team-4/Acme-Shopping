@@ -2,20 +2,27 @@ import React from "react";
 import { Card } from "@mui/material";
 
 const Support = () => {
+  const styleChoice = {
+    fontSize: "12px",
+    color: "navy",
+    padding: "0 20px",
+    height: "fit-content",
+    lineHeight: "14px",
+  };
   return (
-    <div>
-      <Card>
-        <h2>Support</h2>
-        <h4>Customer Service</h4>
-        <h4>Returns and Exchanges</h4>
-        <h4>Feedback</h4>
-        <h4>Contact Us</h4>
-        <h4>Shipping</h4>
-        <h4>Track Order</h4>
-        <h4>Gift Cards</h4>
-        <h4>Accessibility</h4>
-      </Card>
-    </div>
+    <Card variant="none">
+      <div style={styleChoice}>
+        <h3>Support</h3>
+        <p>Customer Service</p>
+        <p>Returns and Exchanges</p>
+        <p>Feedback</p>
+        <p>Contact Us</p>
+        <p>Shipping</p>
+        <p>Track Order</p>
+        <p>Gift Cards</p>
+        <p>Accessibility</p>
+      </div>
+    </Card>
   );
 };
 

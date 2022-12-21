@@ -10,6 +10,7 @@ const FAQMain = () => {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
+    marginTop: "120px",
   };
   return (
     <div style={styleChoice}>

@@ -13,12 +13,53 @@ const SocialMedia = () => {
   const iconUrl =
     "https://www.youtube.com/watch?v=DuQk4PEbH68&ab_channel=%5BHK%5DDra";
   return (
-    <div>
-      <Card variant="outlined">
-        <h2>Stay Connected with Us </h2>
-        <MobileStoreIcon store="ios" url={iconUrl} />
-        <MobileStoreIcon store="android" url={iconUrl} />
-        <h2>Follow Us On</h2>
+    <Card variant="none" style={{ marginTop: "10px" }}>
+      <p
+        style={{
+          color: "navy",
+          fontSize: "15px",
+          marginLeft: "20px",
+          marginTop: "10px",
+          fontSize: "12px",
+        }}
+      >
+        Stay Connected with Us{" "}
+      </p>
+      <MobileStoreIcon
+        store="ios"
+        url={iconUrl}
+        style={{
+          width: "33%",
+          float: "left",
+          marginRight: "10px",
+          marginLeft: "25px",
+          height: "40px",
+        }}
+      />
+      <MobileStoreIcon
+        store="android"
+        url={iconUrl}
+        style={{
+          width: "40%",
+          float: "left",
+          marginRight: "10px",
+          marginLeft: "10px",
+          marginTop: "-8px",
+          height: "40px",
+        }}
+      />
+      <p
+        style={{
+          color: "navy",
+          fontSize: "15px",
+          marginTop: "70px",
+          marginLeft: "20px",
+          fontSize: "12px",
+        }}
+      >
+        Follow Us On
+      </p>
+      <div style={{ marginLeft: "20px", marginBottom: "20px" }}>
         <a href={iconUrl} target="_blank">
           <PinterestIcon />
         </a>
@@ -45,8 +86,8 @@ const SocialMedia = () => {
         <a href={iconUrl} target="_blank">
           <GitHubIcon />
         </a>
-      </Card>
-    </div>
+      </div>
+    </Card>
   );
 };
 

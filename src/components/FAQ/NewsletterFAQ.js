@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Button, TextField } from "@mui/material";
+import { Card } from "@mui/material";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -10,20 +10,47 @@ const Newsletter = () => {
     setEmail("");
     alert("Thank you for signing up for our newsletter!");
   };
+  const styleChoice = {
+    width: "80px",
+    marginLeft: "230px",
+    marginTop: "-22px",
+    marginRight: "20px",
+    marginBottom: "20px",
+    display: "block",
+    border: "none",
+    backgroundColor: "navy",
+    color: "white",
+    height: "22px",
+    fontSize: "12px",
+  };
   return (
     <div>
-      <Card>
-        <h2>Sign Up For Our Newsletters</h2>
-        <TextField
-          id="standard-basic"
-          label="Email"
-          variant="standard"
-          required
-          type="text"
-          value={email}
-          onChange={handleEmail}
-        ></TextField>
-        <Button onClick={submitEmail}>Sign Up</Button>
+      <Card variant="none">
+        <p
+          style={{
+            color: "navy",
+            marginLeft: "20px",
+            marginTop: "10px",
+            fontSize: "12px",
+          }}
+        >
+          Sign Up For Our Newsletters
+        </p>
+        <div
+          style={{
+            color: "navy",
+            marginLeft: "20px",
+            marginTop: "15px",
+            fontSize: "12px",
+          }}
+        >
+          <label>Email: </label>
+
+          <input value={email} onChange={handleEmail} />
+        </div>
+        <button onClick={submitEmail} style={styleChoice}>
+          Sign Up
+        </button>
       </Card>
     </div>
   );

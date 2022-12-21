@@ -1292,8 +1292,8 @@ let userList = [
     password: "LRabzNoFuqz",
     shippingAddress: "123 Rab st",
     billingAddress: "123 Rab st",
-    creditCard: 8816399003452312,
-    phone: 13223115259,
+    creditCard: [{ number: 8812999004932312, expiration: "15 / 23", cvv: 123 }],
+    phone: 13221915259,
     role: "admin",
   },
   {
@@ -1302,12 +1302,10 @@ let userList = [
     email: "pada0867@gmail.com",
     username: "pada0867",
     password: "pada0867",
-    shippingAddress: "571 W 139th St New York NY 10031",
-    billingAddress: "571 W 139th St New York NY 10031",
-    creditCard: [
-      { number: 8816599003432323, expiration: " 15 / 23", cvv: 123 },
-    ],
-    phone: 13263485259,
+    shippingAddress: "123 ABC Street",
+    billingAddress: "123 ABC Street",
+    creditCard: [{ number: 8816599004832312, expiration: "15 / 23", cvv: 123 }],
+    phone: 13263405253,
     role: "admin",
   },
 ];
@@ -1370,6 +1368,7 @@ const seed = async () => {
     CharleyKulas,
     HudsonLegros,
     BenOdisho,
+    LouisRabeno,
     JackPadalino,
   ] = await Promise.all(userList.map((singleUser) => User.create(singleUser)));
 
@@ -1386,6 +1385,7 @@ const seed = async () => {
     { userId: CharleyKulas.id },
     { userId: HudsonLegros.id },
     { userId: BenOdisho.id },
+    { userId: LouisRabeno.id },
     { userId: JackPadalino.id },
   ];
 

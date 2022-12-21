@@ -32,7 +32,20 @@ const AdminViewUserProfile = () => {
         <h3>User Payment Information</h3>
         <p>Shipping Address: {user.shippingAddress}</p>
         <p>Billing Address: {user.billingAddress}</p>
-        <div>Credit Card: {user.creditCard[0].number}</div>
+        <div>
+          <h4 style={{ textDecoration: "underline", marginBottom: "-10px" }}>
+            {" "}
+            Credit Card:
+          </h4>
+          <p style={{ marginBottom: "-10px" }}>
+            Number: {user.creditCard[0].number}
+          </p>
+          <p style={{ marginBottom: "-10px" }}>
+            {" "}
+            Expiration Date: {user.creditCard[0].expiration}{" "}
+          </p>
+          <p style={{ marginBottom: "-10px" }}>CVV: {user.creditCard[0].cvv}</p>
+        </div>
       </div>
       <div>
         <h3>Login & Security</h3>

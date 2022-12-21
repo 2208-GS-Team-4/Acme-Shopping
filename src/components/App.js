@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { Navbar, RouterComponent } from "./";
-import { setUser } from '../store/userSlice';
+import { setUser } from "../store/userSlice";
 import {
   setAllProducts,
   setAllMensProducts,
@@ -10,6 +10,7 @@ import {
 } from "../store/productSlice";
 import { setCart } from "../store/cartSlice";
 import { resetUser } from "../store/userSlice";
+import FAQMain from "./FAQ/MainFAQ";
 const App = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
@@ -57,6 +58,7 @@ const App = () => {
     <div>
       <Navbar />
       <RouterComponent />
+      <FAQMain />
     </div>
   );
 };

@@ -8,7 +8,12 @@ import {
   setPhone,
 } from "../../store/userSlice";
 import axios from "axios";
-
+const style = {
+  margin: "130px auto",
+  width: "70%",
+  color: "navy",
+  display: "block",
+};
 const SettingsForm = ({ display, handleDisplay }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
@@ -44,9 +49,9 @@ const SettingsForm = ({ display, handleDisplay }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleUserSubmit}>
-        <Card variant="outlined">
+    <form onSubmit={handleUserSubmit}>
+      <Card variant="outlined" style={style}>
+        <div style={{ margin: "30px auto 30px 30px" }}>
           <TextField
             id="standard-basic"
             label="First Name"
@@ -55,6 +60,7 @@ const SettingsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.firstName}
             onChange={handleFirstNameChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
             id="standard-basic"
@@ -64,6 +70,7 @@ const SettingsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.lastName}
             onChange={handleLastNameChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
             id="standard-basic"
@@ -73,6 +80,7 @@ const SettingsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.shippingAddress}
             onChange={handleShippingAddressChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
             id="standard-basic"
@@ -82,11 +90,23 @@ const SettingsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.phone}
             onChange={handlePhoneChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
-          <Button type="submit">Update</Button>
-        </Card>
-      </form>
-    </div>
+          <Button
+            type="submit"
+            style={{
+              margin: "20px 0 0 20px",
+              backgroundColor: "navy",
+              color: "yellow",
+              fontSize: "12px",
+              height: "30px",
+            }}
+          >
+            Update
+          </Button>
+        </div>
+      </Card>
+    </form>
   );
 };
 

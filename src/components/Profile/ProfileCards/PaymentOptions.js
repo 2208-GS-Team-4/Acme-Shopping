@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const PaymentOptions = () => {
   const { user } = useSelector((state) => state.user);
   return (
-    <Card variant="outlined" style={{ borderColor: "navy" }}>
+    <Card variant="outlined" style={{ marginTop: "10px" }}>
       <div
         style={{
           color: "navy",
@@ -15,7 +15,16 @@ const PaymentOptions = () => {
       >
         <h3>Payment Options</h3>
         <p>
-          Edit & Add Payment Options <Link to="/paymentoptions">here</Link>
+          Edit & Add Payment Options{" "}
+          <Link
+            to="/paymentoptions"
+            style={{
+              textWeight: "bold",
+              textDecoration: "underline",
+            }}
+          >
+            here
+          </Link>
         </p>
       </div>
     </Card>

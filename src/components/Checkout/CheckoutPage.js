@@ -20,7 +20,7 @@ const CheckoutPage = () => {
   const totalPrice = useSelector((state) => state.cartProduct.cartProduct);
   const cart = cartItem.allProducts;
   const total = cartItem.cart.total;
-  console.log(total);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const newOrderInfo = everything;
@@ -41,15 +41,21 @@ const CheckoutPage = () => {
     // await axios.put("/api/men", { cart });
   };
   return (
-    <div>
-      {" "}
+    <div className="checkOutPage">
       <p>Total:{total}</p>
       <form onSubmit={handleFormSubmit}>
         <ContactInfo />
         <BillingShipping />
         <Delivery />
         <Payment />
-        <Button type="submit" variant="contained">
+        <Button
+          type="submit"
+          variant="contained"
+          style={{
+            backgroundColor: "navy",
+            color: "#f0f014",
+          }}
+        >
           Place Your Order
         </Button>
       </form>

@@ -16,7 +16,17 @@ const ProfilePage = () => {
         display: "block",
       }}
     >
-      <h1>Your Profile</h1>
+      <h1
+        style={{
+          color: "#f0f014",
+          backgroundColor: "navy",
+          padding: "5px 15px 10px 15px",
+          width: "150px",
+          borderRadius: "5px",
+        }}
+      >
+        Your Profile
+      </h1>
       <h3>
         Access your personal info, order history, payment options and more.
       </h3>

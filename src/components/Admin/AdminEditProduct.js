@@ -153,7 +153,7 @@ const AdminEditProduct = () => {
             </p>
           )}
           <button onClick={() => deleteProduct()} className="deleteButton">
-            Delete this Product
+            X
           </button>
         </div>
       </div>

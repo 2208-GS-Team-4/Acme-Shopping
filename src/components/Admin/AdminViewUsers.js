@@ -29,13 +29,17 @@ const AdminViewUsers = () => {
         <Link to="/admin/view-users">Users</Link>
       </div>
       <div className="dashboard">
-        {userList.map((user) => {
-          return (
-            <div>
-              <Link to={`/admin/view-users/${user.id}`}>{user.lastName}, {user.firstName}</Link>
-            </div>
-          );
-        })}
+        <ul style={{ width: "60%" }}>
+          {userList.map((user) => {
+            return (
+              <li>
+                <Link to={`/admin/view-users/${user.id}`}>
+                  {user.lastName}, {user.firstName}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </>
   );

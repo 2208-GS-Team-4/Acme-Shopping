@@ -87,7 +87,6 @@ const AdminAddProduct = () => {
   if (user.role !== "admin") return <NotFoundPage />;
   return (
     <>
-      {" "}
       <div className="sideMenu">
         <Link to="/admin/add-product">Add a New Product</Link>
         <Link to="/men">Men's</Link>
@@ -98,11 +97,6 @@ const AdminAddProduct = () => {
         <h1>Add new product</h1>
         <form onSubmit={addNewProduct} className="newProductForm">
           <input required placeholder="Name" onChange={handleNameChange} />
-          <input
-            required
-            placeholder="Description"
-            onChange={handleDescriptionChange}
-          />
           <input required placeholder="Color" onChange={handleColorChange} />
           <input
             required
@@ -117,7 +111,13 @@ const AdminAddProduct = () => {
             <option value="men">Men</option>
             <option value="women">Women</option>
           </select>
-          <button>Add</button>
+          <textarea
+            required
+            placeholder="Description"
+            onChange={handleDescriptionChange}
+          />
+
+          <button className="addNew">Add</button>
         </form>
         {validProductErrorMessage && (
           <p style={{ color: "red", marginTop: "10px" }}>

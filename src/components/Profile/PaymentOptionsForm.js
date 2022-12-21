@@ -16,7 +16,12 @@ const PaymentOptionsForm = ({ display, handleDisplay }) => {
   const shippingAddress = user.shippingAddress;
   const billingAddress = user.billingAddress;
   const creditCard = user.creditCard;
-
+  const style = {
+    margin: "130px auto",
+    width: "70%",
+    color: "navy",
+    display: "block",
+  };
   const handleShippingAddressChange = (event) => {
     dispatch(setShippingAddress(event.target.value));
   };
@@ -42,9 +47,9 @@ const PaymentOptionsForm = ({ display, handleDisplay }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleUserSubmit}>
-        <Card variant="outlined">
+    <form onSubmit={handleUserSubmit}>
+      <Card variant="outlined" style={style}>
+        <div style={{ margin: "30px auto 30px 30px" }}>
           <TextField
             id="standard-basic"
             label="Shipping Address"
@@ -53,6 +58,7 @@ const PaymentOptionsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.shippingAddress}
             onChange={handleShippingAddressChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
             id="standard-basic"
@@ -62,6 +68,7 @@ const PaymentOptionsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.billingAddress}
             onChange={handleBillingAddressChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
             id="standard-basic"
@@ -71,11 +78,23 @@ const PaymentOptionsForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.creditCard}
             onChange={handleCreditCardChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
-          <Button type="submit">Update</Button>
-        </Card>
-      </form>
-    </div>
+          <Button
+            type="submit"
+            style={{
+              margin: "20px 0 0 20px",
+              backgroundColor: "navy",
+              color: "yellow",
+              fontSize: "12px",
+              height: "30px",
+            }}
+          >
+            Update
+          </Button>
+        </div>
+      </Card>
+    </form>
   );
 };
 

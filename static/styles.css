@@ -14,6 +14,7 @@ h2{margin:0;}
  font-size:18px;
 }
 #navBar a:hover{color:#f0f014;
+  border-radius: 5px;
            background-color:navy;}
 #navBar a{text-decoration:none;
      color:inherit;padding:10px; }
@@ -21,7 +22,7 @@ img{width:200px;}
 .sideMenu{  margin-top:8%;
   padding:15px;
   margin-left:5%;
-
+  border-radius: 5px;
    display:flex;
   flex-direction:column;
 font-size:14px;
@@ -31,7 +32,7 @@ font-size:14px;
   line-height:45px;
   float:left;
  }
- .cartText{background-color:#f0f014;color:navy;width:50px;text-align:center;
+ .cartText{background-color:#f0f014;color:navy;width:50px;text-align:center;  border-radius: 5px;
   border:none;
 padding-top:4px;
 margin-right:5px;          
@@ -44,7 +45,7 @@ margin-right:5px;
         
 }
 .adText h1{font-size:70px;margin-top:-150px;}
-.adtext p{margin-top:-50px;background-color:navy;padding:5px;}
+.adtext p{margin-top:-50px;background-color:navy;padding:5px;border-radius: 3px;}
 .adDiv{
 display: flex;
 justify-content: center;
@@ -78,9 +79,9 @@ text-decoration:underline;
   .productDetail{float:left;width:50%;margin:8% }
   .productdetail input{margin:5px 0px;}
   .pageSizeQuanDetials{display: flex;align-items:center;}
-  .AddToCart{background-color:navy;color:white;
+  .AddToCart{background-color:navy;color:white;  border-radius: 5px;
     border:none;
-    padding:5px;
+    padding:8px;
     font-size:12px;
     margin-right:2%;}
 /*--------------------------log in css------------------*/
@@ -100,7 +101,7 @@ text-decoration:underline;
   margin: 1rem;
 }
 .loginRegForm input{border:solid 2px navy;background-color:lightyellow;height:30px;width:200px;}
-.loginRegForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:25px;}
+.loginRegForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:25px;  border-radius: 5px;}
 .loggedInDiv{
   display:flex;
    justify-content:end;
@@ -112,7 +113,7 @@ text-decoration:underline;
 .loggedInDiv p{margin:0 20px 0 0;padding:0;
   font-size:14px;}
 .loggedInDiv button{
- background-color:navy;color:white;
+ background-color:navy;color:white;  border-radius: 5px;
  border:none;
  padding:5px;
  font-size:12px;
@@ -126,23 +127,27 @@ text-decoration:underline;
 .createNewAccount{font-size:16px;margin-left:16px;}
 
 /*---------------------admin css--------------------*/
-.adminButton{margin-right: 14px;}
+.adminButton{margin-right: 14px;  border-radius: 5px;}
 .dashboard{margin-top:110px;
 align-items:center;float:left;width:70%;margin-left:10%;}
+.newProductForm {display: flex;flex-direction: column;}
 .newProductForm > * {
-  margin: .5rem;
+  margin: .3rem;
 }
-.newProductForm input{border:solid 1px navy;background-color:lightyellow;height:40px;width:500px;}
-.newProductForm select{border:solid 1px navy;background-color:lightyellow;height:40px;width:500px;}
-.newProductForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:35px;width:200px;margin-top:30px}
-.editProductForm{float:left;width:500px;margin:0px 0 0 30px;}
+.newProductForm input{border:solid 1px navy;background-color:lightyellow;height:30px;width:200px;}
+.newProductForm textarea{border:solid 1px navy;background-color:lightyellow;width:420px;height:200px;}
+.newProductForm select{border:solid 1px navy;background-color:lightyellow;height:30px;width:200px;}
+.addNew{background-color:navy;color:#f0f014;border:none;height:30px;width:80px;  border-radius: 5px;}
+
+
+.editProductForm{float:left;width:70%;margin:-5px 0 0 30px;}
 .editProductForm > * {
   margin: .5rem;
 }
-.editProductImg{float:left;width:250px;}
-.editProductForm input{border:solid navy 1px; background-color:lightyellow;height:35px;width:500px;}
-.editProductForm button{margin-left:35%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:30px;width:100px;}
-.deleteButton{margin:450px 0 0 -450px;background-color:maroon;color:#f0f014;border:none;height:30px;width:200px;}
+.editProductImg{float:left;width:25%;}
+.editProductForm input{border:solid navy 1px; background-color:lightyellow;height:35px;width:70%;}
+.editProductForm button{  border-radius: 5px;margin-left:25%;margin-right:20%;background-color:navy;color:#f0f014;border:none;height:30px;width:100px;  border-radius: 5px;}
+.deleteButton{background-color:maroon;color:#f0f014;border:none;height:34px;width:35px;float:left;border-radius:5px;margin-left:-10%;}
 .dashboardNames{margin-top:0}
 /*-----------------cart form--------------*/
 .cartForm{
@@ -152,20 +157,29 @@ align-items:center;float:left;width:70%;margin-left:10%;}
  }
 .cartform h1{margin-left:5%;}
 
- ul li{list-style-type: none;display:flex;justify-content:space-evenly;align-items:center;margin:20px;background-color:#e0e4f38c;padding:10px 0px;}
+ ul li{list-style-type: none;display:flex;justify-content:space-evenly;align-items:center;margin:20px;background-color:#e0e4f38c;padding:10px 0px;border-radius: 5px}
  .cartForm img{
   width:80px;
  }
  .quantity{width:30px;text-align:center;}
- .cartForm .itemButton{border:none;width:20px;background-color:navy;color:white;}
- .cartForm .saveButton{border:none;width:50px;margin-left:-80px;background-color:navy;color:white;height:20px;}
- .submit{width:120px;margin-left:auto;margin-right:auto;display:block;border:none;background-color:navy;color:white;height:40px;}
+ .cartForm .itemButton{border:none;width:20px;background-color:navy;color:white;  border-radius: 2px;}
+ .cartForm .saveButton{border:none;width:50px;margin-left:-80px;background-color:navy;color:white;height:20px;  border-radius: 2px;}
+ .submit{  border-radius: 5px;width:120px;margin-left:auto;margin-right:auto;display:block;border:none;background-color:navy;color:white;height:40px;}
 .submit:hover{color:#f0f014}
 /*----------------order history page--------------------------*/
 .orderHistoryForm{padding-top:120px;display:flex;flex-direction:column;align-items:center;}
-.orderGrid{display:inline-grid;grid-template-columns:80px 120px 80px 80px 80px 80px 80px 80px;background-color:lightgrey;border-top:solid 1px;border-left:solid 1px;border-right:solid 1px;}
+.orderGrid{display:inline-grid;grid-template-columns:80px 120px 80px 80px 80px 80px 80px 80px;background-color:#e0e4f38c;border-top:solid 1px;border-radius: 5px;border-left:solid 1px;border-right:solid 1px;}
 .orderGridItem{
   padding: 10px;
 font-size:12px;
   text-align: left;}
-  /*----------------------------------FAQ------------------------------*/
+  /*----------------------------------checkout Page------------------------------*/
+  .checkOutPage{display: block;margin: 120px auto  auto auto;width:60%;}
+
+  /*----------------------------------------viewUserPage--------------------------------------------*/
+  .viewUserPage{
+    margin:10% 10%;width:60%;
+      }
+      .viewUserPage h3{
+background-color: navy;color:#f0f014;border-radius: 5px;padding:5px;width:fit-content
+          }

@@ -1,9 +1,9 @@
 import React from "react";
-import SocialMedia from "./SocialMedia";
-import Company from "./Company";
-import Support from "./Support";
-import OurBrands from "./OurBrands";
-import Newsletter from "./Newsletter";
+import SocialMedia from "./SocialMediaFAQ";
+import Company from "./CompanyFAQ";
+import Support from "./SupportFAQ";
+import OurBrands from "./OurBrandsFAQ";
+import Newsletter from "./NewsletterFAQ";
 
 const FAQMain = () => {
   const styleChoice = {

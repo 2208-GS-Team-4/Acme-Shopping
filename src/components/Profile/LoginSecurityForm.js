@@ -31,11 +31,16 @@ const LoginSecurityForm = ({ display, handleDisplay }) => {
     await axios.put(`/api/users/${user.id}`, updatedUserInfo);
     alert("User Info Changed!");
   };
-
+  const style = {
+    margin: "130px auto",
+    width: "70%",
+    color: "navy",
+    display: "block",
+  };
   return (
-    <div>
-      <form onSubmit={handleUserSubmit}>
-        <Card variant="outlined">
+    <form onSubmit={handleUserSubmit}>
+      <Card variant="outlined" style={style}>
+        <div style={{ margin: "30px auto 30px 30px" }}>
           <TextField
             id="standard-basic"
             label="Username"
@@ -44,8 +49,10 @@ const LoginSecurityForm = ({ display, handleDisplay }) => {
             type="text"
             value={user.username}
             onChange={handleUsernameChange}
+            style={{ marginRight: "30px" }}
           ></TextField>
           <TextField
+            style={{ marginRight: "30px" }}
             id="standard-basic"
             label="Email"
             variant="standard"
@@ -55,6 +62,7 @@ const LoginSecurityForm = ({ display, handleDisplay }) => {
             onChange={handleEmailChange}
           ></TextField>
           <TextField
+            style={{ marginRight: "30px" }}
             id="standard-basic"
             label="Password"
             variant="standard"
@@ -63,10 +71,21 @@ const LoginSecurityForm = ({ display, handleDisplay }) => {
             value={user.password}
             onChange={handlePasswordChange}
           ></TextField>
-          <Button type="submit">Update</Button>
-        </Card>
-      </form>
-    </div>
+          <Button
+            type="submit"
+            style={{
+              margin: "20px 0 0 20px",
+              backgroundColor: "navy",
+              color: "yellow",
+              fontSize: "12px",
+              height: "30px",
+            }}
+          >
+            Update
+          </Button>
+        </div>
+      </Card>
+    </form>
   );
 };
 

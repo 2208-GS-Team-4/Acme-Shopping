@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ProfileSettings = () => {
   const { user } = useSelector((state) => state.user);
   return (
-    <Card variant="outlined" style={{ marginTop: "1px" }}>
+    <Card variant="outlined" style={{ marginTop: "10px" }}>
       <div
         style={{
           color: "navy",

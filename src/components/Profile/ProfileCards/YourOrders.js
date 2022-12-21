@@ -7,7 +7,7 @@ const YourOrders = () => {
   const { user } = useSelector((state) => state.user);
 
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" style={{ marginTop: "10px" }}>
       <div
         style={{
           color: "navy",

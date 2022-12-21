@@ -11,6 +11,7 @@ const Newsletter = () => {
     alert("Thank you for signing up for our newsletter!");
   };
   const styleChoice = {
+    borderRadius: "5px",
     width: "80px",
     marginLeft: "230px",
     marginTop: "-22px",

@@ -6,7 +6,12 @@ import SettingsForm from "./SettingsForm";
 const SettingsPage = () => {
   const { user } = useSelector((state) => state.user);
   const [display, setDisplay] = useState(false);
-
+  const style = {
+    margin: "130px auto",
+    width: "70%",
+    color: "navy",
+    display: "block",
+  };
   const handleDisplay = () => {
     setDisplay(!display);
   };
@@ -17,8 +22,8 @@ const SettingsPage = () => {
 
   const currentInfo = () => {
     return (
-      <div>
-        <Card variant="outlined">
+      <Card variant="outlined" style={style}>
+        <div style={{ margin: "30px auto 30px 30px" }}>
           <h2>
             Name: {user.firstName}, {user.lastName}
           </h2>
@@ -26,9 +31,18 @@ const SettingsPage = () => {
           <h4>Address: {user.shippingAddress}</h4>
           <h4>Phone Number: {user.phone}</h4>
           <h4></h4>
-          <Button onClick={handleDisplay}>Edit</Button>
-        </Card>
-      </div>
+          <Button
+            onClick={handleDisplay}
+            style={{
+              margin: "0 0 0 0",
+              backgroundColor: "navy",
+              color: "yellow",
+            }}
+          >
+            Edit
+          </Button>
+        </div>
+      </Card>
     );
   };
 

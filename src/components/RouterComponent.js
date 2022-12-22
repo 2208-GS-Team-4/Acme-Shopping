@@ -18,6 +18,7 @@ import {
   AdminViewUsers,
   AdminViewUserProfile,
   CheckoutPage,
+  GuestCart
 } from "./";
 
 import OrderHistory from "./OrderHistory";
@@ -40,6 +41,7 @@ const RouterComponent = () => {
       <Route exact path="/admin/view-users" element={<AdminViewUsers />} />
       <Route exact path="/admin/view-users/:id" element={<AdminViewUserProfile />} />
       <Route exact path="/cart" element={<Cart />} />
+      <Route exact path="/guest-cart" element={<GuestCart />} />
       <Route exact path="/men" element={<AllMenProducts />} />
       <Route exact path="/men/:productType" element={<ProductCategoryMen />} />
       <Route exact path="/men/:productType/:id" element={<SingleMenProduct />}/>

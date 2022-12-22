@@ -11,6 +11,7 @@ import {
 import { setCart } from "../store/cartSlice";
 import { resetUser } from "../store/userSlice";
 import FAQMain from "./FAQ/MainFAQ";
+import { create } from "@mui/material/styles/createTransitions";
 const App = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
@@ -39,9 +40,17 @@ const App = () => {
     }
   };
 
+  const createGuestCart = () =>{
+    if(!user.id){
+      const guestCart = [];
+      window.localStorage.setItem('guestCart', JSON.stringify(guestCart));
+    };
+  };
+
   useEffect(() => {
     fetchProducts();
     checkForUser();
+    createGuestCart();
   }, []);
 
   useEffect(() => {
@@ -53,8 +62,6 @@ const App = () => {
       fetchCart(), [];
     }
   });
-
-  localStorage.clear();
 
   return (
     <div>

@@ -13,6 +13,7 @@ export { default as SideMenuWomen } from './SideMenuWomen';
 export { default as SingleMenProduct } from './SingleMenProduct';
 export { default as SingleWomenProduct } from './SingleWomenProduct';
 export { default as Cart } from './Cart';
+export { default as GuestCart } from './GuestCart';
 // Admin components
 export { default as Admin } from './Admin/Admin';
 export { default as AdminAddProduct } from './Admin/AdminAddProduct';

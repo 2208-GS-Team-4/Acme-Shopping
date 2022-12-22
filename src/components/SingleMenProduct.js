@@ -43,7 +43,23 @@ const SingleMenProduct = () => {
   };
 
   const addToGuestCart = () =>{
-    window.localStorage.setItem(product[0].name,JSON.stringify(product[0]));
+    const guestCart = JSON.parse(localStorage.getItem('guestCart'));
+    const name = product[0].name;
+    const imageURL = product[0].imageURL;
+    const price = product[0].price;
+    const productId = product[0].id;
+    const quantity = addQuantity;
+    const size = addSize;
+    const data = {
+      name,
+      size,
+      imageURL,
+      quantity,
+      price,
+      productId,
+    };
+    guestCart.push(data);
+    window.localStorage.setItem('guestCart', JSON.stringify(guestCart));
   };
 
   const addToCart = async () => {
@@ -91,8 +107,6 @@ const SingleMenProduct = () => {
     const newData = await axios.get(`/api/users/${user.id}/cart`);
     dispatch(setCart(newData.data));
   };
-
-  //console.log(product[0]);
 
   return (
     <>

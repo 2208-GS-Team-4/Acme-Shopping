@@ -42,6 +42,26 @@ const SingleWomenProduct = () => {
     setAddQuantity(addQuantity + 1);
   };
 
+  const addToGuestCart = () =>{
+    const guestCart = JSON.parse(localStorage.getItem('guestCart'));
+    const name = product[0].name;
+    const imageURL = product[0].imageURL;
+    const price = product[0].price;
+    const productId = product[0].id;
+    const quantity = addQuantity;
+    const size = addSize;
+    const data = {
+      name,
+      size,
+      imageURL,
+      quantity,
+      price,
+      productId,
+    };
+    guestCart.push(data);
+    window.localStorage.setItem('guestCart', JSON.stringify(guestCart));
+  };
+
   const addToCart = async (event) => {
     const name = product[0].name;
     const imageURL = product[0].imageURL;
@@ -134,6 +154,11 @@ const SingleWomenProduct = () => {
                 <button onClick={addToCart} className="AddToCart">
                   Add to cart
                 </button>
+              )}
+              {!user.id && (
+                  <button onClick={addToGuestCart} className="AddToCart">
+                    Add to cart
+                  </button>
               )}
               {itemAlert && !sizeAlert && <p>Item added to cart!</p>}
               {sizeAlert && (

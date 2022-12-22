@@ -22,7 +22,15 @@ const Navbar = () => {
         <Link to="/men">Men</Link>
         <Link to="/women">Women</Link>
       </div>
+      
       <div className="loggedInDiv">
+        
+        {!user.id && (
+          <Link to="/guest-cart" className="cartText">
+            Cart
+          </Link>
+        )}
+
         {user.id ? (
           <div>
             <p>
@@ -38,6 +46,7 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
+
 
         {user.role === "admin" && (
           <Link to="/admin" className="adminButton">

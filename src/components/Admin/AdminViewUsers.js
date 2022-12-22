@@ -9,7 +9,7 @@ const AdminViewUsers = () => {
   const [userList, setUserList] = useState([]);
 
   const getUsers = async () => {
-    const response = await axios.get(`/api/users/`, {
+    const response = await axios.get(`/api/users/admin`, {
       headers: { Authorization: "Bearer " + token },
     });
     setUserList(response.data);

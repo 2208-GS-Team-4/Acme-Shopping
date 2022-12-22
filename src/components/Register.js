@@ -18,10 +18,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const getUsers = async () => {
-    setLoading(true);
     const response = await axios.get("/api/users");
     setUsers(response.data);
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -108,37 +106,37 @@ const Register = () => {
       )}
     </div>
   );
-  return (
-    <div>
-      <h2>Create new account</h2>
-      <form onSubmit={registerUser}>
-        <input
-          require
-          placeholder="First name"
-          onChange={handleFirstNameChange}
-        />
-        <input
-          require
-          placeholder="Last name"
-          onChange={handleLastNameChange}
-        />
-        <input require placeholder="email" onChange={handleEmailChange} />
-        <input require placeholder="Username" onChange={handleUsernameChange} />
-        <input require placeholder="Password" onChange={handlePasswordChange} />
-        <button>Register</button>
-      </form>
-      {emailErrorMessage && (
-        <p style={{ color: "red", marginTop: "10px" }}>
-          Sorry, this email is already in use.
-        </p>
-      )}
-      {usernameErrorMessage && (
-        <p style={{ color: "red", marginTop: "10px" }}>
-          Sorry, this username is already in use.
-        </p>
-      )}
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <h2>Create new account</h2>
+  //     <form onSubmit={registerUser}>
+  //       <input
+  //         require
+  //         placeholder="First name"
+  //         onChange={handleFirstNameChange}
+  //       />
+  //       <input
+  //         require
+  //         placeholder="Last name"
+  //         onChange={handleLastNameChange}
+  //       />
+  //       <input require placeholder="email" onChange={handleEmailChange} />
+  //       <input require placeholder="Username" onChange={handleUsernameChange} />
+  //       <input require placeholder="Password" onChange={handlePasswordChange} />
+  //       <button>Register</button>
+  //     </form>
+  //     {emailErrorMessage && (
+  //       <p style={{ color: "red", marginTop: "10px" }}>
+  //         Sorry, this email is already in use.
+  //       </p>
+  //     )}
+  //     {usernameErrorMessage && (
+  //       <p style={{ color: "red", marginTop: "10px" }}>
+  //         Sorry, this username is already in use.
+  //       </p>
+  //     )}
+  //   </div>
+  // );
 };
 
 export default Register;

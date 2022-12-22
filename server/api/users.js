@@ -14,7 +14,17 @@ const {
 } = require("../db");
 
 // GET localhost:3000/api/users
-router.get("/",authenticateUser,async (req, res, next) => {
+router.get("/",async (req, res, next) => {
+  try{
+    const users = await User.findAll();
+    res.send(users);
+  }catch(error){
+    next(error);
+  };
+});
+
+// GET localhost:3000/api/users/admin
+router.get("/admin",authenticateUser,async (req, res, next) => {
   try{
     const { role } = req.user;
     if(role!=='admin'){

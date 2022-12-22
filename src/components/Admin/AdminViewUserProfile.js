@@ -17,6 +17,7 @@ const AdminViewUserProfile = () => {
   useEffect(() => {
     fetchUser();
   }, []);
+  
   return (
     <div className="viewUserPage">
       <div>
@@ -32,7 +33,7 @@ const AdminViewUserProfile = () => {
         <h3>User Payment Information</h3>
         <p>Shipping Address: {user.shippingAddress}</p>
         <p>Billing Address: {user.billingAddress}</p>
-        <div>
+        {user.creditCard && <div>
           <h4 style={{ textDecoration: "underline", marginBottom: "-10px" }}>
             {" "}
             Credit Card:
@@ -45,7 +46,7 @@ const AdminViewUserProfile = () => {
             Expiration Date: {user.creditCard[0].expiration}{" "}
           </p>
           <p style={{ marginBottom: "-10px" }}>CVV: {user.creditCard[0].cvv}</p>
-        </div>
+        </div>}
       </div>
       <div>
         <h3>Login & Security</h3>

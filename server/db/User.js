@@ -56,7 +56,6 @@ const User = db.define("user", {
     type: Sequelize.STRING,
   },
   creditCard: {
-
     type: Sequelize.JSON,
 
     // commenting out this validator to create fake data use FakerJS
@@ -68,11 +67,11 @@ const User = db.define("user", {
   phone: {
     type: Sequelize.BIGINT,
   },
-  role:{
-    type:Sequelize.ENUM,
-    values:['member','admin','guest'],
-    defaultValue:'member'
-  }
+  role: {
+    type: Sequelize.ENUM,
+    values: ["member", "admin", "guest"],
+    defaultValue: "member",
+  },
 });
 
 User.addHook("beforeSave", async (user) => {
@@ -107,7 +106,10 @@ User.authenticate = async function ({ username, password }) {
     },
   });
   if (user && (await bcrypt.compare(password, user.password))) {
-    return jwt.sign({ id:user.id,username:user.username,role:user.role }, JWT);
+    return jwt.sign(
+      { id: user.id, username: user.username, role: user.role },
+      JWT
+    );
   }
   const error = new Error("bad credentials");
   error.status = 401;

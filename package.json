@@ -30,7 +30,8 @@
     "pg": "^8.9.0",
     "react-mobile-store-button": "^0.0.6",
     "sequelize": "^6.25.3",
-    "volleyball": "^1.5.1"
+    "volleyball": "^1.5.1",
+    "authUserMiddleware": "file:./helpers/authUserMiddleware"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

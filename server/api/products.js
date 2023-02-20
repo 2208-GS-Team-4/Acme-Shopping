@@ -54,8 +54,9 @@ router.delete("/:id", authenticateUser, async (req, res, next) => {
 });
 
 router.put("/:id", authenticateUser, async (req, res, next) => {
-  const notFoundMessage = "The object you are trying to update does not exist!";
   try {
+    const notFoundMessage =
+      "The object you are trying to update does not exist!";
     const { role } = req.user;
     if (role !== "admin") {
       return res.sendStatus(403);

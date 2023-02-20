@@ -2,7 +2,7 @@ const express = require("express");
 const { Test } = require("mocha");
 const router = express.Router();
 const sequelize = require("sequelize");
-const { authenticateUser } = require('./helpers/authUserMiddleware');
+const { authenticateUser } = require("./helpers/authUserMiddleware");
 
 const {
   User,
@@ -14,111 +14,122 @@ const {
 } = require("../db");
 
 // GET localhost:3000/api/users
-router.get("/",async (req, res, next) => {
-  try{
+router.get("/", async (req, res, next) => {
+  try {
     const users = await User.findAll();
     res.send(users);
-  }catch(error){
+  } catch (error) {
     next(error);
-  };
+  }
 });
 
 // GET localhost:3000/api/users/admin
-router.get("/admin",authenticateUser,async (req, res, next) => {
-  try{
+router.get("/admin", authenticateUser, async (req, res, next) => {
+  try {
     const { role } = req.user;
-    if(role!=='admin'){
-        return res.sendStatus(403);
-    };
+    if (role !== "admin") {
+      return res.sendStatus(403);
+    }
     const users = await User.findAll({
-      order: [
-        ['lastName', 'ASC'],
-      ]
+      order: [["lastName", "ASC"]],
     });
     res.send(users);
-  }catch(error){
+  } catch (error) {
     next(error);
-  };
+  }
 });
 
 // POST localhost:3000/api/users/
 router.post("/", async (req, res, next) => {
-  const data = ({
-    firstName,
-    lastName,
-    email,
-    username,
-    password,
-    //shippingAddress,
-    //billingAddress,
-    //creditCard,
-    //phone
-  } = req.body);
-  const newUser = await User.create(data);
-  await Cart.create({ userId: newUser.id });
-  res.send(newUser);
+  try {
+    const data = ({
+      firstName,
+      lastName,
+      email,
+      username,
+      password,
+      //shippingAddress,
+      //billingAddress,
+      //creditCard,
+      //phone
+    } = req.body);
+    const newUser = await User.create(data);
+    await Cart.create({ userId: newUser.id });
+    res.send(newUser);
+  } catch (error) {
+    next(error);
+  }
 });
 
 //PUT localhost:3000/api/users/:userId
 router.put("/:userId", async (req, res, next) => {
-  const userId = req.params.userId;
-  const {
-    firstName,
-    lastName,
-    email,
-    username,
-    password,
-    shippingAddress,
-    billingAddress,
-    creditCard,
-    phone,
-  } = req.body;
+  try {
+    const userId = req.params.userId;
+    const {
+      firstName,
+      lastName,
+      email,
+      username,
+      password,
+      shippingAddress,
+      billingAddress,
+      creditCard,
+      phone,
+    } = req.body;
 
-  const selectedUser = await User.findByPk(userId);
-  selectedUser.update({
-    firstName,
-    lastName,
-    username,
-    email,
-    password,
-    shippingAddress,
-    billingAddress,
-    creditCard,
-    phone,
-  });
-  res.sendStatus(200);
+    const selectedUser = await User.findByPk(userId);
+    selectedUser.update({
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      shippingAddress,
+      billingAddress,
+      creditCard,
+      phone,
+    });
+    res.sendStatus(200);
+  } catch (error) {
+    next(error);
+  }
 });
 
 // GET localhost:3000/api/users/:userId
 router.get("/:userId", async (req, res, next) => {
-  const user = await User.findByPk(req.params.userId, {
+  try {
+    const user = await User.findByPk(req.params.userId, {
+      include: [Cart][Order],
+    });
+    const { newOrder } = req.body;
 
-    include: [Cart][Order],
-
-
-  });
-  const { newOrder } = req.body;
-
-  res.send(user);
+    res.send(user);
+  } catch (error) {
+    next(error);
+  }
 });
 router.put("/:userId", async (req, res, next) => {
-  const user = await User.findByPk(req.params.userId, {
-    include: [Cart][Order],
-  });
-  const order = await Order.findOne({
-    where: {
-      userId: req.params.userId,
-    },
-  });
-  const { newOrderInfo } = req.body;
-  const number = newOrderInfo.number;
-  const expiration = newOrderInfo.expiration;
-  const cvv = newOrderInfo.cvv;
-  const userToUpdate = await user.update({
-    creditCard: { number, expiration, cvv },
-  });
+  try {
+    const user = await User.findByPk(req.params.userId, {
+      include: [Cart][Order],
+    });
+    const order = await Order.findOne({
+      where: {
+        userId: req.params.userId,
+      },
+    });
+    const { newOrderInfo } = req.body;
+    const number = newOrderInfo.number;
+    const expiration = newOrderInfo.expiration;
+    const cvv = newOrderInfo.cvv;
+    const userToUpdate = await user.update({
+      creditCard: { number, expiration, cvv },
+    });
 
-  res.send(201);
+    res.send(201);
+  } catch (error) {
+    next(error);
+  }
 });
 // GET localhost:3000/api/users/:userId/cart
 router.get("/:userId/cart", async (req, res, next) => {
@@ -147,7 +158,6 @@ router.get("/:userId/cart", async (req, res, next) => {
     cart.update({ total });
 
     res.json({ allProducts, cart });
-
   } catch (error) {
     next(error);
   }
